@@ -1,9 +1,8 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <ScatterPlot :data="data" />
 </template>
+
+<script setup>
+import ScatterPlot from "../components/ScatterPlot.vue";
+import data from "../data/mushroom-data.json";
+</script>

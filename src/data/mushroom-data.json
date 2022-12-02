@@ -1,0 +1,8711 @@
+[
+    {
+        "family": "Amanita Family",
+        "name": "Fly Agaric",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "e",
+            "o"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "g",
+            "p"
+        ],
+        "minCapDiameter": 10,
+        "maxCapDiameter": 20,
+        "minStemHeight": 15,
+        "maxStemHeight": 20,
+        "minStemWidth": 15,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "g",
+            "h"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": null,
+        "stemRoot": [
+            "s"
+        ],
+        "stemSurface": [
+            "y"
+        ],
+        "veilType": [
+            "u"
+        ],
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Amanita Family",
+        "name": "Panther Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "p",
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "p"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 10,
+        "minStemHeight": 6,
+        "maxStemHeight": 10,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "g"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "y"
+        ],
+        "veilType": [
+            "u"
+        ],
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Amanita Family",
+        "name": "False Panther Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "g",
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "e",
+            "g"
+        ],
+        "minCapDiameter": 10,
+        "maxCapDiameter": 15,
+        "minStemHeight": 10,
+        "maxStemHeight": 12,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": null,
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": [
+            "u"
+        ],
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Amanita Family",
+        "name": "The Blusher",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "g"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 15,
+        "minStemHeight": 7,
+        "maxStemHeight": 15,
+        "minStemWidth": 10,
+        "maxStemWidth": 25,
+        "capSurface": null,
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": [
+            "b"
+        ],
+        "stemSurface": null,
+        "veilType": [
+            "u"
+        ],
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Amanita Family",
+        "name": "Death Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "r"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "g",
+            "p"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 12,
+        "minStemHeight": 10,
+        "maxStemHeight": 12,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "h"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": [
+            "u"
+        ],
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Amanita Family",
+        "name": "False Death Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "w",
+            "y"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w",
+            "y"
+        ],
+        "ringType": [
+            "g"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 9,
+        "minStemHeight": 5,
+        "maxStemHeight": 7,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": null,
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": null,
+        "stemRoot": [
+            "b"
+        ],
+        "stemSurface": null,
+        "veilType": [
+            "u"
+        ],
+        "veilColor": [
+            "y",
+            "w"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Amanita Family",
+        "name": "Destroying Angel",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b"
+        ],
+        "capColor": [
+            "w"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "l",
+            "e"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 10,
+        "minStemHeight": 10,
+        "maxStemHeight": 15,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "t"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "y"
+        ],
+        "veilType": [
+            "u"
+        ],
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Amanita Family",
+        "name": "Tawny Grisette",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "c",
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 8,
+        "minStemHeight": 10,
+        "maxStemHeight": 15,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "h",
+            "t"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": [
+            "u"
+        ],
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Lepiota Family",
+        "name": "Parasol Mushroom",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "m",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "p",
+            "f"
+        ],
+        "capColor": [
+            "w",
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "m"
+        ],
+        "minCapDiameter": 10,
+        "maxCapDiameter": 25,
+        "minStemHeight": 15,
+        "maxStemHeight": 35,
+        "minStemWidth": 15,
+        "maxStemWidth": 25,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": [
+            "s"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Lepiota Family",
+        "name": "Stinking Parasol",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "m",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b",
+            "f"
+        ],
+        "capColor": [
+            "e",
+            "n",
+            "p",
+            "w"
+        ],
+        "gillColor": [
+            "n",
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "e"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 3,
+        "maxStemWidth": 4,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "k"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Saffron Parasol",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "g",
+            "h",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "y",
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "y",
+            "n"
+        ],
+        "ringType": [
+            "r"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 4,
+        "maxStemHeight": 7,
+        "minStemWidth": 3,
+        "maxStemWidth": 4,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "y"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "The Deceiver",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "h"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "p"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 4,
+        "minStemHeight": 3,
+        "maxStemHeight": 10,
+        "minStemWidth": 2,
+        "maxStemWidth": 5,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": [
+            "a",
+            "d"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "i"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Amethyst Deceiver",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "b",
+            "u"
+        ],
+        "gillColor": [
+            "u",
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 4,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 3,
+        "maxStemWidth": 6,
+        "capSurface": null,
+        "gillAttachment": null,
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Wood Blewit",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "l",
+            "u",
+            "g",
+            "n"
+        ],
+        "gillColor": [
+            "b",
+            "u"
+        ],
+        "stemColor": [
+            "b",
+            "u"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 15,
+        "minStemHeight": 5,
+        "maxStemHeight": 10,
+        "minStemWidth": 15,
+        "maxStemWidth": 25,
+        "capSurface": null,
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Field Blewit",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "g",
+            "n"
+        ],
+        "gillColor": [
+            "g",
+            "p"
+        ],
+        "stemColor": [
+            "u"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 12,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 15,
+        "maxStemWidth": 25,
+        "capSurface": null,
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": [
+            "b"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Clouded Agaric",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "g",
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 8,
+        "maxCapDiameter": 20,
+        "minStemHeight": 5,
+        "maxStemHeight": 12,
+        "minStemWidth": 20,
+        "maxStemWidth": 30,
+        "capSurface": [
+            "e"
+        ],
+        "gillAttachment": [
+            "a",
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": [
+            "s"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Club-footed Funnel Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "g",
+            "n"
+        ],
+        "gillColor": [
+            "w",
+            "y"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 8,
+        "minStemHeight": 4,
+        "maxStemHeight": 7,
+        "minStemWidth": 10,
+        "maxStemWidth": 10,
+        "capSurface": null,
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": [
+            "b"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Common Funnel Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d",
+            "h"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "s"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 8,
+        "minStemHeight": 3,
+        "maxStemHeight": 7,
+        "minStemWidth": 6,
+        "maxStemWidth": 10,
+        "capSurface": null,
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Aniseed Funnel Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "l",
+            "r",
+            "w"
+        ],
+        "gillColor": [
+            "r"
+        ],
+        "stemColor": [
+            "l",
+            "r",
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 6,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": null,
+        "gillAttachment": [
+            "a",
+            "d"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Ivory Clitocybe",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "w",
+            "g"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 4,
+        "minStemHeight": 2,
+        "maxStemHeight": 4,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "s"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Wood Woolly-foot",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "f"
+        ],
+        "capColor": [
+            "n",
+            "e",
+            "y"
+        ],
+        "gillColor": [
+            "n",
+            "e",
+            "y"
+        ],
+        "stemColor": [
+            "n",
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 6,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 4,
+        "maxStemWidth": 6,
+        "capSurface": [
+            "l"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Russet Tough Shank",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "f"
+        ],
+        "capColor": [
+            "n",
+            "b"
+        ],
+        "gillColor": [
+            "w",
+            "y"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 2,
+        "maxStemWidth": 4,
+        "capSurface": [
+            "d"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": [
+            "b"
+        ],
+        "stemSurface": [
+            "i",
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Clustered Tough Shank",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "n",
+            "w"
+        ],
+        "gillColor": [
+            "p"
+        ],
+        "stemColor": [
+            "n",
+            "p"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 6,
+        "maxStemHeight": 10,
+        "minStemWidth": 3,
+        "maxStemWidth": 5,
+        "capSurface": null,
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Greasy Tough Shank",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "n",
+            "b"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 8,
+        "minStemHeight": 5,
+        "maxStemHeight": 9,
+        "minStemWidth": 10,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "s"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Spotted Tough Shank",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d",
+            "h"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "w",
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 6,
+        "maxCapDiameter": 12,
+        "minStemHeight": 8,
+        "maxStemHeight": 12,
+        "minStemWidth": 8,
+        "maxStemWidth": 15,
+        "capSurface": null,
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": [
+            "r"
+        ],
+        "stemSurface": [
+            "i"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Fairy Ring Champignon",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b"
+        ],
+        "capColor": [
+            "n ,w"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 2,
+        "maxStemWidth": 4,
+        "capSurface": [
+            "g"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Little Wheel Fungus",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "w"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "n",
+            "e"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 0,
+        "maxCapDiameter": 1,
+        "minStemHeight": 2,
+        "maxStemHeight": 4,
+        "minStemWidth": 1,
+        "maxStemWidth": 2,
+        "capSurface": [
+            "g"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Horse-hair Fungus",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n",
+            "p",
+            "e"
+        ],
+        "gillColor": [
+            "n",
+            "p"
+        ],
+        "stemColor": [
+            "k"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 0,
+        "maxCapDiameter": 1,
+        "minStemHeight": 3,
+        "maxStemHeight": 5,
+        "minStemWidth": 1,
+        "maxStemWidth": 1,
+        "capSurface": [
+            "g"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "s",
+            "h"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Bonnet Bell Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "b",
+            "f"
+        ],
+        "capColor": [
+            "n",
+            "g"
+        ],
+        "gillColor": [
+            "g"
+        ],
+        "stemColor": [
+            "n",
+            "g"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 6,
+        "minStemHeight": 3,
+        "maxStemHeight": 8,
+        "minStemWidth": 2,
+        "maxStemWidth": 5,
+        "capSurface": [
+            "g"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Stump Bell Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b"
+        ],
+        "capColor": [
+            "g",
+            "n"
+        ],
+        "gillColor": [
+            "g"
+        ],
+        "stemColor": [
+            "g",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 3,
+        "minStemHeight": 4,
+        "maxStemHeight": 6,
+        "minStemWidth": 2,
+        "maxStemWidth": 2,
+        "capSurface": null,
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Tufted Bell Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "e",
+            "n"
+        ],
+        "gillColor": [
+            "w",
+            "p"
+        ],
+        "stemColor": [
+            "n",
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 3,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 2,
+        "maxStemWidth": 3,
+        "capSurface": [
+            "g"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Milky Bell Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "c"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "g",
+            "w"
+        ],
+        "stemColor": [
+            "g"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 2,
+        "minStemHeight": 4,
+        "maxStemHeight": 6,
+        "minStemWidth": 1,
+        "maxStemWidth": 2,
+        "capSurface": [
+            "g"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Small Bleeding Bell Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d",
+            "h"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "c",
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "n",
+            "e"
+        ],
+        "gillColor": [
+            "p",
+            "w"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 0,
+        "maxCapDiameter": 1,
+        "minStemHeight": 4,
+        "maxStemHeight": 7,
+        "minStemWidth": 1,
+        "maxStemWidth": 1,
+        "capSurface": [
+            "g"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Lilac Bell Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "u"
+        ],
+        "gillColor": [
+            "g",
+            "u"
+        ],
+        "stemColor": [
+            "u"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 3,
+        "maxStemHeight": 8,
+        "minStemWidth": 3,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "w"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Yellow-stemmed Bell Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "d",
+            "h"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n",
+            "y"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 2,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 1,
+        "maxStemWidth": 3,
+        "capSurface": [
+            "g",
+            "s",
+            "t"
+        ],
+        "gillAttachment": [
+            "a",
+            "d"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "t"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Orange Bell Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "o",
+            "y"
+        ],
+        "gillColor": [
+            "y"
+        ],
+        "stemColor": [
+            "w",
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 0,
+        "maxCapDiameter": 1,
+        "minStemHeight": 3,
+        "maxStemHeight": 4,
+        "minStemWidth": 0,
+        "maxStemWidth": 1,
+        "capSurface": [
+            "g"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Orange Moss Agaric",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "o"
+        ],
+        "gillColor": [
+            "o"
+        ],
+        "stemColor": [
+            "o",
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 0,
+        "maxCapDiameter": 1,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 1,
+        "maxStemWidth": 1,
+        "capSurface": null,
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": [
+            "w"
+        ]
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Umbrella Navel Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d",
+            "h"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n",
+            "y"
+        ],
+        "gillColor": [
+            "n"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 2,
+        "minStemHeight": 1,
+        "maxStemHeight": 3,
+        "minStemWidth": 2,
+        "maxStemWidth": 3,
+        "capSurface": [
+            "g"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Rooting Shank",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "n",
+            "e"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 10,
+        "minStemHeight": 8,
+        "maxStemHeight": 20,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "h",
+            "t",
+            "w"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": null,
+        "stemRoot": [
+            "r"
+        ],
+        "stemSurface": [
+            "g"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Porcelain Mushroom",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "g",
+            "n"
+        ],
+        "gillColor": [
+            "n"
+        ],
+        "stemColor": [
+            "g",
+            "w"
+        ],
+        "ringType": [
+            "l"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 8,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 3,
+        "maxStemWidth": 7,
+        "capSurface": [
+            "h",
+            "t"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "t"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Velvet Shank",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "o",
+            "n"
+        ],
+        "gillColor": [
+            "w",
+            "y"
+        ],
+        "stemColor": [
+            "o",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 7,
+        "minStemHeight": 3,
+        "maxStemHeight": 10,
+        "minStemWidth": 3,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "h",
+            "t"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "k",
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Bulbous Honey Fungus",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "e",
+            "n",
+            "y"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "e"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 15,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 20,
+        "maxStemWidth": 30,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": [
+            "b"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Soap-scented Tricholoma",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "g",
+            "r",
+            "n"
+        ],
+        "gillColor": [
+            "w",
+            "r"
+        ],
+        "stemColor": [
+            "w",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 10,
+        "minStemHeight": 3,
+        "maxStemHeight": 8,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "s"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": [
+            "r"
+        ],
+        "stemSurface": [
+            "i",
+            "y"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Grey Tricholoma",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b",
+            "f"
+        ],
+        "capColor": [
+            "g",
+            "k"
+        ],
+        "gillColor": [
+            "g",
+            "w"
+        ],
+        "stemColor": [
+            "g"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 8,
+        "minStemHeight": 3,
+        "maxStemHeight": 7,
+        "minStemWidth": 10,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "h"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Scaly Tricholoma",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "g",
+            "n"
+        ],
+        "gillColor": [
+            "g",
+            "w",
+            "y"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 7,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Yellow-brown Tricholoma",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "f"
+        ],
+        "capColor": [
+            "n",
+            "o"
+        ],
+        "gillColor": [
+            "n",
+            "y"
+        ],
+        "stemColor": [
+            "n",
+            "o"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 10,
+        "minStemHeight": 7,
+        "maxStemHeight": 11,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "g",
+            "s",
+            "h",
+            "t"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "i",
+            "t"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Sulphur Tricholoma",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "y"
+        ],
+        "gillColor": [
+            "y"
+        ],
+        "stemColor": [
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 8,
+        "minStemHeight": 3,
+        "maxStemHeight": 8,
+        "minStemWidth": 8,
+        "maxStemWidth": 18,
+        "capSurface": null,
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "i"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "St George's Mushroom",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "m",
+            "d"
+        ],
+        "season": [
+            "s",
+            "u"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "w"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 12,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 20,
+        "maxStemWidth": 40,
+        "capSurface": [
+            "d",
+            "s"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Clustered Brown Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "p",
+            "x"
+        ],
+        "capColor": [
+            "g",
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "g",
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 6,
+        "maxCapDiameter": 10,
+        "minStemHeight": 5,
+        "maxStemHeight": 10,
+        "minStemWidth": 10,
+        "maxStemWidth": 18,
+        "capSurface": null,
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Changeable Melanoleuca",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "l",
+            "m",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "f"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "n",
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 10,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 10,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "s"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": [
+            "b"
+        ],
+        "stemSurface": [
+            "i"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Plums and custard",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "f"
+        ],
+        "capColor": [
+            "e",
+            "u",
+            "y"
+        ],
+        "gillColor": [
+            "y"
+        ],
+        "stemColor": [
+            "e",
+            "u",
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 12,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 10,
+        "maxStemWidth": 25,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "y"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Wax Gill Family",
+        "name": "Ivory Wax Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "m"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "w"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 2,
+        "maxStemHeight": 5,
+        "minStemWidth": 4,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "s"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Wax Gill Family",
+        "name": "Yellow Wax cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "o",
+            "y"
+        ],
+        "gillColor": [
+            "y"
+        ],
+        "stemColor": [
+            "o"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 6,
+        "minStemHeight": 5,
+        "maxStemHeight": 7,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "h",
+            "s",
+            "t"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "g"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Wax Gill Family",
+        "name": "Orange-red Wax Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "m",
+            "h"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "o"
+        ],
+        "gillColor": [
+            "o",
+            "y"
+        ],
+        "stemColor": [
+            "o",
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 4,
+        "minStemHeight": 2,
+        "maxStemHeight": 4,
+        "minStemWidth": 4,
+        "maxStemWidth": 7,
+        "capSurface": [
+            "s",
+            "y"
+        ],
+        "gillAttachment": [
+            "a",
+            "d"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Wax Gill Family",
+        "name": "Blackening Wax Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "m"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b",
+            "x"
+        ],
+        "capColor": [
+            "e",
+            "o",
+            "k"
+        ],
+        "gillColor": [
+            "y",
+            "g",
+            "k"
+        ],
+        "stemColor": [
+            "y",
+            "o",
+            "k"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 7,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "s",
+            "i"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Wax Gill Family",
+        "name": "Meadow Wax Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "m",
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "o",
+            "b"
+        ],
+        "gillColor": [
+            "o",
+            "b"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 10,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "s",
+            "d"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Wax Gill Family",
+        "name": "Scarlet Hood",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "m"
+        ],
+        "season": [
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "o",
+            "p",
+            "e"
+        ],
+        "gillColor": [
+            "o",
+            "e"
+        ],
+        "stemColor": [
+            "o",
+            "e"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 5,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "h",
+            "s",
+            "d"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Wax Gill Family",
+        "name": "Parrot Wax Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "m",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b",
+            "f"
+        ],
+        "capColor": [
+            "r",
+            "p",
+            "y"
+        ],
+        "gillColor": [
+            "r",
+            "y"
+        ],
+        "stemColor": [
+            "r",
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 4,
+        "minStemHeight": 4,
+        "maxStemHeight": 6,
+        "minStemWidth": 4,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "t",
+            "w",
+            "d"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "t"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Wax Gill Family",
+        "name": "Herald of Winter",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "o"
+        ],
+        "stemColor": [
+            "w",
+            "o"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 5,
+        "minStemHeight": 5,
+        "maxStemHeight": 7,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "t"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "t"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Common Yellow Russula",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "y"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "g",
+            " w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 10,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": null,
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Yellow-gilled Russula",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "y"
+        ],
+        "gillColor": [
+            "o",
+            "y"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 6,
+        "minStemHeight": 2,
+        "maxStemHeight": 6,
+        "minStemWidth": 6,
+        "maxStemWidth": 12,
+        "capSurface": null,
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Yellow Swamp Russula",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "y"
+        ],
+        "gillColor": [
+            "y"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 10,
+        "minStemHeight": 5,
+        "maxStemHeight": 10,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "h",
+            "t"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Geranium-scented Russula",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "n",
+            "y"
+        ],
+        "gillColor": [
+            "y"
+        ],
+        "stemColor": [
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 10,
+        "minStemHeight": 3,
+        "maxStemHeight": 8,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "t"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Stinking Russula",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 6,
+        "maxCapDiameter": 15,
+        "minStemHeight": 6,
+        "maxStemHeight": 15,
+        "minStemWidth": 20,
+        "maxStemWidth": 40,
+        "capSurface": [
+            "t"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Fragile Russula",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "u"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w",
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 6,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": null,
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Birch Russula",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "b",
+            "p",
+            "e",
+            "y"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 6,
+        "minStemHeight": 3,
+        "maxStemHeight": 7,
+        "minStemWidth": 5,
+        "maxStemWidth": 8,
+        "capSurface": null,
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Bare-toothed Russula",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "n",
+            "p",
+            "e"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 10,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 10,
+        "maxStemWidth": 25,
+        "capSurface": null,
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "The Charcoal Burner",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "l",
+            "y"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 15,
+        "minStemHeight": 5,
+        "maxStemHeight": 10,
+        "minStemWidth": 10,
+        "maxStemWidth": 30,
+        "capSurface": [
+            "e"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Blackish Purple Russula",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "u",
+            "k"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 12,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "s"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Blackening Russula",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "k",
+            "n",
+            "w"
+        ],
+        "gillColor": [
+            "y",
+            "k"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 8,
+        "maxCapDiameter": 25,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 15,
+        "maxStemWidth": 30,
+        "capSurface": [
+            "s",
+            "t"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": [
+            "w"
+        ]
+    },
+    {
+        "family": "Russula Family",
+        "name": "The Sickener",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "e"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 10,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 15,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "h",
+            "t"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": [
+            "b"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Beechwood Sickener",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "e",
+            "p",
+            "w"
+        ],
+        "gillColor": [
+            "g",
+            "r",
+            "w"
+        ],
+        "stemColor": [
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 7,
+        "minStemHeight": 2,
+        "maxStemHeight": 5,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": null,
+        "gillAttachment": null,
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Crab-scented Russula",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "n",
+            "r",
+            "u",
+            "y"
+        ],
+        "gillColor": [
+            "n"
+        ],
+        "stemColor": [
+            "n",
+            "p",
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 7,
+        "maxCapDiameter": 15,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 15,
+        "maxStemWidth": 30,
+        "capSurface": [
+            "s"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Grass-green Russula",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "f"
+        ],
+        "capColor": [
+            "r",
+            "y"
+        ],
+        "gillColor": [
+            "y",
+            "n"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 10,
+        "minStemHeight": 5,
+        "maxStemHeight": 8,
+        "minStemWidth": 8,
+        "maxStemWidth": 15,
+        "capSurface": null,
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Peppery Milk Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "s"
+        ],
+        "capColor": [
+            "w"
+        ],
+        "gillColor": [
+            "w",
+            "p",
+            "y"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 8,
+        "maxCapDiameter": 15,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 20,
+        "maxStemWidth": 30,
+        "capSurface": null,
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Fleecy Milk Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "w"
+        ],
+        "gillColor": [
+            "w",
+            "n"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 10,
+        "maxCapDiameter": 25,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 20,
+        "maxStemWidth": 40,
+        "capSurface": [
+            "k"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Oak Milk Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "s"
+        ],
+        "capColor": [
+            "n",
+            "e"
+        ],
+        "gillColor": [
+            "n",
+            "w"
+        ],
+        "stemColor": [
+            "e",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 9,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 6,
+        "maxStemWidth": 12,
+        "capSurface": [
+            "d"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Slimy Milk Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "s"
+        ],
+        "capColor": [
+            "g",
+            "r",
+            "n"
+        ],
+        "gillColor": [
+            "w",
+            "g"
+        ],
+        "stemColor": [
+            "g",
+            "r",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 10,
+        "minStemHeight": 4,
+        "maxStemHeight": 5,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "h",
+            "t"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "t"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Ugly Milk Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "l",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "g",
+            "r",
+            "k",
+            "n"
+        ],
+        "gillColor": [
+            "w",
+            "b",
+            "n"
+        ],
+        "stemColor": [
+            "g",
+            "r",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 7,
+        "maxCapDiameter": 20,
+        "minStemHeight": 4,
+        "maxStemHeight": 6,
+        "minStemWidth": 20,
+        "maxStemWidth": 30,
+        "capSurface": [
+            "t"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Rufous Milk Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "n",
+            "e"
+        ],
+        "gillColor": [
+            "y",
+            "w"
+        ],
+        "stemColor": [
+            "n",
+            "e"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 10,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 6,
+        "maxStemWidth": 12,
+        "capSurface": [
+            "d"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Sweet Milk Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "s"
+        ],
+        "capColor": [
+            "e",
+            "n"
+        ],
+        "gillColor": [
+            "b",
+            "p",
+            "w"
+        ],
+        "stemColor": [
+            "e",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 8,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 4,
+        "maxStemWidth": 8,
+        "capSurface": null,
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Small Brown Milk Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "n",
+            "o"
+        ],
+        "gillColor": [
+            "n",
+            "y"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 4,
+        "minStemHeight": 2,
+        "maxStemHeight": 5,
+        "minStemWidth": 4,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "w"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Coconut-scented Milk Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "g",
+            "u",
+            "n",
+            "p"
+        ],
+        "gillColor": [
+            "p"
+        ],
+        "stemColor": [
+            "g",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 4,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "d"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Woolly Milk Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "s"
+        ],
+        "capColor": [
+            "p"
+        ],
+        "gillColor": [
+            "p"
+        ],
+        "stemColor": [
+            "p"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 6,
+        "maxCapDiameter": 12,
+        "minStemHeight": 6,
+        "maxStemHeight": 10,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "t"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Saffron Milk Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "s"
+        ],
+        "capColor": [
+            "w",
+            "p",
+            "o"
+        ],
+        "gillColor": [
+            "o"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 15,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 15,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "t"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Russula Family",
+        "name": "Spruce Milk Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "s"
+        ],
+        "capColor": [
+            "o",
+            "y",
+            "r"
+        ],
+        "gillColor": [
+            "o"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 12,
+        "minStemHeight": 3,
+        "maxStemHeight": 7,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": null,
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Pluteus Family",
+        "name": "Fawn Pluteus",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "w",
+            "p"
+        ],
+        "stemColor": [
+            "w",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 6,
+        "maxCapDiameter": 12,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 8,
+        "maxStemWidth": 12,
+        "capSurface": [
+            "s"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "i"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": [
+            "p"
+        ]
+    },
+    {
+        "family": "Pluteus Family",
+        "name": "Veined Pluteus",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "p",
+            "w"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 9,
+        "minStemHeight": 3,
+        "maxStemHeight": 8,
+        "minStemWidth": 8,
+        "maxStemWidth": 12,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "y"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Entoloma Family",
+        "name": "Silky Nolanea",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "n",
+            "w"
+        ],
+        "gillColor": [
+            "p"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 3,
+        "maxStemHeight": 5,
+        "minStemWidth": 2,
+        "maxStemWidth": 4,
+        "capSurface": [
+            "k"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": [
+            "p"
+        ]
+    },
+    {
+        "family": "Entoloma Family",
+        "name": "Striated Nolanea",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "m",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b",
+            "f"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "p"
+        ],
+        "stemColor": [
+            "n",
+            "g"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 5,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 3,
+        "maxStemWidth": 6,
+        "capSurface": [
+            "t"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "i"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Entoloma Family",
+        "name": "White Leptonia",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "s"
+        ],
+        "capColor": [
+            "w"
+        ],
+        "gillColor": [
+            "p",
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 4,
+        "minStemHeight": 2,
+        "maxStemHeight": 5,
+        "minStemWidth": 2,
+        "maxStemWidth": 3,
+        "capSurface": [
+            "d"
+        ],
+        "gillAttachment": [
+            "a",
+            "d"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "h"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Entoloma Family",
+        "name": "Blue Leptonia",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "l",
+            "k"
+        ],
+        "gillColor": [
+            "p",
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 3,
+        "minStemHeight": 2,
+        "maxStemHeight": 6,
+        "minStemWidth": 2,
+        "maxStemWidth": 3,
+        "capSurface": [
+            "i"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": [
+            "p"
+        ]
+    },
+    {
+        "family": "Entoloma Family",
+        "name": "Livid Entoloma",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "w",
+            "y",
+            "g",
+            "n"
+        ],
+        "gillColor": [
+            "p",
+            "y"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 6,
+        "maxCapDiameter": 18,
+        "minStemHeight": 5,
+        "maxStemHeight": 10,
+        "minStemWidth": 15,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "s",
+            "h"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "i"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Entoloma Family",
+        "name": "The Miller",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "s"
+        ],
+        "capColor": [
+            "w"
+        ],
+        "gillColor": [
+            "p",
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 10,
+        "minStemHeight": 3,
+        "maxStemHeight": 4,
+        "minStemWidth": 6,
+        "maxStemWidth": 12,
+        "capSurface": [
+            "l"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Entoloma Family",
+        "name": "Apricot Fungus",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "p"
+        ],
+        "gillColor": [
+            "p"
+        ],
+        "stemColor": [
+            "p"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 10,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 8,
+        "maxStemWidth": 12,
+        "capSurface": [
+            "w"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolbitius Family",
+        "name": "Egg Yolk Fungus",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "c",
+            "f"
+        ],
+        "capColor": [
+            "y",
+            "n"
+        ],
+        "gillColor": [
+            "y",
+            "n"
+        ],
+        "stemColor": [
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 3,
+        "minStemHeight": 5,
+        "maxStemHeight": 10,
+        "minStemWidth": 2,
+        "maxStemWidth": 4,
+        "capSurface": [
+            "h",
+            "t"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolbitius Family",
+        "name": "Brown Bell Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "m",
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b"
+        ],
+        "capColor": [
+            "n",
+            "o",
+            "y",
+            "w"
+        ],
+        "gillColor": [
+            "n"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 3,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 2,
+        "maxStemWidth": 4,
+        "capSurface": [
+            "g"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Stropharia Family",
+        "name": "Charcoal Pholiota",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n",
+            "o"
+        ],
+        "gillColor": [
+            "n"
+        ],
+        "stemColor": [
+            "n",
+            "o"
+        ],
+        "ringType": [
+            "z"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 6,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 4,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "h",
+            "t"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "y"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Stropharia Family",
+        "name": "Brown Stew Fungus",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "w",
+            "n"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "r"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 8,
+        "minStemHeight": 3,
+        "maxStemHeight": 8,
+        "minStemWidth": 4,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "h"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "y",
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Stropharia Family",
+        "name": "Sulphur Tuft",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "b",
+            "x"
+        ],
+        "capColor": [
+            "y"
+        ],
+        "gillColor": [
+            "y",
+            "r",
+            "k"
+        ],
+        "stemColor": [
+            "y"
+        ],
+        "ringType": [
+            "z"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 6,
+        "minStemHeight": 5,
+        "maxStemHeight": 12,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "s"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": [
+            "u"
+        ],
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": [
+            "k",
+            "r"
+        ]
+    },
+    {
+        "family": "Stropharia Family",
+        "name": "Brick Caps",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "e"
+        ],
+        "gillColor": [
+            "w",
+            "y",
+            "g",
+            "n"
+        ],
+        "stemColor": [
+            "y",
+            "e",
+            "n"
+        ],
+        "ringType": [
+            "z"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 8,
+        "minStemHeight": 6,
+        "maxStemHeight": 10,
+        "minStemWidth": 8,
+        "maxStemWidth": 12,
+        "capSurface": [
+            "e"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Stropharia Family",
+        "name": "Verdigris Toadstool",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "g",
+            "m",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b",
+            "x"
+        ],
+        "capColor": [
+            "r",
+            "l"
+        ],
+        "gillColor": [
+            "g",
+            "n",
+            "u"
+        ],
+        "stemColor": [
+            "w",
+            "l",
+            "n"
+        ],
+        "ringType": [
+            "e"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 6,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "h",
+            "t",
+            "y"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "y"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": [
+            "k",
+            "u"
+        ]
+    },
+    {
+        "family": "Stropharia Family",
+        "name": "Dung Roundhead",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "m"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "p"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "g",
+            "n"
+        ],
+        "stemColor": [
+            "y"
+        ],
+        "ringType": [
+            "e"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 3,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 2,
+        "maxStemWidth": 3,
+        "capSurface": [
+            "t"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "t"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Stropharia Family",
+        "name": "Magic Mushroom",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "g",
+            "m"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b"
+        ],
+        "capColor": [
+            "n",
+            "y"
+        ],
+        "gillColor": [
+            "g",
+            "k"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 0,
+        "maxCapDiameter": 1,
+        "minStemHeight": 2,
+        "maxStemHeight": 5,
+        "minStemWidth": 2,
+        "maxStemWidth": 3,
+        "capSurface": [
+            "t"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Cortinarius Family",
+        "name": "Red-banded Cortinarius",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d",
+            "h"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "n"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 6,
+        "maxCapDiameter": 12,
+        "minStemHeight": 6,
+        "maxStemHeight": 15,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "i",
+            "e"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": [
+            "s"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": [
+            "e",
+            "n"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Cortinarius Family",
+        "name": "Purple Cortinarius",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "g",
+            "u",
+            "n"
+        ],
+        "gillColor": [
+            "n",
+            "u"
+        ],
+        "stemColor": [
+            "g",
+            "u",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 12,
+        "minStemHeight": 6,
+        "maxStemHeight": 12,
+        "minStemWidth": 15,
+        "maxStemWidth": 25,
+        "capSurface": null,
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": null,
+        "stemRoot": [
+            "s"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": [
+            "u"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Cortinarius Family",
+        "name": "Blood-red Cortinarius",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "e"
+        ],
+        "gillColor": [
+            "e"
+        ],
+        "stemColor": [
+            "e"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 3,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "i"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": [
+            "n"
+        ]
+    },
+    {
+        "family": "Cortinarius Family",
+        "name": "Red-staining Inocybe",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "c"
+        ],
+        "capColor": [
+            "w",
+            "y"
+        ],
+        "gillColor": [
+            "p",
+            "y",
+            "r"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 8,
+        "minStemHeight": 3,
+        "maxStemHeight": 10,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "k",
+            "e"
+        ],
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Cortinarius Family",
+        "name": "Straw-coloured Inocybe",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "c"
+        ],
+        "capColor": [
+            "y"
+        ],
+        "gillColor": [
+            "n",
+            "r"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 7,
+        "minStemHeight": 5,
+        "maxStemHeight": 8,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "i"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Cortinarius Family",
+        "name": "Common White Inocybe",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "p",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "c",
+            "f"
+        ],
+        "capColor": [
+            "w",
+            "u"
+        ],
+        "gillColor": [
+            "w",
+            "n"
+        ],
+        "stemColor": [
+            "w",
+            "u"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 4,
+        "minStemHeight": 2,
+        "maxStemHeight": 5,
+        "minStemWidth": 3,
+        "maxStemWidth": 4,
+        "capSurface": null,
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "i"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Cortinarius Family",
+        "name": "Poison Pie",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "g",
+            "n"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 10,
+        "minStemHeight": 4,
+        "maxStemHeight": 7,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "s",
+            "t"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "y"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Cortinarius Family",
+        "name": "Dark-centred Hebeloma",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "n",
+            "p"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "z"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 4,
+        "maxStemHeight": 7,
+        "minStemWidth": 5,
+        "maxStemWidth": 12,
+        "capSurface": [
+            "t"
+        ],
+        "gillAttachment": [
+            "s"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": [
+            "n"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Cortinarius Family",
+        "name": "Spectacular Gymnopile",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "y",
+            "o"
+        ],
+        "gillColor": [
+            "o",
+            "y"
+        ],
+        "stemColor": [
+            "o",
+            "y"
+        ],
+        "ringType": [
+            "r"
+        ],
+        "minCapDiameter": 6,
+        "maxCapDiameter": 15,
+        "minStemHeight": 6,
+        "maxStemHeight": 18,
+        "minStemWidth": 15,
+        "maxStemWidth": 30,
+        "capSurface": [
+            "d",
+            "e",
+            "y",
+            "i"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": [
+            "r"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": [
+            "n"
+        ]
+    },
+    {
+        "family": "Cortinarius Family",
+        "name": "Moss Pixy Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "h",
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "n"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 2,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 1,
+        "maxStemWidth": 2,
+        "capSurface": [
+            "h"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "t"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Mushroom Family",
+        "name": "Field Mushroom",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "g",
+            "m"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "p",
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "w"
+        ],
+        "gillColor": [
+            "p",
+            "n",
+            "k"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "e"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 10,
+        "minStemHeight": 3,
+        "maxStemHeight": 7,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "s",
+            "y"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Mushroom Family",
+        "name": "Cultivated Mushroom",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "w"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "f",
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "p",
+            "n"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "l",
+            "r"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 10,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "i",
+            "y"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Mushroom Family",
+        "name": "Horse Mushroom",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": true,
+        "habitat": [
+            "m"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "p",
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "w",
+            "n"
+        ],
+        "gillColor": [
+            "g",
+            "n"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "l",
+            "r"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 20,
+        "minStemHeight": 5,
+        "maxStemHeight": 15,
+        "minStemWidth": 15,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "s"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": null,
+        "stemRoot": [
+            "s"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Mushroom Family",
+        "name": "Yellow-staining Mushroom",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": true,
+        "habitat": [
+            "g",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "w"
+        ],
+        "gillColor": [
+            "w",
+            "g",
+            "p",
+            "n"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "l"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 10,
+        "minStemHeight": 6,
+        "maxStemHeight": 10,
+        "minStemWidth": 10,
+        "maxStemWidth": 18,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": [
+            "s"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Mushroom Family",
+        "name": "Bleeding Brown Mushroom",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": true,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "p",
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "p"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "l",
+            "p"
+        ],
+        "minCapDiameter": 8,
+        "maxCapDiameter": 12,
+        "minStemHeight": 8,
+        "maxStemHeight": 10,
+        "minStemWidth": 15,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "i",
+            "y"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "y"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Ink Cap Family",
+        "name": "Shaggy Ink Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "g",
+            "u",
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "p",
+            "f"
+        ],
+        "capColor": [
+            "w"
+        ],
+        "gillColor": [
+            "k",
+            "p",
+            "w"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "e"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 15,
+        "minStemHeight": 8,
+        "maxStemHeight": 30,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "y",
+            "s"
+        ],
+        "gillAttachment": [
+            "e"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Ink Cap Family",
+        "name": "Common Ink Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "g",
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "p",
+            "b"
+        ],
+        "capColor": [
+            "g",
+            "n"
+        ],
+        "gillColor": [
+            "w",
+            "g",
+            "k"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "z"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 8,
+        "minStemHeight": 5,
+        "maxStemHeight": 15,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "s",
+            "y"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Ink Cap Family",
+        "name": "Magpie Ink Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "p",
+            "b"
+        ],
+        "capColor": [
+            "w",
+            "n"
+        ],
+        "gillColor": [
+            "k",
+            "p"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 6,
+        "maxCapDiameter": 10,
+        "minStemHeight": 10,
+        "maxStemHeight": 20,
+        "minStemWidth": 15,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Ink Cap Family",
+        "name": "Rusty Carpet Ink Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "w",
+            "g",
+            "u"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 4,
+        "maxStemWidth": 5,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": [
+            "s"
+        ],
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Ink Cap Family",
+        "name": "Glistening Ink Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "b"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "k",
+            "n"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 4,
+        "minStemHeight": 5,
+        "maxStemHeight": 8,
+        "minStemWidth": 2,
+        "maxStemWidth": 4,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Ink Cap Family",
+        "name": "Fairies' Bonnets",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "p",
+            "b"
+        ],
+        "capColor": [
+            "w",
+            "g"
+        ],
+        "gillColor": [
+            "g"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 0,
+        "maxCapDiameter": 1,
+        "minStemHeight": 2,
+        "maxStemHeight": 4,
+        "minStemWidth": 1,
+        "maxStemWidth": 2,
+        "capSurface": [
+            "g"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Ink Cap Family",
+        "name": "Fairy Parasol",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "n",
+            "g"
+        ],
+        "gillColor": [
+            "g",
+            "k"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 2,
+        "minStemHeight": 4,
+        "maxStemHeight": 6,
+        "minStemWidth": 2,
+        "maxStemWidth": 3,
+        "capSurface": [
+            "w"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Ink Cap Family",
+        "name": "Common Crumble Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "n",
+            "y",
+            "w"
+        ],
+        "gillColor": [
+            "w",
+            "u",
+            "g",
+            "n"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 6,
+        "minStemHeight": 5,
+        "maxStemHeight": 8,
+        "minStemWidth": 3,
+        "maxStemWidth": 5,
+        "capSurface": null,
+        "gillAttachment": [
+            "x"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Ink Cap Family",
+        "name": "Two-toned Crumble Cap",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "k",
+            "n"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 5,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "h"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": [
+            "k"
+        ]
+    },
+    {
+        "family": "Ink Cap Family",
+        "name": "Hay Cap",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "k",
+            "n"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 2,
+        "minStemHeight": 4,
+        "maxStemHeight": 6,
+        "minStemWidth": 2,
+        "maxStemWidth": 3,
+        "capSurface": null,
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": [
+            "k"
+        ]
+    },
+    {
+        "family": "Ink Cap Family",
+        "name": "Petticoat Fungus",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "b"
+        ],
+        "capColor": [
+            "g",
+            "n",
+            "k"
+        ],
+        "gillColor": [
+            "k",
+            "n"
+        ],
+        "stemColor": [
+            "g",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 4,
+        "minStemHeight": 6,
+        "maxStemHeight": 12,
+        "minStemWidth": 2,
+        "maxStemWidth": 3,
+        "capSurface": null,
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": [
+            "k"
+        ]
+    },
+    {
+        "family": "Ink Cap Family",
+        "name": "Weeping Widow",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "g",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n",
+            "y"
+        ],
+        "gillColor": [
+            "k",
+            "n"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "z"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 10,
+        "minStemHeight": 6,
+        "maxStemHeight": 10,
+        "minStemWidth": 6,
+        "maxStemWidth": 10,
+        "capSurface": [
+            "i"
+        ],
+        "gillAttachment": [
+            "a"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "i"
+        ],
+        "veilType": null,
+        "veilColor": [
+            "k"
+        ],
+        "sporePrintColor": [
+            "k"
+        ]
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Cep",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "p"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "w",
+            "y"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 8,
+        "maxCapDiameter": 30,
+        "minStemHeight": 8,
+        "maxStemHeight": 25,
+        "minStemWidth": 40,
+        "maxStemWidth": 100,
+        "capSurface": [
+            "w",
+            "t"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Bay Bolete",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "y"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 7,
+        "maxCapDiameter": 15,
+        "minStemHeight": 5,
+        "maxStemHeight": 12,
+        "minStemWidth": 20,
+        "maxStemWidth": 25,
+        "capSurface": [
+            "h",
+            "t"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Red-cracked Bolete",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n",
+            "y",
+            "e"
+        ],
+        "gillColor": [
+            "y",
+            "r"
+        ],
+        "stemColor": [
+            "e",
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 10,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "d"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Yellow-cracked Bolete",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n",
+            "y"
+        ],
+        "gillColor": [
+            "y"
+        ],
+        "stemColor": [
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 10,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "d"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Dotted-stemmed Bolete",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "y",
+            "o",
+            "e"
+        ],
+        "stemColor": [
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 8,
+        "maxCapDiameter": 20,
+        "minStemHeight": 6,
+        "maxStemHeight": 12,
+        "minStemWidth": 20,
+        "maxStemWidth": 40,
+        "capSurface": [
+            "e",
+            "k",
+            "s",
+            "h"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": [
+            "c"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Lurid Bolete",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n",
+            "y"
+        ],
+        "gillColor": [
+            "o",
+            "e"
+        ],
+        "stemColor": [
+            "u",
+            "e"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 8,
+        "maxCapDiameter": 14,
+        "minStemHeight": 5,
+        "maxStemHeight": 12,
+        "minStemWidth": 15,
+        "maxStemWidth": 40,
+        "capSurface": [
+            "e"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Parasitic Bolete",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "y",
+            "e",
+            "n"
+        ],
+        "stemColor": [
+            "n",
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 3,
+        "maxStemHeight": 6,
+        "minStemWidth": 8,
+        "maxStemWidth": 12,
+        "capSurface": [
+            "d",
+            "k"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Bitter Bolete",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "p"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "w",
+            "p"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 14,
+        "minStemHeight": 6,
+        "maxStemHeight": 14,
+        "minStemWidth": 20,
+        "maxStemWidth": 40,
+        "capSurface": null,
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": [
+            "c"
+        ],
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": [
+            "p",
+            "w"
+        ]
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Peppery Bolete",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n",
+            "o"
+        ],
+        "gillColor": [
+            "n"
+        ],
+        "stemColor": [
+            "e",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 6,
+        "minStemHeight": 3,
+        "maxStemHeight": 8,
+        "minStemWidth": 8,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "s",
+            "t"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Orange Birch Bolete",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "p",
+            "x"
+        ],
+        "capColor": [
+            "n",
+            "o",
+            "e"
+        ],
+        "gillColor": [
+            "w",
+            "n"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 12,
+        "maxCapDiameter": 25,
+        "minStemHeight": 12,
+        "maxStemHeight": 20,
+        "minStemWidth": 30,
+        "maxStemWidth": 40,
+        "capSurface": [
+            "d"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": [
+            "s"
+        ],
+        "stemSurface": [
+            "y"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Brown Birch Bolete",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "g",
+            "n"
+        ],
+        "gillColor": [
+            "g"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 10,
+        "minStemHeight": 8,
+        "maxStemHeight": 15,
+        "minStemWidth": 20,
+        "maxStemWidth": 30,
+        "capSurface": null,
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "y"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Slippery Jack",
+        "poisonous": false,
+        "doesBruiseOrBleed": true,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "y",
+            "n"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "p"
+        ],
+        "minCapDiameter": 6,
+        "maxCapDiameter": 12,
+        "minStemHeight": 5,
+        "maxStemHeight": 10,
+        "minStemWidth": 15,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "t",
+            "h",
+            "s"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": [
+            "w"
+        ],
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bolete Family",
+        "name": "Shallow-pored Bolete",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "g",
+            "h",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "y"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 4,
+        "maxCapDiameter": 12,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 10,
+        "maxStemWidth": 15,
+        "capSurface": [
+            "h",
+            "t"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": [
+            "d"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "s"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Paxillus Family",
+        "name": "Brown Roll-rim",
+        "poisonous": true,
+        "doesBruiseOrBleed": true,
+        "hasRing": false,
+        "habitat": [
+            "h",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "r",
+            "n"
+        ],
+        "gillColor": [
+            "n"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 7,
+        "maxCapDiameter": 15,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "t"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Paxillus Family",
+        "name": "Velvet Roll-rim",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "y"
+        ],
+        "stemColor": [
+            "k",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 8,
+        "maxCapDiameter": 25,
+        "minStemHeight": 4,
+        "maxStemHeight": 8,
+        "minStemWidth": 20,
+        "maxStemWidth": 50,
+        "capSurface": [
+            "d",
+            "k",
+            "s"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "k"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Paxillus Family",
+        "name": "False Chanterelle",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "h",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "s"
+        ],
+        "capColor": [
+            "o",
+            "y"
+        ],
+        "gillColor": [
+            "o",
+            "y"
+        ],
+        "stemColor": [
+            "o",
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 8,
+        "minStemHeight": 2,
+        "maxStemHeight": 5,
+        "minStemWidth": 5,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "d"
+        ],
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Chanterelle Family",
+        "name": "Chanterelle",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "y"
+        ],
+        "gillColor": [
+            "f"
+        ],
+        "stemColor": [
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 10,
+        "minStemHeight": 2,
+        "maxStemHeight": 8,
+        "minStemWidth": 8,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "w"
+        ],
+        "gillAttachment": [
+            "f"
+        ],
+        "gillSpacing": [
+            "f"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Chanterelle Family",
+        "name": "Tubed Chanterelle",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "s"
+        ],
+        "capColor": [
+            "n",
+            "y"
+        ],
+        "gillColor": [
+            "f"
+        ],
+        "stemColor": [
+            "o",
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 5,
+        "minStemHeight": 5,
+        "maxStemHeight": 8,
+        "minStemWidth": 5,
+        "maxStemWidth": 10,
+        "capSurface": null,
+        "gillAttachment": [
+            "f"
+        ],
+        "gillSpacing": [
+            "f"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Chanterelle Family",
+        "name": "Horn of Plenty",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "s",
+            "o"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "f"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 8,
+        "minStemHeight": 4,
+        "maxStemHeight": 10,
+        "minStemWidth": 20,
+        "maxStemWidth": 80,
+        "capSurface": [
+            "l"
+        ],
+        "gillAttachment": [
+            "f"
+        ],
+        "gillSpacing": [
+            "f"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": [
+            "g"
+        ]
+    },
+    {
+        "family": "Oyster Mushroom Family",
+        "name": "Oyster Mushroom",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "f"
+        ],
+        "capColor": [
+            "l",
+            "g",
+            "b",
+            "w"
+        ],
+        "gillColor": [
+            "w",
+            "y"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 18,
+        "minStemHeight": 2,
+        "maxStemHeight": 3,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": null,
+        "gillAttachment": [
+            "d"
+        ],
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Oyster Mushroom Family",
+        "name": "Branched Oyster Mushroom",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "s",
+            "o"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 12,
+        "minStemHeight": 2,
+        "maxStemHeight": 7,
+        "minStemWidth": 15,
+        "maxStemWidth": 30,
+        "capSurface": null,
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Tricholoma Family",
+        "name": "Olive-brown Panellus",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "o"
+        ],
+        "capColor": [
+            "y",
+            "o",
+            "r",
+            "n"
+        ],
+        "gillColor": [
+            "o",
+            "y"
+        ],
+        "stemColor": [
+            "y",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 12,
+        "minStemHeight": 1,
+        "maxStemHeight": 2,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": [
+            "e",
+            "t",
+            "k"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Crepidotus Family",
+        "name": "Soft Slipper Toadstool",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "o"
+        ],
+        "capColor": [
+            "n",
+            "w"
+        ],
+        "gillColor": [
+            "w"
+        ],
+        "stemColor": [
+            "f"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 7,
+        "minStemHeight": 0,
+        "maxStemHeight": 0,
+        "minStemWidth": 0,
+        "maxStemWidth": 0,
+        "capSurface": [
+            "s",
+            "t"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": [
+            "f"
+        ],
+        "stemSurface": [
+            "f"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": [
+            "n"
+        ]
+    },
+    {
+        "family": "Hydnum Family",
+        "name": "Hedgehog Fungus",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a"
+        ],
+        "capShape": [
+            "f"
+        ],
+        "capColor": [
+            "b"
+        ],
+        "gillColor": [
+            "b"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 6,
+        "maxCapDiameter": 14,
+        "minStemHeight": 4,
+        "maxStemHeight": 6,
+        "minStemWidth": 15,
+        "maxStemWidth": 25,
+        "capSurface": [
+            "e"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": [
+            "c"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Ear-Pick Family",
+        "name": "Ear-pick Fungus",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "x",
+            "o"
+        ],
+        "capColor": [
+            "n"
+        ],
+        "gillColor": [
+            "n"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 2,
+        "minStemHeight": 2,
+        "maxStemHeight": 6,
+        "minStemWidth": 1,
+        "maxStemWidth": 2,
+        "capSurface": [
+            "k"
+        ],
+        "gillAttachment": null,
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bracket Fungi",
+        "name": "Hairy Stereum",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "o"
+        ],
+        "capColor": [
+            "y",
+            "o",
+            "g",
+            "n",
+            "r"
+        ],
+        "gillColor": [
+            "f"
+        ],
+        "stemColor": [
+            "f"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 6,
+        "minStemHeight": 0,
+        "maxStemHeight": 0,
+        "minStemWidth": 0,
+        "maxStemWidth": 0,
+        "capSurface": [
+            "s"
+        ],
+        "gillAttachment": [
+            "f"
+        ],
+        "gillSpacing": [
+            "f"
+        ],
+        "stemRoot": [
+            "f"
+        ],
+        "stemSurface": [
+            "f"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bracket Fungi",
+        "name": "Silver Leaf Fungus",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "u",
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "o"
+        ],
+        "capColor": [
+            "g"
+        ],
+        "gillColor": [
+            "f"
+        ],
+        "stemColor": [
+            "f"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 4,
+        "minStemHeight": 0,
+        "maxStemHeight": 0,
+        "minStemWidth": 0,
+        "maxStemWidth": 0,
+        "capSurface": [
+            "l"
+        ],
+        "gillAttachment": [
+            "f"
+        ],
+        "gillSpacing": [
+            "f"
+        ],
+        "stemRoot": [
+            "f"
+        ],
+        "stemSurface": [
+            "f"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bracket Fungi",
+        "name": "Dryad's Saddle",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "u"
+        ],
+        "capShape": [
+            "o"
+        ],
+        "capColor": [
+            "y"
+        ],
+        "gillColor": [
+            "y"
+        ],
+        "stemColor": [
+            "k",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 50,
+        "maxCapDiameter": 50,
+        "minStemHeight": 3,
+        "maxStemHeight": 10,
+        "minStemWidth": 10,
+        "maxStemWidth": 60,
+        "capSurface": [
+            "y"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "k"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bracket Fungi",
+        "name": "Fuzzy Polypore",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "a",
+            "w"
+        ],
+        "capShape": [
+            "f",
+            "x"
+        ],
+        "capColor": [
+            "o",
+            "e",
+            "n",
+            "k"
+        ],
+        "gillColor": [
+            "y"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 8,
+        "maxCapDiameter": 30,
+        "minStemHeight": 3,
+        "maxStemHeight": 8,
+        "minStemWidth": 20,
+        "maxStemWidth": 60,
+        "capSurface": [
+            "g",
+            "s",
+            "d"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bracket Fungi",
+        "name": "Brown Goblet",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u"
+        ],
+        "capShape": [
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "n",
+            "y"
+        ],
+        "gillColor": [
+            "n"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 7,
+        "minStemHeight": 2,
+        "maxStemHeight": 5,
+        "minStemWidth": 3,
+        "maxStemWidth": 8,
+        "capSurface": [
+            "k"
+        ],
+        "gillAttachment": [
+            "p"
+        ],
+        "gillSpacing": null,
+        "stemRoot": null,
+        "stemSurface": [
+            "k"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Saddle-Cup Family",
+        "name": "White Saddle",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": true,
+        "habitat": [
+            "p",
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "o"
+        ],
+        "capColor": [
+            "w"
+        ],
+        "gillColor": [
+            "f"
+        ],
+        "stemColor": [
+            "w"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 6,
+        "minStemHeight": 4,
+        "maxStemHeight": 7,
+        "minStemWidth": 20,
+        "maxStemWidth": 40,
+        "capSurface": null,
+        "gillAttachment": [
+            "f"
+        ],
+        "gillSpacing": [
+            "f"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "g"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bracket Fungi",
+        "name": "Elfin's Saddle",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "o"
+        ],
+        "capColor": [
+            "g",
+            "k"
+        ],
+        "gillColor": [
+            "f"
+        ],
+        "stemColor": [
+            "g",
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 2,
+        "maxCapDiameter": 4,
+        "minStemHeight": 2,
+        "maxStemHeight": 5,
+        "minStemWidth": 10,
+        "maxStemWidth": 20,
+        "capSurface": null,
+        "gillAttachment": [
+            "f"
+        ],
+        "gillSpacing": [
+            "f"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "g"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Bracket Fungi",
+        "name": "Turban Fungus",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "s",
+            "u"
+        ],
+        "capShape": [
+            "o"
+        ],
+        "capColor": [
+            "n",
+            "e"
+        ],
+        "gillColor": [
+            "f"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 5,
+        "maxCapDiameter": 15,
+        "minStemHeight": 2,
+        "maxStemHeight": 5,
+        "minStemWidth": 20,
+        "maxStemWidth": 30,
+        "capSurface": null,
+        "gillAttachment": [
+            "f"
+        ],
+        "gillSpacing": [
+            "f"
+        ],
+        "stemRoot": null,
+        "stemSurface": [
+            "g"
+        ],
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Morel Family",
+        "name": "Common Morel",
+        "poisonous": false,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "l",
+            "d"
+        ],
+        "season": [
+            "s"
+        ],
+        "capShape": [
+            "p",
+            "c",
+            "o"
+        ],
+        "capColor": [
+            "n",
+            "g"
+        ],
+        "gillColor": [
+            "f"
+        ],
+        "stemColor": [
+            "n"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 3,
+        "maxCapDiameter": 8,
+        "minStemHeight": 3,
+        "maxStemHeight": 8,
+        "minStemWidth": 15,
+        "maxStemWidth": 25,
+        "capSurface": null,
+        "gillAttachment": [
+            "f"
+        ],
+        "gillSpacing": [
+            "f"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    },
+    {
+        "family": "Jelly Discs Family",
+        "name": "Jelly Babies",
+        "poisonous": true,
+        "doesBruiseOrBleed": false,
+        "hasRing": false,
+        "habitat": [
+            "d"
+        ],
+        "season": [
+            "u",
+            "a"
+        ],
+        "capShape": [
+            "x",
+            "f",
+            "s"
+        ],
+        "capColor": [
+            "y"
+        ],
+        "gillColor": [
+            "f"
+        ],
+        "stemColor": [
+            "y"
+        ],
+        "ringType": [
+            "f"
+        ],
+        "minCapDiameter": 1,
+        "maxCapDiameter": 1,
+        "minStemHeight": 2,
+        "maxStemHeight": 5,
+        "minStemWidth": 4,
+        "maxStemWidth": 7,
+        "capSurface": [
+            "s"
+        ],
+        "gillAttachment": [
+            "f"
+        ],
+        "gillSpacing": [
+            "f"
+        ],
+        "stemRoot": null,
+        "stemSurface": null,
+        "veilType": null,
+        "veilColor": null,
+        "sporePrintColor": null
+    }
+]
