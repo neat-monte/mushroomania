@@ -187,7 +187,9 @@ export default {
 
       if (priority == 0) {
         // If already highest priority, change direction of the target
-        // if (target != "seasonValue") // Possibility to exclude season sorting as increasing
+        // if (target != "seasonValue" ) // Possibility to exclude season sorting as increasing, sorting it always as decreasing
+        // Only change direction if we are not changing the season
+        if (index == 0)
           sortDirectionsAreDescreasing[target] = !sortDirectionsAreDescreasing[target];
       } else {
         // If not highest priority, move to the front so it is
