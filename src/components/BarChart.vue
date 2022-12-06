@@ -8,7 +8,7 @@
             :items="categoricalProperties"
             item-title="displayName"
             item-value="propName"
-            label="X-axis"
+            label="X axis"
             density="compact"
             variant="underlined"
         />
@@ -27,7 +27,7 @@ export default {
     setup(props){
 
         const marginForLabel = 20;
-        const margin = { top: 20, right: 20, bottom: 20, left: 20 };
+        const margin = { top: 20, right: 20, bottom: 20, left: 30 };
         const width = 700 - margin.left - margin.right;
         const height = 500 - margin.top - margin.bottom;
 
@@ -73,13 +73,14 @@ export default {
                         return categories[d];
                     });
                 chart.append('g')
-                    .attr("transform", `translate(0, ${height})`)
+                    .attr("transform", `translate(${margin.left}, ${height})`)
                     .call(xAxis);
                 
                 const yAxis = axisLeft(yScale)
                     .tickFormat(d => d)
                     .ticks(10);
                 chart.append('g')
+                    .attr("transform", `translate(${margin.left},0)`)
                     .call(yAxis)
                     ; 
                 
@@ -88,6 +89,7 @@ export default {
                     .enter()
                     .append('rect')
                     .classed('bar', true)
+                    .attr("transform", `translate(${margin.left},0)`)
                     .style('fill', barColor)
                     .attr('width', xScale.bandwidth())
                     .attr('height', d => height - yScale(d.count))
@@ -99,6 +101,7 @@ export default {
                     .enter()
                     .append('text')
                     .classed('label', true)
+                    .attr("transform", `translate(${margin.left},0)`)
                     .style('fill', labelColor)
                     .text( d => d.count)
                     .attr('x', d => xScale(d.propName) + (xScale.bandwidth() / 2))
@@ -106,6 +109,7 @@ export default {
                     .attr('text-anchor', 'middle');
             });
 
+            
         });
         return {
             xAxisLabel, 
