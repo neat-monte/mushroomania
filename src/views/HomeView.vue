@@ -1,8 +1,8 @@
 <template>
-  <ScatterPlot :data="data" />
+  <BarChart :data="data" />
 </template>
 
 <script setup>
-import ScatterPlot from "../components/ScatterPlot.vue";
+import BarChart from "../components/BarChart.vue";
 import data from "../data/mushroom-data.json";
 </script>
