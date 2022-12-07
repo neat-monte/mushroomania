@@ -1,10 +1,34 @@
 <template>
-  <ScatterPlot :data="data" />
-  <SeasonTable :data="data" :style="{width: '50vw', height: '50vh'}"/>
+  <v-layout full-height>
+    <v-container class="pa-0">
+      <v-row no-gutters>
+        <v-col>
+          <v-sheet class="d-flex flex-column" min-height="50vh">
+            <ScatterPlot />
+          </v-sheet>
+        </v-col>
+
+        <v-col>
+          <v-sheet min-height="50vh">Mushroom info</v-sheet>
+        </v-col>
+
+        <v-responsive width="100%"></v-responsive>
+
+        <v-col>
+          <v-sheet min-height="50vh">Bar chart</v-sheet>
+        </v-col>
+
+        <v-col>
+          <v-sheet min-height="50vh">
+            <SeasonTable />
+          </v-sheet>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-layout>
 </template>
 
 <script setup>
-import SeasonTable from "../components/SeasonTable.vue";
-import ScatterPlot from "../components/ScatterPlot.vue";
-import data from "../data/mushroom-data.json";
+import ScatterPlot from "@/components/ScatterPlot.vue";
+import SeasonTable from "@/components/SeasonTable.vue";
 </script>
