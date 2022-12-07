@@ -8,6 +8,12 @@ export const numericalProperties = [
 ];
 
 export const categoricalProperties = [
+  {displayName: "Ediblity", propName: "poisonous", values: 
+    {true: "Edible", false: "Non-edible"}},
+  {displayName: "Damage", propName: "doesBruiseOrBleed", values: 
+    {true: "Visbile", false: "Invisible"}},
+  {displayName: "Ring", propName: "hasRing", values: 
+    {true: "One or more", false: "No ring"}},
   {displayName: "Habitat", propName: "habitat", values: 
     {g:"Grasses",l:"Leaves",m:"Meadows",p:"Paths",h:"Heaths",u:"Urban"
     ,w:"Waste",d:"Woods"}},

@@ -40,7 +40,14 @@ onMounted(() => {
             return { propName: keys, count: 0 };
         })
         mushroomStore.data.forEach(mushroomEntry => {
-            mushroomEntry[xAxisLabel.value].forEach(abbrv => {
+            let attribute = mushroomEntry[xAxisLabel.value];
+
+            if (!Array.isArray(attribute)) {
+                speciesCount[attribute ? 0 : 1].count++;
+                return;
+            }
+
+            attribute.forEach(abbrv => {
                 speciesCount[categoryAbbrv.indexOf(abbrv)].count++;
             });
         });
