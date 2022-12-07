@@ -63,11 +63,6 @@ onMounted(() => {
       });
     });
 
-    console.log(categories);
-    console.log(categoryMap);
-    console.log(categoryMapKeys);
-    console.log(counts);
-
     const { width, height } = resizeState.dimensions;
 
     const chart = svg
@@ -128,7 +123,6 @@ onMounted(() => {
       .attr("x", (d) => xScale(d.value) + xScale.bandwidth() / 2)
       .attr("y", (d) => yScale(d.count) - marginForLabel / 2)
       .attr("text-anchor", "middle");
-    console.log("OK");
   });
 });
 </script>
