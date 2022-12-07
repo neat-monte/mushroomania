@@ -1,113 +1,99 @@
 <template>
-  <div id="scatter-plot">
-    <svg ref="svgRef">
-      <g class="x-axis" />
-      <g class="y-axis" />
-    </svg>
-  </div>
-  <div class="d-flex">
-    <v-select
-      v-model="xAxisValue"
-      :items="numericalProperties"
-      item-title="displayName"
-      item-value="propName"
-      label="X-axis"
-      density="compact"
-      variant="underlined"
-    />
-    <v-select
-      v-model="yAxisValue"
-      :items="numericalProperties"
-      item-title="displayName"
-      item-value="propName"
-      label="Y-axis"
-      density="compact"
-      variant="underlined"
-    />
+  <div id="scatter-plot" class="d-flex flex-column pa-4">
+    <div ref="resizeRef" class="flex-grow-1">
+      <svg ref="svgRef" class="position-absolute"></svg>
+    </div>
+    <div class="d-flex mx-4 my-2">
+      <v-select
+        v-model="xAxisValue"
+        :items="numericalProperties"
+        item-title="name"
+        item-value="prop"
+        label="X-axis"
+        density="compact"
+        variant="underlined"
+      />
+      <v-spacer />
+      <v-select
+        v-model="yAxisValue"
+        :items="numericalProperties"
+        item-title="name"
+        item-value="prop"
+        label="Y-axis"
+        density="compact"
+        variant="underlined"
+      />
+    </div>
   </div>
 </template>
 
-<script>
+<script setup>
 import { onMounted, ref, watchEffect } from "vue";
-import {
-  select,
-  line,
-  scaleLinear,
-  min,
-  max,
-  curveBasis,
-  axisBottom,
-  axisLeft,
-} from "d3";
+import { select, scaleLinear, min, max, axisBottom, axisLeft } from "d3";
 
-import { numericalProperties } from "../utils/controls";
+import useMushroomStore from "@/stores/mushrooms";
+import { numericalProperties } from "@/utils/controls";
+import useResizeObserver from "@/utils/resizeObserver";
 
-export default {
-  name: "ScatterPlot",
-  props: ["data"],
-  setup(props) {
-    const svgRef = ref(null);
+const mushroomStore = useMushroomStore();
 
-    const xAxisValue = ref(numericalProperties[1].propName);
-    const yAxisValue = ref(numericalProperties[3].propName);
+const svgRef = ref(null);
+const xAxisValue = ref(numericalProperties[1].prop);
+const yAxisValue = ref(numericalProperties[3].prop);
 
-    const margin = { top: 30, right: 30, bottom: 30, left: 30 };
-    const width = 460 - margin.left - margin.right;
-    const height = 400 - margin.top - margin.bottom;
+const { resizeRef, resizeState } = useResizeObserver();
 
-    onMounted(() => {
-      const svg = select(svgRef.value)
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+onMounted(() => {
+  const svg = select(svgRef.value);
+  const margin = { top: 5, right: 10, bottom: 26, left: 26 };
 
-      watchEffect(() => {
-        svg.selectAll("*").remove();
+  watchEffect(() => {
+    svg.selectAll("*").remove();
 
-        const xScale = scaleLinear()
-          .domain([
-            min(props.data, (d) => d[xAxisValue.value]) - 1,
-            max(props.data, (d) => d[xAxisValue.value]) + 1,
-          ])
-          .range([0, width]);
+    const { width, height } = resizeState.dimensions;
 
-        const yScale = scaleLinear()
-          .domain([
-            min(props.data, (d) => d[yAxisValue.value]) - 1,
-            max(props.data, (d) => d[yAxisValue.value]) + 1,
-          ])
-          .range([height, 0]);
+    const field = svg
+      .attr("width", Math.floor(width))
+      .attr("height", Math.floor(height))
+      .append("g")
+      .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-        const xAxis = axisBottom(xScale);
-        svg
-          .append("g")
-          .attr("transform", `translate(0, ${height})`)
-          .call(xAxis);
+    const f_width = Math.floor(width) - margin.left - margin.right;
+    const f_height = Math.floor(height) - margin.top - margin.bottom;
 
-        const yAxis = axisLeft(yScale);
-        svg.append("g").call(yAxis);
+    const xMin = min(mushroomStore.data, (d) => d[xAxisValue.value]);
+    const xMax = max(mushroomStore.data, (d) => d[xAxisValue.value]);
 
-        svg
-          .append("g")
-          .selectAll("dot")
-          .data(props.data)
-          .enter()
-          .append("circle")
-          .attr("cx", (d) => xScale(d[xAxisValue.value]))
-          .attr("cy", (d) => yScale(d[yAxisValue.value]))
-          .attr("r", 3)
-          .style("fill", "red")
-          .style("fill-opacity", 0.2);
-      });
-    });
+    const xScale = scaleLinear()
+      .domain([xMin - 1 <= 0 ? 0 : xMin - 1, xMax + 1])
+      .range([0, f_width]);
 
-    return {
-      svgRef,
-      xAxisValue,
-      yAxisValue,
-      numericalProperties,
-    };
-  },
-};
+    const yMin = min(mushroomStore.data, (d) => d[yAxisValue.value]);
+    const yMax = max(mushroomStore.data, (d) => d[yAxisValue.value]);
+
+    const yScale = scaleLinear()
+      .domain([yMin - 1 <= 0 ? 0 : yMin - 1, yMax + 1])
+      .range([f_height, 0]);
+
+    const xAxis = axisBottom(xScale).tickSizeOuter(0);
+    field
+      .append("g")
+      .attr("transform", `translate(0, ${f_height})`)
+      .call(xAxis);
+
+    const yAxis = axisLeft(yScale).tickSizeOuter(0);
+    field.append("g").call(yAxis);
+
+    field
+      .append("g")
+      .selectAll("dot")
+      .data(mushroomStore.data)
+      .enter()
+      .append("circle")
+      .attr("cx", (d) => xScale(d[xAxisValue.value]))
+      .attr("cy", (d) => yScale(d[yAxisValue.value]))
+      .attr("r", 3)
+      .style("fill-opacity", 0.3);
+  });
+});
 </script>

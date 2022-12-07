@@ -1,13 +1,13 @@
-const numericalProperties = [
-  { id: 0, displayName: "Min. Cap Diameter", propName: "minCapDiameter" },
-  { id: 1, displayName: "Max. Cap Diameter", propName: "maxCapDiameter" },
-  { id: 2, displayName: "Min. Stem Height", propName: "minStemHeight" },
-  { id: 3, displayName: "Max. Stem Height", propName: "maxStemHeight" },
-  { id: 4, displayName: "Min. Stem Width", propName: "minStemWidth" },
-  { id: 5, displayName: "Max. Stem Width", propName: "maxStemWidth" },
+export const numericalProperties = [
+  { name: "Min. Cap Diameter", prop: "minCapDiameter" },
+  { name: "Max. Cap Diameter", prop: "maxCapDiameter" },
+  { name: "Min. Stem Height", prop: "minStemHeight" },
+  { name: "Max. Stem Height", prop: "maxStemHeight" },
+  { name: "Min. Stem Width", prop: "minStemWidth" },
+  { name: "Max. Stem Width", prop: "maxStemWidth" },
 ];
 
-const categoricalProperties = [
+export const categoricalProperties = [
   {displayName: "Habitat", propName: "habitat", values: 
     {g:"Grasses",l:"Leaves",m:"Meadows",p:"Paths",h:"Heaths",u:"Urban"
     ,w:"Waste",d:"Woods"}},
@@ -28,4 +28,80 @@ const categoricalProperties = [
     {c:"Cobwebby",e:"Evanescent",r:"Flaring",g:"Grooved",l:"Large",p:"Pendant",s:"Sheathing"
     ,z:"Zone",y:"Scaly",m:"Movable",f:"None",'?':"Unknown"}},
 ];
-export { numericalProperties, categoricalProperties };
+
+const edibilityFilterOptions = {
+  edibility: [
+    { name: "All", value: -1 },
+    { name: "Edible", value: 1 },
+    { name: "Poisonous", value: 0 },
+  ],
+};
+
+const occurrenceFilterOptions = {
+  seasons: [
+    { name: "Spring", value: "s" },
+    { name: "Summer", value: "u" },
+    { name: "Autumn", value: "a" },
+    { name: "Winter", value: "w" },
+  ],
+  habitats: [
+    { name: "Grasses", value: "g" },
+    { name: "Leaves", value: "l" },
+    { name: "Meadows", value: "m" },
+    { name: "Paths", value: "p" },
+    { name: "Heaths", value: "h" },
+    { name: "Urban", value: "u" },
+    { name: "Waste", value: "w" },
+    { name: "Woods", value: "d" },
+  ],
+};
+
+const capFilterOptions = {
+  shape: [
+    { name: "Bell", value: "b" },
+    { name: "Conical", value: "c" },
+    { name: "Convex", value: "x" },
+    { name: "Flat", value: "f" },
+    { name: "Sunken", value: "s" },
+    { name: "Spherical", value: "p" },
+    { name: "Others", value: "o" },
+  ],
+  surface: [
+    { name: "Fibrous", value: "i" },
+    { name: "Grooves", value: "g" },
+    { name: "Scaly", value: "y" },
+    { name: "Smooth", value: "s" },
+    { name: "Shiny", value: "h" },
+    { name: "Leathery", value: "l" },
+    { name: "Silky", value: "k" },
+    { name: "Sticky", value: "t" },
+    { name: "Wrinkled", value: "w" },
+    { name: "Fleshy", value: "e" },
+  ],
+  color: [
+    { name: "Brown", value: "n" },
+    { name: "Buff", value: "b" },
+    { name: "Gray", value: "g" },
+    { name: "Green", value: "r" },
+    { name: "Pink", value: "p" },
+    { name: "Purple", value: "u" },
+    { name: "Red", value: "e" },
+    { name: "White", value: "w" },
+    { name: "Yellow", value: "y" },
+    { name: "Blue", value: "l" },
+    { name: "Orange", value: "o" },
+    { name: "Black", value: "k" },
+  ],
+};
+
+export const filterOptions = {
+  edibility: edibilityFilterOptions,
+  occurrence: occurrenceFilterOptions,
+  cap: capFilterOptions,
+};
+
+export default {
+  numericalProperties,
+  categoricalProperties,
+  filterOptions,
+};
