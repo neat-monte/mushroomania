@@ -19,7 +19,9 @@
         </v-col>
 
         <v-col>
-          <v-sheet min-height="50vh">Table</v-sheet>
+          <v-sheet min-height="50vh">
+            <SeasonTable />
+          </v-sheet>
         </v-col>
       </v-row>
     </v-container>
@@ -28,4 +30,5 @@
 
 <script setup>
 import ScatterPlot from "@/components/ScatterPlot.vue";
+import SeasonTable from "@/components/SeasonTable.vue";
 </script>
