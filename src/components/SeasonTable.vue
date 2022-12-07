@@ -1,10 +1,9 @@
 <template>
-  <v-table
+  <v-table id="season-table"
     fixed-header
     height="100%"
-    density="compact"
   >
-    <thead id="table-header">
+    <thead class="table-header" color="blue-grey-lighten-3">
       <tr>
         <th class="text-left family" @click="onSort(0, 'family')"
             :priority="sortPriority.indexOf('family')"
@@ -32,7 +31,7 @@
         </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="table-body">
       <tr
         v-for="item in sortedData"
         :key="item.name"
@@ -178,65 +177,78 @@ $winter-spring: #BBD9CD
 $startperc:     10%
 $endperc:       90%
 
-.family
-  width: 18em
-.name
-  width: 18em
 
-td
-  &.season
-    &[available=true]
-      margin: 0
-      padding: 0
+#season-table
+  --v-theme-surface: transparent
+  height: 100%
 
+  .family
+    width: 18em
+  .name
+    width: 18em
+  th
+    background: #CFD8DC
+
+    &[priority]
+      padding-right: 10px
+
+    &.arrow
+      content: ' '
+      position: relative
+      left: 2px
+      border: 5px solid transparent
+
+    &[priority="0"]
+      --arrow-color: black
+    &[priority="1"]
+      --arrow-color: grey
+    &[priority="2"]
+      --arrow-color: silver
+
+    &[direction="up"]:after
+      @extend .arrow
+      bottom: 15px
+      border-bottom-color: var(--arrow-color)
+    
+    &[direction="down"]:after
+      @extend .arrow
+      top: 10px
+      border-top-color: var(--arrow-color)
+
+  td
+    &.season
+      &[available=true]
+        margin: 0
+        padding: 0
+
+        // &:before
+        //   content: ""
+        //   display: block
+        //   width: 100%
+        //   height: 20%.
+        //   // box-shadow: 0 -2px 5px white
+        //   // position: static
+
+        &:after
+          content: ""
+          display: block
+          width: 100%
+          height: 1.1rem
+
+    &.spring
+      @extend .season
       &:after
-        content: ""
-        display: block
-        width: 100%
-        height: 60%
-  &.spring
-    @extend .season
-    &:after
-      background: linear-gradient(0.25turn, $winter-spring, $startperc, $spring, $endperc, $spring-summer)
-  &.summer
-    @extend .season
-    &:after
-      background: linear-gradient(0.25turn, $spring-summer, $startperc, $summer, $endperc, $summer-autumn)
-  &.autumn
-    @extend .season
-    &:after
-      background: linear-gradient(0.25turn, $summer-autumn, $startperc, $autumn, $endperc, $autumn-winter)
-  &.winter
-    @extend .season
-    &:after
-      background: linear-gradient(0.25turn, $autumn-winter, $startperc, $winter, $endperc, $winter-spring)
-
-
-
-th 
-  &[priority]
-    padding-right: 10px
-
-  &.arrow
-    content: ' '
-    position: relative
-    left: 2px
-    border: 8px solid transparent
-
-  &[priority="0"]
-    --arrow-color: black
-  &[priority="1"]
-    --arrow-color: grey
-  &[priority="2"]
-    --arrow-color: silver
-
-  &[direction="up"]:after
-    @extend .arrow
-    bottom: 15px
-    border-bottom-color: var(--arrow-color)
-   
-  &[direction="down"]:after
-    @extend .arrow
-    top: 10px
-    border-top-color: var(--arrow-color)
+        background: linear-gradient(0.25turn, $winter-spring, $startperc, $spring, $endperc, $spring-summer)
+    &.summer
+      @extend .season
+      &:after
+        background: linear-gradient(0.25turn, $spring-summer, $startperc, $summer, $endperc, $summer-autumn)
+    &.autumn
+      @extend .season
+      &:after
+        background: linear-gradient(0.25turn, $summer-autumn, $startperc, $autumn, $endperc, $autumn-winter)
+    &.winter
+      @extend .season
+      &:after
+        background: linear-gradient(0.25turn, $autumn-winter, $startperc, $winter, $endperc, $winter-spring)
 </style>

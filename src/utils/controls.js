@@ -7,6 +7,28 @@ export const numericalProperties = [
   { name: "Max. Stem Width", prop: "maxStemWidth" },
 ];
 
+export const categoricalProperties = [
+  {displayName: "Habitat", propName: "habitat", values: 
+    {g:"Grasses",l:"Leaves",m:"Meadows",p:"Paths",h:"Heaths",u:"Urban"
+    ,w:"Waste",d:"Woods"}},
+  {displayName: "Season", propName: "season", values: 
+    {s:"Spring",u:"Summer",a:"Autumn",w:"Winter"}},
+  {displayName: "Cap Shape", propName: "capShape", values: 
+    {b:"Bell",c:"Conical",x:"Convex",f:"Flat",s:"Sunken",p:"Spherical",o:"Others"}},
+  {displayName: "Cap Color", propName: "capColor", values:
+    {n:"Brown", b:"Buff", g:"Gray",r:"Green",p:"Pink",u:"Purple",e:"Red",w:"White"
+    ,y:"Yellow",l:"Blue",o:"Orange",k:"Black"}},
+  {displayName: "Gill Color", propName: "gillColor", values:
+    {n:"Brown", b:"Buff", g:"Gray",r:"Green",p:"Pink",u:"Purple",e:"Red",w:"White"
+    ,y:"Yellow",l:"Blue",o:"Orange",k:"Black",f:"None"}},
+  {displayName: "Stem Color", propName: "stemColor", values:
+    {n:"Brown", b:"Buff", g:"Gray",r:"Green",p:"Pink",u:"Purple",e:"Red",w:"White"
+    ,y:"Yellow",l:"Blue",o:"Orange",k:"Black",f:"None"}},
+  {displayName: "Ring Type", propName: "ringType", values:
+    {c:"Cobwebby",e:"Evanescent",r:"Flaring",g:"Grooved",l:"Large",p:"Pendant",s:"Sheathing"
+    ,z:"Zone",y:"Scaly",m:"Movable",f:"None",'?':"Unknown"}},
+];
+
 const edibilityFilterOptions = {
   edibility: [
     { name: "All", value: -1 },
@@ -57,18 +79,18 @@ const capFilterOptions = {
     { name: "Fleshy", value: "e" },
   ],
   color: [
-    { name: "brown", value: "n" },
-    { name: "buff", value: "b" },
-    { name: "gray", value: "g" },
-    { name: "green", value: "r" },
-    { name: "pink", value: "p" },
-    { name: "purple", value: "u" },
-    { name: "red", value: "e" },
-    { name: "white", value: "w" },
-    { name: "yellow", value: "y" },
-    { name: "blue", value: "l" },
-    { name: "orange", value: "o" },
-    { name: "black", value: "k" },
+    { name: "Brown", value: "n" },
+    { name: "Buff", value: "b" },
+    { name: "Gray", value: "g" },
+    { name: "Green", value: "r" },
+    { name: "Pink", value: "p" },
+    { name: "Purple", value: "u" },
+    { name: "Red", value: "e" },
+    { name: "White", value: "w" },
+    { name: "Yellow", value: "y" },
+    { name: "Blue", value: "l" },
+    { name: "Orange", value: "o" },
+    { name: "Black", value: "k" },
   ],
 };
 
@@ -80,5 +102,6 @@ export const filterOptions = {
 
 export default {
   numericalProperties,
+  categoricalProperties,
   filterOptions,
 };

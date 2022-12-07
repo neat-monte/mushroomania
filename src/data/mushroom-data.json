@@ -1354,7 +1354,8 @@
             "b"
         ],
         "capColor": [
-            "n ,w"
+            "n",
+            "w"
         ],
         "gillColor": [
             "w"
@@ -3168,7 +3169,7 @@
         ],
         "stemColor": [
             "g",
-            " w"
+            "w"
         ],
         "ringType": [
             "f"

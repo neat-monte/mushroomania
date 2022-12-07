@@ -1,27 +1,29 @@
 <template>
-  <div ref="resizeRef" class="flex-grow-1">
-    <svg ref="svgRef"></svg>
-  </div>
-  <div class="d-flex mx-4 my-2">
-    <v-select
-      v-model="xAxisValue"
-      :items="numericalProperties"
-      item-title="name"
-      item-value="prop"
-      label="X-axis"
-      density="compact"
-      variant="underlined"
-    />
-    <v-spacer />
-    <v-select
-      v-model="yAxisValue"
-      :items="numericalProperties"
-      item-title="name"
-      item-value="prop"
-      label="Y-axis"
-      density="compact"
-      variant="underlined"
-    />
+  <div id="scatter-plot" class="d-flex flex-column pa-4">
+    <div ref="resizeRef" class="flex-grow-1">
+      <svg ref="svgRef" class="position-absolute"></svg>
+    </div>
+    <div class="d-flex mx-4 my-2">
+      <v-select
+        v-model="xAxisValue"
+        :items="numericalProperties"
+        item-title="name"
+        item-value="prop"
+        label="X-axis"
+        density="compact"
+        variant="underlined"
+      />
+      <v-spacer />
+      <v-select
+        v-model="yAxisValue"
+        :items="numericalProperties"
+        item-title="name"
+        item-value="prop"
+        label="Y-axis"
+        density="compact"
+        variant="underlined"
+      />
+    </div>
   </div>
 </template>
 
@@ -44,7 +46,6 @@ const { resizeRef, resizeState } = useResizeObserver();
 onMounted(() => {
   const svg = select(svgRef.value);
   const margin = { top: 5, right: 10, bottom: 26, left: 26 };
-  const marginOfError = 10;
 
   watchEffect(() => {
     svg.selectAll("*").remove();
@@ -53,7 +54,7 @@ onMounted(() => {
 
     const field = svg
       .attr("width", Math.floor(width))
-      .attr("height", Math.floor(height) - marginOfError)
+      .attr("height", Math.floor(height))
       .append("g")
       .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
