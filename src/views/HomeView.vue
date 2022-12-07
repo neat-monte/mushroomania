@@ -1,16 +1,16 @@
 <template>
-    <div class="grid-layout pa-0 ma-0">
-      <ScatterPlot />
-      <div>Mushroom info</div>
-      <BarChart />
-      <SeasonTable />
-    </div>
+  <div class="grid-layout pa-0 ma-0">
+    <ScatterPlot />
+    <div>Mushroom info</div>
+    <BarChart />
+    <SeasonTable />
+  </div>
 </template>
 
 <script setup>
 import ScatterPlot from "@/components/ScatterPlot.vue";
 import SeasonTable from "@/components/SeasonTable.vue";
-import BarChart from "../components/BarChart.vue";
+import BarChart from "@/components/BarChart.vue";
 </script>
 
 <style lang="sass">

@@ -5,8 +5,8 @@
     </div>
     <div class="d-flex mx-4 my-2">
       <v-select
-        v-model="xAxisValue"
-        :items="numericalProperties"
+        v-model="xAxisLabel"
+        :items="dataProperties.numerical"
         item-title="name"
         item-value="prop"
         label="X-axis"
@@ -15,8 +15,8 @@
       />
       <v-spacer />
       <v-select
-        v-model="yAxisValue"
-        :items="numericalProperties"
+        v-model="yAxisLabel"
+        :items="dataProperties.numerical"
         item-title="name"
         item-value="prop"
         label="Y-axis"
@@ -32,14 +32,14 @@ import { onMounted, ref, watchEffect } from "vue";
 import { select, scaleLinear, min, max, axisBottom, axisLeft } from "d3";
 
 import useMushroomStore from "@/stores/mushrooms";
-import { numericalProperties } from "@/utils/controls";
+import dataProperties from "@/data/dataProperties";
 import useResizeObserver from "@/utils/resizeObserver";
 
 const mushroomStore = useMushroomStore();
 
 const svgRef = ref(null);
-const xAxisValue = ref(numericalProperties[1].prop);
-const yAxisValue = ref(numericalProperties[3].prop);
+const xAxisLabel = ref(dataProperties.numerical[1].prop);
+const yAxisLabel = ref(dataProperties.numerical[3].prop);
 
 const { resizeRef, resizeState } = useResizeObserver();
 
@@ -58,27 +58,27 @@ onMounted(() => {
       .append("g")
       .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-    const f_width = Math.floor(width) - margin.left - margin.right;
-    const f_height = Math.floor(height) - margin.top - margin.bottom;
+    const fieldWidth = Math.floor(width) - margin.left - margin.right;
+    const fieldHeight = Math.floor(height) - margin.top - margin.bottom;
 
-    const xMin = min(mushroomStore.data, (d) => d[xAxisValue.value]);
-    const xMax = max(mushroomStore.data, (d) => d[xAxisValue.value]);
+    const xMin = min(mushroomStore.data, (d) => d[xAxisLabel.value]);
+    const xMax = max(mushroomStore.data, (d) => d[xAxisLabel.value]);
 
     const xScale = scaleLinear()
       .domain([xMin - 1 <= 0 ? 0 : xMin - 1, xMax + 1])
-      .range([0, f_width]);
+      .range([0, fieldWidth]);
 
-    const yMin = min(mushroomStore.data, (d) => d[yAxisValue.value]);
-    const yMax = max(mushroomStore.data, (d) => d[yAxisValue.value]);
+    const yMin = min(mushroomStore.data, (d) => d[yAxisLabel.value]);
+    const yMax = max(mushroomStore.data, (d) => d[yAxisLabel.value]);
 
     const yScale = scaleLinear()
       .domain([yMin - 1 <= 0 ? 0 : yMin - 1, yMax + 1])
-      .range([f_height, 0]);
+      .range([fieldHeight, 0]);
 
     const xAxis = axisBottom(xScale).tickSizeOuter(0);
     field
       .append("g")
-      .attr("transform", `translate(0, ${f_height})`)
+      .attr("transform", `translate(0, ${fieldHeight})`)
       .call(xAxis);
 
     const yAxis = axisLeft(yScale).tickSizeOuter(0);
@@ -90,8 +90,8 @@ onMounted(() => {
       .data(mushroomStore.data)
       .enter()
       .append("circle")
-      .attr("cx", (d) => xScale(d[xAxisValue.value]))
-      .attr("cy", (d) => yScale(d[yAxisValue.value]))
+      .attr("cx", (d) => xScale(d[xAxisLabel.value]))
+      .attr("cy", (d) => yScale(d[yAxisLabel.value]))
       .attr("r", 3)
       .style("fill-opacity", 0.3);
   });

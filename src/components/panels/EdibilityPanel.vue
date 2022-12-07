@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import { filterOptions } from "@/utils/controls";
+import filterOptions from "@/data/filterOptions";
 import useMushroomStore from "@/stores/mushrooms";
 
 const mushroomStore = useMushroomStore();
