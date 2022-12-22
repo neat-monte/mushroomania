@@ -16,6 +16,7 @@
       </v-btn>
     </div>
     <v-expansion-panels multiple>
+      <SearchPanel />
       <EdibilityPanel />
       <OccurrencePanel />
       <CapPanel />
@@ -25,6 +26,7 @@
 </template>
 
 <script setup>
+import SearchPanel from "@/components/panels/SearchPanel.vue";
 import EdibilityPanel from "@/components/panels/EdibilityPanel.vue";
 import OccurrencePanel from "@/components/panels/OccurrencePanel.vue";
 import CapPanel from "@/components/panels/CapPanel.vue";
