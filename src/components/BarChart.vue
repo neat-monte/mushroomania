@@ -1,5 +1,5 @@
 <template>
-  <div id="bar-chart" class="d-flex flex-column pa-4">
+  <div id="bar-chart" class="d-flex flex-column">
     <div ref="resizeRef" class="flex-grow-1">
       <svg ref="svgRef" class="position-absolute"></svg>
     </div>

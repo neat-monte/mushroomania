@@ -1,5 +1,5 @@
 <template>
-  <div id="scatter-plot" class="d-flex flex-column pa-4">
+  <div id="scatter-plot" class="d-flex flex-column">
     <div ref="resizeRef" class="flex-grow-1">
       <svg ref="svgRef" class="position-absolute"></svg>
     </div>
@@ -90,10 +90,28 @@ onMounted(() => {
       .data(mushroomStore.data)
       .enter()
       .append("circle")
+      .on("click", (e, d) => {
+        selectMushroom(e);
+        mushroomStore.selectMushroom(d);
+      })
       .attr("cx", (d) => xScale(d[xAxisLabel.value]))
       .attr("cy", (d) => yScale(d[yAxisLabel.value]))
-      .attr("r", 3)
+      .attr("r", 5)
       .style("fill-opacity", 0.3);
+
+    const selectMushroom = (event) => {
+      field.selectAll("circle").classed("selected", false);
+      select(event.currentTarget).classed("selected", true);
+    };
   });
 });
 </script>
+
+<style lang="sass">
+circle
+  &.selected
+    fill: red
+    stroke: #646464
+    stroke-width: 2px
+    stroke-linejoin: round
+</style>

@@ -4,7 +4,7 @@ import { defineStore } from "pinia";
 import mushroomData from "@/data/mushroom-data.json";
 import filterOptions from "@/data/filterOptions";
 
-const defaultOptions = {
+const defaultFilters = {
   search: {
     family: null,
     name: null,
@@ -20,7 +20,6 @@ const defaultOptions = {
   },
   cap: {
     shape: filterOptions.cap.shape.map((s) => s.value),
-    // surface: filterOptions.cap.surface.map((s) => s.value),
     color: filterOptions.cap.color.map((c) => c.value),
     gillColor: filterOptions.cap.gillColor.map((gc) => gc.value),
   },
@@ -34,7 +33,12 @@ const defaultOptions = {
 export const useMushroomStore = defineStore("mushrooms", () => {
   const families = [...new Set(mushroomData.map((m) => m.family))];
   const names = mushroomData.map((m) => m.name);
-  const filters = reactive(structuredClone(defaultOptions));
+  const filters = reactive(structuredClone(defaultFilters));
+
+  const selectedMushroom = reactive({});
+  const mushroomProps = () => {
+    
+  };
 
   const data = computed(() => {
     let data = mushroomData;
@@ -67,16 +71,27 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     return data;
   });
 
+  const selectMushroom = (mushroom) => {
+    Object.assign(selectedMushroom, structuredClone(mushroom));
+  };
+
+  const isMushroomSelected = () => {
+    return Object.keys(selectedMushroom).length > 0;
+  };
+
   const resetToDefault = () => {
-    Object.assign(filters, structuredClone(defaultOptions));
+    Object.assign(filters, structuredClone(defaultFilters));
   };
 
   return {
     families,
     names,
     filterOptions: filters,
-    data,
     resetToDefault,
+    data,
+    selectedMushroom,
+    selectMushroom,
+    isMushroomSelected,
   };
 });
 
