@@ -1,32 +1,36 @@
 <template>
-  <div>
-    <v-btn
-      @click="mushroomStore.resetToDefault"
-      size="x-small"
-      variant="flat"
-      color="blue-grey-lighten-4"
-      prepend-icon="mdi-reload"
-      class="mb-4"
-    >
-      Reset to defaults
-    </v-btn>
+  <div id="filter-panels">
+    <div class="mb-4">
+      <div class="font-italic text-caption ml-1 mb-2">
+        Mushrooms found: {{ mushroomStore.data.length }}
+      </div>
+      <v-btn
+        @click="mushroomStore.resetToDefault"
+        size="x-small"
+        variant="flat"
+        color="blue-grey-lighten-4"
+        prepend-icon="mdi-reload"
+        class="mb-2"
+      >
+        Reset to defaults
+      </v-btn>
+    </div>
     <v-expansion-panels multiple>
+      <SearchPanel />
       <EdibilityPanel />
       <OccurrencePanel />
       <CapPanel />
+      <StemPanel />
     </v-expansion-panels>
-  </div>
-  <div class="mt-auto">
-    <div class="font-italic text-caption">
-      Total records: {{ mushroomStore.data.length }}
-    </div>
   </div>
 </template>
 
 <script setup>
+import SearchPanel from "@/components/panels/SearchPanel.vue";
 import EdibilityPanel from "@/components/panels/EdibilityPanel.vue";
 import OccurrencePanel from "@/components/panels/OccurrencePanel.vue";
 import CapPanel from "@/components/panels/CapPanel.vue";
+import StemPanel from "@/components/panels/StemPanel.vue";
 
 import useMushroomStore from "@/stores/mushrooms";
 

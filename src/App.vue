@@ -6,7 +6,7 @@
         <FilterPanels />
       </v-container>
     </v-navigation-drawer>
-    <v-main color="blue-grey">
+    <v-main id="main" color="blue-grey">
       <RouterView />
     </v-main>
   </v-app>
@@ -18,6 +18,9 @@ import FilterPanels from "@/components/FilterPanels.vue";
 </script>
 
 <style lang="sass">
+html > ::-webkit-scrollbar
+    display: none
+
 ::-webkit-scrollbar
   width: 6px
   height: 6px
@@ -30,9 +33,9 @@ import FilterPanels from "@/components/FilterPanels.vue";
   border-radius: 10px
   background: rgba(0,0,0,0.2)
 
-::-webkit-scrollbar-thumb:hover
-  background: rgba(0,0,0,0.4)
+  &:hover
+    background: rgba(0,0,0,0.4)
 
-::-webkit-scrollbar-thumb:active
-  background: rgba(0,0,0,.9)
+  &:active
+    background: rgba(0,0,0,.9)
 </style>

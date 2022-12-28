@@ -1,21 +1,26 @@
 <template>
-    <div class="grid-layout pa-0 ma-0">
-      <ScatterPlot />
-      <div>Mushroom info</div>
-      <BarChart />
-      <SeasonTable />
-    </div>
+  <div class="exploration-grid">
+    <ScatterPlot />
+    <MushroomCard />
+    <BarChart />
+    <SeasonTable />
+  </div>
 </template>
 
 <script setup>
 import ScatterPlot from "@/components/ScatterPlot.vue";
+import MushroomCard from "@/components/MushroomCard.vue";
 import SeasonTable from "@/components/SeasonTable.vue";
-import BarChart from "../components/BarChart.vue";
+import BarChart from "@/components/BarChart.vue";
 </script>
 
 <style lang="sass">
-.grid-layout
+$padding: 6px
+
+.exploration-grid
   display: grid
+  gap: $padding
+  padding: $padding
   width: 100%
   height: 100%
   grid-template-columns: repeat(2, 1fr)
@@ -23,5 +28,5 @@ import BarChart from "../components/BarChart.vue";
   background: linear-gradient(45deg, #E0E0E0, var(--secondary-theme))
 
   #scatter-plot, #bar-chart, #season-table
-    height: 50vh
+    height: calc(50vh - $padding * 2)
 </style>

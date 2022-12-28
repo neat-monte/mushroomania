@@ -1,40 +1,39 @@
 <template>
-  <v-expansion-panel title="Cap" elevation="0" bg-color="blue-grey-lighten-3">
+  <v-expansion-panel title="Stem" elevation="0" bg-color="blue-grey-lighten-3">
     <v-expansion-panel-text>
       <v-select
-        v-model="mushroomStore.filterOptions.cap.shape"
-        :items="filterOptions.cap.shape"
+        v-model="mushroomStore.filterOptions.stem.color"
+        :items="filterOptions.stem.color"
         item-title="name"
         item-value="value"
-        label="Cap shape"
+        label="Stem color"
         chips
         multiple
         variant="underlined"
         hide-details="true"
         class="mb-2"
-      ></v-select>
+      />
       <v-select
-        v-model="mushroomStore.filterOptions.cap.color"
-        :items="filterOptions.cap.color"
+        v-model="mushroomStore.filterOptions.stem.hasRing"
+        :items="filterOptions.stem.hasRing"
         item-title="name"
         item-value="value"
-        label="Cap color"
+        label="Has ring"
+        variant="underlined"
+        hide-details="true"
+      />
+      <v-select
+        v-model="mushroomStore.filterOptions.stem.ringType"
+        :items="filterOptions.stem.ringType"
+        item-title="name"
+        item-value="value"
+        label="Ring type"
         chips
         multiple
         variant="underlined"
         hide-details="true"
-      ></v-select>
-      <v-select
-        v-model="mushroomStore.filterOptions.cap.gillColor"
-        :items="filterOptions.cap.gillColor"
-        item-title="name"
-        item-value="value"
-        label="Gill color"
-        chips
-        multiple
-        variant="underlined"
-        hide-details="true"
-      ></v-select>
+        class="mb-2"
+      />
     </v-expansion-panel-text>
   </v-expansion-panel>
 </template>
