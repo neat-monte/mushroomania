@@ -86,10 +86,10 @@ const defaultHeader = [
 ];
 //The order used for sorting on a specific season.
 const sortOrder = {
-  1011: 0,
-  1001: 1,
-  1000: 2,
-  1100: 3,
+  1000: 0,
+  1100: 1,
+  1001: 2,
+  1011: 3,
   1101: 4,
   1110: 5,
   1010: 6,
