@@ -19,7 +19,8 @@
         text
         v-if="canHaveMoreThanOneValue"
         type="info"
-        >{{ canHaveMoreThanOneValue }}
+      >
+        One type of mushroom can be part of multiple bars
       </v-alert>
     </div>
   </div>
@@ -53,9 +54,7 @@ onMounted(() => {
       (cat) => cat.prop === xAxisLabel.value
     );
 
-    canHaveMoreThanOneValue.value = xLabelProperty.canHaveMoreThanOneValue
-      ? "One type of mushroom can be part of multiple bars"
-      : "";
+    canHaveMoreThanOneValue.value = xLabelProperty.canHaveMoreThanOneValue;
 
     const categories = xLabelProperty.values;
 
