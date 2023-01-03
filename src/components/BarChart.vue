@@ -13,6 +13,14 @@
         density="compact"
         variant="underlined"
       />
+      <v-alert
+        class="ml-5"
+        color="accent"
+        text
+        v-if="canHaveMoreThanOneValue"
+        type="info"
+        >{{ canHaveMoreThanOneValue }}
+      </v-alert>
     </div>
   </div>
 </template>
@@ -31,6 +39,7 @@ const mushroomStore = useMushroomStore();
 
 const svgRef = ref(null);
 const xAxisLabel = ref(dataProperties.categorical[0].prop);
+const canHaveMoreThanOneValue = ref("null");
 
 onMounted(() => {
   const svg = select(svgRef.value);
@@ -40,9 +49,15 @@ onMounted(() => {
   watchEffect(() => {
     svg.selectAll("*").remove();
 
-    const categories = dataProperties.categorical.find(
+    const xLabelProperty = dataProperties.categorical.find(
       (cat) => cat.prop === xAxisLabel.value
-    ).values;
+    );
+
+    canHaveMoreThanOneValue.value = xLabelProperty.canHaveMoreThanOneValue
+      ? "One type of mushroom can be part of multiple bars"
+      : "";
+
+    const categories = xLabelProperty.values;
 
     const categoryMap = new Map(categories.map((c) => [c.value, c.name]));
     const categoryMapKeys = Array.from(categoryMap.keys());
