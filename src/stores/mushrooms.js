@@ -3,6 +3,7 @@ import { defineStore } from "pinia";
 
 import mushroomData from "@/data/mushroom-data.json";
 import filterOptions from "@/data/filterOptions";
+import dataProperties from "../data/dataProperties";
 
 const defaultFilters = {
   search: {
@@ -36,12 +37,17 @@ export const useMushroomStore = defineStore("mushrooms", () => {
   const filters = reactive(structuredClone(defaultFilters));
 
   const selectedMushroom = reactive({});
-  const mushroomProps = () => {
-    
-  };
+  const mushroomProps = () => {};
 
   const data = computed(() => {
     let data = mushroomData;
+    // calculate averages:
+    data.forEach((d) => {
+      dataProperties.combinedNumerical.forEach(({ prop: t }) => {
+        d[`avg${t}`] = (d[`min${t}`] + d[`max${t}`]) / 2;
+      });
+    });
+
     // search:
     if (filters.search.family)
       data = data.filter((d) => d.family == filters.search.family);

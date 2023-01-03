@@ -9,6 +9,12 @@ export const numericalProperties = [
   { name: "Max. Stem Width", prop: "maxStemWidth" },
 ];
 
+export const combinedNumericalProperties = [
+  { name: "Cap Diameter", prop: "CapDiameter" },
+  { name: "Stem Height", prop: "StemHeight" },
+  { name: "Stem Width", prop: "StemWidth" },
+];
+
 export const categoricalProperties = [
   {
     name: "Edibility",
@@ -64,6 +70,7 @@ export const categoricalProperties = [
 
 export const dataProperties = {
   numerical: numericalProperties,
+  combinedNumerical: combinedNumericalProperties,
   categorical: categoricalProperties,
 };
 
