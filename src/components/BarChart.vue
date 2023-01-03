@@ -37,6 +37,7 @@ import useResizeObserver from "@/utils/resizeObserver";
 const { resizeRef, resizeState } = useResizeObserver();
 
 const mushroomStore = useMushroomStore();
+const showSelectedMushroom = true;
 
 const svgRef = ref(null);
 const xAxisLabel = ref(dataProperties.categorical[0].prop);
@@ -151,6 +152,26 @@ onMounted(() => {
         select(event.currentTarget).classed("highlighted", true);
       }
     };
+
+    if (showSelectedMushroom && mushroomStore.isMushroomSelected()) {
+      const attribute = mushroomStore.selectedMushroom[xAxisLabel.value];
+      console.log(attribute);
+
+      if (!Array.isArray(attribute)) {
+        console.log("Boolean");
+        console.log(
+          chart.selectAll(".bar").each(function (e) {
+            if (e.value == (attribute ? 0 : 1))
+              select(this).classed("selected", true);
+          })
+        );
+        return;
+      }
+
+      chart.selectAll(".bar").each(function (e) {
+        if (attribute.includes(e.value)) select(this).classed("selected", true);
+      });
+    }
   });
 });
 </script>
@@ -163,6 +184,12 @@ rect
 
   &.highlighted
     fill: rgb(var(--v-theme-secondary)) !important
+    //stroke: rgb(var(--v-theme-accent))
+    //stroke-width: 1px
+
+  &.selected
+    fill: rgb(var(--v-theme-accent-lighten-2))
     stroke: rgb(var(--v-theme-accent))
-    stroke-width: 1px
+    stroke-width: 2px
+    stroke-linejoin: round
 </style>
