@@ -93,9 +93,9 @@ const sortOrder = {
   1010: 2,
   1001: 3,
   //Then all mushrooms in the season + 2 others
-  1110: 6,
+  1110: 4,
   1101: 5,
-  1011: 4,
+  1011: 6,
   //Undefined behaviour
   1111: 7,
   //Undefined behaviour
