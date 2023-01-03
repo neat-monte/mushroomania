@@ -2,7 +2,7 @@
   <div id="scatter-plot" class="d-flex flex-column">
     <v-tabs ref="selector" v-model="tab" center-active>
       <v-tab :value="1">Points</v-tab>
-      <v-tab :value="2">Average</v-tab>
+      <v-tab :value="2">Averages</v-tab>
       <v-tab :value="3">Boxes</v-tab>
     </v-tabs>
     <div ref="resizeRef" class="flex-grow-1">
@@ -134,7 +134,7 @@ onMounted(() => {
           renderFunction = function () {
             return select(this)
               .attr("cx", (d) => xScale(d[`avg${xAxisLabel.value}`]))
-              .attr("cy", (d) => xScale(d[`avg${yAxisLabel.value}`]))
+              .attr("cy", (d) => yScale(d[`avg${yAxisLabel.value}`]))
               .attr("r", 5);
           };
         }
