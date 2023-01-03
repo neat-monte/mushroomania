@@ -86,21 +86,29 @@ const defaultHeader = [
 ];
 //The order used for sorting on a specific season.
 const sortOrder = {
+  //First all mushrooms in the season
   1000: 0,
+  //Then all mushrooms in the season + another
   1100: 1,
-  1001: 2,
-  1011: 3,
-  1101: 4,
-  1110: 5,
-  1010: 6,
+  1010: 2,
+  1001: 3,
+  //Then all mushrooms in the season + 2 others
+  1110: 6,
+  1101: 5,
+  1011: 4,
+  //Undefined behaviour
   1111: 7,
-  "0100": 8,
+  //Undefined behaviour
+  "0111": 8,
+  //Undefined behaviour
   "0110": 9,
-  "0111": 10,
-  "0101": 11,
-  "0010": 12,
-  "0011": 13,
+  "0101": 10,
+  "0011": 11,
+  //Undefined behaviour
+  "0100": 12,
+  "0010": 13,
   "0001": 14,
+  //Lastly all mushrooms with no seasons
   "0000": 15,
 };
 // The order in which to sort rows, default is sort on family first, then name and lastly seasonValue.
