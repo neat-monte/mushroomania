@@ -47,7 +47,7 @@ onMounted(() => {
     const categoryMap = new Map(categories.map((c) => [c.value, c.name]));
     const categoryMapKeys = Array.from(categoryMap.keys());
     const counts = categories.map((c) => {
-      return { value: c.value, count: 0 };
+      return { prop: xAxisLabel.value, value: c.value, count: 0 };
     });
 
     mushroomStore.data.forEach((mushroomEntry) => {
@@ -106,12 +106,16 @@ onMounted(() => {
       .data(counts)
       .enter()
       .append("rect")
+      .on("click", (e, d) => {
+        mushroomStore.setHighlightedMushrooms(d.prop, d.value);
+        addHighlightedClass(e);
+      })
       .classed("bar", true)
       .attr("width", xScale.bandwidth())
       .attr("height", (d) => chartHeight - yScale(d.count))
       .attr("x", (d) => xScale(d.value))
       .attr("y", (d) => yScale(d.count))
-      .style("fill-opacity", 0.75);
+      .style("fill", "rgb(var(--v-theme-primary))");
 
     chart
       .selectAll(".label")
@@ -122,7 +126,29 @@ onMounted(() => {
       .text((d) => d.count)
       .attr("x", (d) => xScale(d.value) + xScale.bandwidth() / 2)
       .attr("y", (d) => yScale(d.count) - marginForLabel / 2)
-      .attr("text-anchor", "middle");
+      .attr("text-anchor", "middle")
+      .style("fill", "rgb(var(--v-theme-primary))");
+
+    const addHighlightedClass = (event) => {
+      if (event.currentTarget.classList.contains("highlighted")) {
+        chart.selectAll("rect").classed("highlighted", false);
+      } else {
+        chart.selectAll("rect").classed("highlighted", false);
+        select(event.currentTarget).classed("highlighted", true);
+      }
+    };
   });
 });
 </script>
+
+<style lang="sass">
+rect
+  &:hover
+    cursor: pointer
+    fill: rgb(var(--v-theme-secondary)) !important
+
+  &.highlighted
+    fill: rgb(var(--v-theme-secondary)) !important
+    stroke: rgb(var(--v-theme-accent))
+    stroke-width: 1px
+</style>

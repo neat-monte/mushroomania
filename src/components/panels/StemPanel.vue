@@ -1,5 +1,5 @@
 <template>
-  <v-expansion-panel title="Stem" elevation="0" bg-color="blue-grey-lighten-3">
+  <v-expansion-panel title="Stem" elevation="0" bg-color="panel">
     <v-expansion-panel-text>
       <v-select
         v-model="mushroomStore.filterOptions.stem.color"

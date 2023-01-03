@@ -23,6 +23,8 @@
         density="compact"
         variant="underlined"
       />
+      <v-spacer />
+      <v-checkbox v-model="showOnlyHighlighted" label="Show only highlighted" />
     </div>
   </div>
 </template>
@@ -36,6 +38,8 @@ import dataProperties from "@/data/dataProperties";
 import useResizeObserver from "@/utils/resizeObserver";
 
 const mushroomStore = useMushroomStore();
+
+const showOnlyHighlighted = ref(false);
 
 const svgRef = ref(null);
 const xAxisLabel = ref(dataProperties.numerical[1].prop);
@@ -52,11 +56,12 @@ onMounted(() => {
 
     const { width, height } = resizeState.dimensions;
 
-    const field = svg
+    const plot = svg
       .attr("width", Math.floor(width))
       .attr("height", Math.floor(height))
       .append("g")
-      .attr("transform", `translate(${margin.left}, ${margin.top})`);
+      .attr("transform", `translate(${margin.left}, ${margin.top})`)
+      .classed("plot", true);
 
     const fieldWidth = Math.floor(width) - margin.left - margin.right;
     const fieldHeight = Math.floor(height) - margin.top - margin.bottom;
@@ -76,42 +81,69 @@ onMounted(() => {
       .range([fieldHeight, 0]);
 
     const xAxis = axisBottom(xScale).tickSizeOuter(0);
-    field
+    plot
       .append("g")
       .attr("transform", `translate(0, ${fieldHeight})`)
       .call(xAxis);
 
     const yAxis = axisLeft(yScale).tickSizeOuter(0);
-    field.append("g").call(yAxis);
+    plot.append("g").call(yAxis);
 
-    field
+    const dots = plot
       .append("g")
       .selectAll("dot")
       .data(mushroomStore.data)
-      .enter()
+      .enter();
+
+    if (!showOnlyHighlighted.value) {
+      dots
+        .filter(
+          (d) =>
+            !mushroomStore.isSelectedMushroom(d) &&
+            !mushroomStore.isHighlightedMushroom(d)
+        )
+        .append("circle");
+    }
+
+    dots
+      .filter((d) => mushroomStore.isHighlightedMushroom(d))
       .append("circle")
-      .on("click", (e, d) => {
-        selectMushroom(e);
-        mushroomStore.selectMushroom(d);
+      .classed("highlighted", true);
+
+    dots
+      .filter((d) => mushroomStore.isSelectedMushroom(d))
+      .append("circle")
+      .classed("selected", true);
+
+    dots
+      .selectAll("circle")
+      .on("click", (_, d) => {
+        mushroomStore.setSelectedMushroom(d);
       })
       .attr("cx", (d) => xScale(d[xAxisLabel.value]))
       .attr("cy", (d) => yScale(d[yAxisLabel.value]))
-      .attr("r", 5)
-      .style("fill-opacity", 0.3);
-
-    const selectMushroom = (event) => {
-      field.selectAll("circle").classed("selected", false);
-      select(event.currentTarget).classed("selected", true);
-    };
+      .attr("r", 5);
   });
 });
 </script>
 
 <style lang="sass">
-circle
-  &.selected
-    fill: red
-    stroke: #646464
-    stroke-width: 2px
-    stroke-linejoin: round
+.plot
+  position: relative
+
+  circle
+    fill: rgba(var(--v-theme-primary), 0.3)
+
+    &:hover
+      cursor: pointer
+      fill: rgb(var(--v-theme-accent-lighten-2)) !important
+
+    &.highlighted
+      fill: rgb(var(--v-theme-secondary))
+
+    &.selected
+      fill: rgb(var(--v-theme-accent-lighten-2))
+      stroke: rgb(var(--v-theme-accent))
+      stroke-width: 2px
+      stroke-linejoin: round
 </style>

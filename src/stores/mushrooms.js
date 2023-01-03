@@ -36,9 +36,10 @@ export const useMushroomStore = defineStore("mushrooms", () => {
   const filters = reactive(structuredClone(defaultFilters));
 
   const selectedMushroom = reactive({});
-  const mushroomProps = () => {
-    
-  };
+  // const mushroomProps = () => {};
+
+  const highlightedMushrooms = reactive([]);
+  const highlightedProp = reactive({ prop: null, value: null });
 
   const data = computed(() => {
     let data = mushroomData;
@@ -71,12 +72,41 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     return data;
   });
 
-  const selectMushroom = (mushroom) => {
+  const isMushroomSelected = () => {
+    return Object.keys(selectedMushroom).length > 0;
+  };
+
+  const setSelectedMushroom = (mushroom) => {
     Object.assign(selectedMushroom, structuredClone(mushroom));
   };
 
-  const isMushroomSelected = () => {
-    return Object.keys(selectedMushroom).length > 0;
+  const isSelectedMushroom = (mushroom) => {
+    return (
+      mushroom.family === selectedMushroom.family &&
+      mushroom.name === selectedMushroom.name
+    );
+  };
+
+  const setHighlightedMushrooms = (prop, value) => {
+    highlightedMushrooms.splice(0, highlightedMushrooms.length);
+    if (highlightedProp.prop === prop && highlightedProp.value === value) {
+      highlightedProp.value = highlightedProp.prop = null;
+    } else {
+      highlightedMushrooms.push(
+        ...data.value.filter((mushroom) => {
+          if (Array.isArray(mushroom[prop])) {
+            return mushroom[prop].includes(value);
+          }
+          return mushroom[prop] == value;
+        })
+      );
+      highlightedProp.prop = prop;
+      highlightedProp.value = value;
+    }
+  };
+
+  const isHighlightedMushroom = (mushroom) => {
+    return highlightedMushrooms.includes(mushroom);
   };
 
   const resetToDefault = () => {
@@ -90,8 +120,12 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     resetToDefault,
     data,
     selectedMushroom,
-    selectMushroom,
+    setSelectedMushroom,
     isMushroomSelected,
+    isSelectedMushroom,
+    highlightedMushrooms,
+    setHighlightedMushrooms,
+    isHighlightedMushroom,
   };
 });
 

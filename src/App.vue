@@ -1,11 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer permanent color="blue-grey-lighten-3">
-      <v-container class="d-flex flex-column h-100">
-        <h2 class="mb-2">Mushroomania</h2>
-        <FilterPanels />
-      </v-container>
-    </v-navigation-drawer>
+    <FiltersDrawer />
     <v-main id="main" color="blue-grey">
       <RouterView />
     </v-main>
@@ -14,11 +9,17 @@
 
 <script setup>
 import { RouterView } from "vue-router";
-import FilterPanels from "@/components/FilterPanels.vue";
+import FiltersDrawer from "@/components/FiltersDrawer.vue";
 </script>
 
 <style lang="sass">
-html > ::-webkit-scrollbar
+@import url('https://fonts.googleapis.com/css?family=Kodchasan|Lato')
+
+html
+  & *
+    font-family: "Lato"
+
+  & > ::-webkit-scrollbar
     display: none
 
 ::-webkit-scrollbar

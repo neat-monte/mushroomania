@@ -1,9 +1,5 @@
 <template>
-  <v-expansion-panel
-    title="Search"
-    elevation="0"
-    bg-color="blue-grey-lighten-3"
-  >
+  <v-expansion-panel title="Search" elevation="0" bg-color="panel">
     <v-expansion-panel-text>
       <v-autocomplete
         v-model="mushroomStore.filterOptions.search.family"
