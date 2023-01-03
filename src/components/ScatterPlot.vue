@@ -28,6 +28,8 @@
         density="compact"
         variant="underlined"
       />
+      <v-spacer />
+      <v-checkbox v-model="showOnlyHighlighted" label="Show only highlighted" />
     </div>
   </div>
 </template>
@@ -42,6 +44,7 @@ import useResizeObserver from "@/utils/resizeObserver";
 
 const mushroomStore = useMushroomStore();
 
+const showOnlyHighlighted = ref(false);
 const tab = ref(null);
 const svgRef = ref(null);
 const selector = ref(null);
@@ -67,7 +70,6 @@ watch(tab, async (newTab, oldTab) => {
     case 3:
       {
         if ([2, 3].includes(oldTab)) return;
-        console.log("changing");
         selectorOptions.value = dataProperties.combinedNumerical;
         xAxisLabel.value = dataProperties.combinedNumerical[0].prop;
         yAxisLabel.value = dataProperties.combinedNumerical[1].prop;
@@ -86,11 +88,12 @@ onMounted(() => {
 
     const { width, height } = resizeState.dimensions;
 
-    const field = svg
+    const plot = svg
       .attr("width", Math.floor(width))
       .attr("height", Math.floor(height))
       .append("g")
-      .attr("transform", `translate(${margin.left}, ${margin.top})`);
+      .attr("transform", `translate(${margin.left}, ${margin.top})`)
+      .classed("plot", true);
 
     const fieldWidth = Math.floor(width) - margin.left - margin.right;
     const fieldHeight = Math.floor(height) - margin.top - margin.bottom;
@@ -100,6 +103,7 @@ onMounted(() => {
     let yMinLabel;
     let yMaxLabel;
     let renderFunction;
+    let type;
 
     switch (tab.value) {
       default:
@@ -109,19 +113,13 @@ onMounted(() => {
           xMaxLabel = xAxisLabel.value;
           yMinLabel = yAxisLabel.value;
           yMaxLabel = yAxisLabel.value;
+          type = "circle";
 
           renderFunction = function () {
-            return select(this)
-              .append("circle")
-              .classed("mushroom", true)
-              .on("click", (e, d) => {
-                selectMushroom(e);
-                mushroomStore.selectMushroom(d);
-              })
+            select(this)
               .attr("cx", (d) => xScale(d[xAxisLabel.value]))
               .attr("cy", (d) => yScale(d[yAxisLabel.value]))
-              .attr("r", 5)
-              .style("fill-opacity", 0.3);
+              .attr("r", 5);
           };
         }
         break;
@@ -131,19 +129,13 @@ onMounted(() => {
           xMaxLabel = `avg${xAxisLabel.value}`;
           yMinLabel = `avg${yAxisLabel.value}`;
           yMaxLabel = `avg${yAxisLabel.value}`;
+          type = "circle";
 
           renderFunction = function () {
             return select(this)
-              .append("circle")
-              .classed("mushroom", true)
-              .on("click", (e, d) => {
-                selectMushroom(e);
-                mushroomStore.selectMushroom(d);
-              })
-              .attr("cx", (d) => xScale((d[xMinLabel] + d[xMaxLabel]) / 2))
-              .attr("cy", (d) => yScale((d[yMinLabel] + d[yMaxLabel]) / 2))
-              .attr("r", 5)
-              .style("fill-opacity", 0.3);
+              .attr("cx", (d) => xScale(d[`avg${xAxisLabel.value}`]))
+              .attr("cy", (d) => xScale(d[`avg${yAxisLabel.value}`]))
+              .attr("r", 5);
           };
         }
         break;
@@ -153,6 +145,7 @@ onMounted(() => {
           xMaxLabel = `max${xAxisLabel.value}`;
           yMinLabel = `min${yAxisLabel.value}`;
           yMaxLabel = `max${yAxisLabel.value}`;
+          type = "rect";
 
           renderFunction = function (d) {
             const xRound = xScale(0.2) - xScale(0);
@@ -174,13 +167,8 @@ onMounted(() => {
               y -= yRound;
               height += 2 * yRound;
             }
-            return select(this)
-              .append("rect")
-              .classed("mushroom", true)
-              .on("click", (e, d) => {
-                selectMushroom(e);
-                mushroomStore.selectMushroom(d);
-              })
+
+            select(this)
               .attr("x", x)
               .attr("y", y)
               .attr("width", width)
@@ -201,47 +189,80 @@ onMounted(() => {
 
     const xMin = min(mushroomStore.data, (d) => d[xMinLabel]);
     const xMax = max(mushroomStore.data, (d) => d[xMaxLabel]);
-
     const xScale = scaleLinear()
       .domain([xMin - 1 <= 0 ? 0 : xMin - 1, xMax + 1])
       .range([0, fieldWidth]);
-
     const yMin = min(mushroomStore.data, (d) => d[yMinLabel]);
     const yMax = max(mushroomStore.data, (d) => d[yMaxLabel]);
-
     const yScale = scaleLinear()
       .domain([yMin - 1 <= 0 ? 0 : yMin - 1, yMax + 1])
       .range([fieldHeight, 0]);
 
     const xAxis = axisBottom(xScale).tickSizeOuter(0);
-    field
+    plot
       .append("g")
       .attr("transform", `translate(0, ${fieldHeight})`)
       .call(xAxis);
 
     const yAxis = axisLeft(yScale).tickSizeOuter(0);
-    field.append("g").call(yAxis);
+    plot.append("g").call(yAxis);
 
-    field
+    const dots = plot
       .append("g")
       .selectAll("circle")
       .data(mushroomStore.data)
-      .enter()
-      .each(renderFunction);
+      .enter();
 
-    const selectMushroom = (event) => {
-      field.selectAll(".mushroom").classed("selected", false);
-      select(event.currentTarget).classed("selected", true);
-    };
+    if (!showOnlyHighlighted.value) {
+      dots
+        .filter(
+          (d) =>
+            !mushroomStore.isSelectedMushroom(d) &&
+            !mushroomStore.isHighlightedMushroom(d)
+        )
+        .append(type)
+        .classed("mushroom", true);
+    }
+
+    dots
+      .filter((d) => mushroomStore.isHighlightedMushroom(d))
+      .append(type)
+      .classed("mushroom", true)
+      .classed("highlighted", true);
+
+    dots
+      .filter((d) => mushroomStore.isSelectedMushroom(d))
+      .append(type)
+      .classed("mushroom", true)
+      .classed("selected", true);
+
+    dots
+      .selectAll(".mushroom")
+      .on("click", (_, d) => {
+        mushroomStore.setSelectedMushroom(d);
+      })
+      .each(renderFunction);
   });
 });
 </script>
 
 <style lang="sass">
-.mushroom
-  &.selected
-    fill: red
-    stroke: #646464
-    stroke-width: 2px
-    stroke-linejoin: round
+.plot
+  position: relative
+
+  .mushroom
+    fill: rgba(var(--v-theme-primary), 0.3)
+
+    &:hover
+      cursor: pointer
+      fill: rgb(var(--v-theme-accent-lighten-2)) !important
+
+    &.highlighted
+      fill: rgb(var(--v-theme-secondary))
+
+    &.selected
+      fill: rgb(var(--v-theme-accent-lighten-2))
+      stroke: rgb(var(--v-theme-accent))
+      stroke-width: 2px
+      stroke-linejoin: round
 </style>
