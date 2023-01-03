@@ -129,8 +129,7 @@ onMounted(() => {
       .attr("width", xScale.bandwidth())
       .attr("height", (d) => chartHeight - yScale(d.count))
       .attr("x", (d) => xScale(d.value))
-      .attr("y", (d) => yScale(d.count))
-      .style("fill", "rgb(var(--v-theme-primary))");
+      .attr("y", (d) => yScale(d.count));
 
     chart
       .selectAll(".label")
@@ -141,8 +140,7 @@ onMounted(() => {
       .text((d) => d.count)
       .attr("x", (d) => xScale(d.value) + xScale.bandwidth() / 2)
       .attr("y", (d) => yScale(d.count) - marginForLabel / 2)
-      .attr("text-anchor", "middle")
-      .style("fill", "rgb(var(--v-theme-primary))");
+      .attr("text-anchor", "middle");
 
     const addHighlightedClass = (event) => {
       if (event.currentTarget.classList.contains("highlighted")) {
@@ -155,16 +153,13 @@ onMounted(() => {
 
     if (showSelectedMushroom && mushroomStore.isMushroomSelected()) {
       const attribute = mushroomStore.selectedMushroom[xAxisLabel.value];
-      console.log(attribute);
 
       if (!Array.isArray(attribute)) {
-        console.log("Boolean");
-        console.log(
-          chart.selectAll(".bar").each(function (e) {
-            if (e.value == (attribute ? 0 : 1))
-              select(this).classed("selected", true);
-          })
-        );
+        chart.selectAll(".bar").each(function (e) {
+          if (e.value == (attribute ? 0 : 1)) {
+            select(this).classed("selected", true);
+          }
+        });
         return;
       }
 
@@ -178,6 +173,8 @@ onMounted(() => {
 
 <style lang="sass">
 rect
+  fill: rgb(var(--v-theme-primary))
+
   &:hover
     cursor: pointer
     fill: rgb(var(--v-theme-secondary)) !important
@@ -188,7 +185,7 @@ rect
     //stroke-width: 1px
 
   &.selected
-    fill: rgb(var(--v-theme-accent-lighten-2))
+    // fill: rgb(var(--v-theme-accent-lighten-2))
     stroke: rgb(var(--v-theme-accent))
     stroke-width: 2px
     stroke-linejoin: round
