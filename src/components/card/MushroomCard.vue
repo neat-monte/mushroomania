@@ -22,6 +22,11 @@
               name="Edible"
               :description="mushroom.edible"
             />
+            <InfoProperty
+              icon="mdi-sword"
+              name="Damage"
+              :description="mushroom.damage"
+            />
           </InfoSection>
           <InfoSection title="Occurrence">
             <InfoProperty

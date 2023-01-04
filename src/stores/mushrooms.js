@@ -35,6 +35,13 @@ const defaultFilters = {
   },
 };
 
+const isReverseOfType = (type, prop) => {
+  if (type === -1) return (m) => m;
+  return (mushroom) => {
+    return Boolean(type) === mushroom[prop];
+  };
+};
+
 const isOfType = (type, prop) => {
   if (type === -1) return (m) => m;
   return (mushroom) => {
@@ -88,7 +95,9 @@ export const useMushroomStore = defineStore("mushrooms", () => {
             .indexOf((filters.search.name || "").toLowerCase()) > -1
       );
     // edibility:
-    data = data.filter(isOfType(filters.edibility.edibility, "poisonous"));
+    data = data.filter(
+      isReverseOfType(filters.edibility.edibility, "poisonous")
+    );
     // damage:
     data = data.filter(isOfType(filters.damage.damage, "doesBruiseOrBleed"));
     // occurrence:
@@ -138,6 +147,7 @@ export const useMushroomStore = defineStore("mushrooms", () => {
   };
 
   const setHighlightedMushrooms = (prop, value) => {
+    console.log(value);
     highlightedMushrooms.splice(0, highlightedMushrooms.length);
     if (highlightedProp.prop === prop && highlightedProp.value === value) {
       highlightedProp.value = highlightedProp.prop = null;

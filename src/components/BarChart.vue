@@ -41,7 +41,6 @@ import useResizeObserver from "@/utils/resizeObserver";
 const { resizeRef, resizeState } = useResizeObserver();
 
 const mushroomStore = useMushroomStore();
-const showSelectedMushroom = true;
 
 const svgRef = ref(null);
 const xAxisLabel = ref(dataProperties.categorical[0].prop);
@@ -70,16 +69,26 @@ onMounted(() => {
       return { prop: xAxisLabel.value, value: c.value, count: 0 };
     });
 
+    const filterCounts = categories.map((c) => {
+      return { prop: xAxisLabel.value, value: c.value, count: 0 };
+    });
+
     mushroomStore.data.forEach((mushroomEntry) => {
       const attribute = mushroomEntry[xAxisLabel.value];
 
       if (!Array.isArray(attribute)) {
-        counts[categoryMapKeys.indexOf(attribute ? 0 : 1)].count++;
+        counts[categoryMapKeys.indexOf(attribute ? 1 : 0)].count++;
+        if (mushroomStore.isHighlightedMushroom(mushroomEntry)) {
+          filterCounts[categoryMapKeys.indexOf(attribute ? 1 : 0)].count++;
+        }
         return;
       }
 
       attribute.forEach((abbrv) => {
         counts[categoryMapKeys.indexOf(abbrv)].count++;
+        if (mushroomStore.isHighlightedMushroom(mushroomEntry)) {
+          filterCounts[categoryMapKeys.indexOf(abbrv)].count++;
+        }
       });
     });
 
@@ -126,8 +135,8 @@ onMounted(() => {
     bars
       .append("rect")
       .on("click", (e, d) => {
+        console.log(d);
         mushroomStore.setHighlightedMushrooms(d.prop, d.value);
-        addHighlightedClass(e);
       })
       .classed("bar", true)
       .attr("width", xScale.bandwidth())
@@ -146,16 +155,23 @@ onMounted(() => {
       .attr("y", (d) => yScale(d.count) - marginForLabel / 2)
       .attr("text-anchor", "middle");
 
-    const addHighlightedClass = (event) => {
-      if (event.currentTarget.classList.contains("highlighted")) {
-        chart.selectAll("rect").classed("highlighted", false);
-      } else {
-        chart.selectAll("rect").classed("highlighted", false);
-        select(event.currentTarget).classed("highlighted", true);
-      }
-    };
+    chart
+      .selectAll(".highlighted")
+      .data(filterCounts)
+      .enter()
+      .append("rect")
+      .on("click", (e, d) => {
+        console.log(d);
+        mushroomStore.setHighlightedMushrooms(d.prop, d.value);
+      })
+      .classed("bar", true)
+      .classed("highlighted", true)
+      .attr("width", xScale.bandwidth())
+      .attr("height", (d) => chartHeight - yScale(d.count))
+      .attr("x", (d) => xScale(d.value))
+      .attr("y", (d) => yScale(d.count));
 
-    if (showSelectedMushroom && mushroomStore.isMushroomSelected()) {
+    if (mushroomStore.isMushroomSelected()) {
       let isFilteredOut = true;
       for (let mushroom of mushroomStore.data) {
         if (mushroomStore.isSelectedMushroom(mushroom)) {
@@ -172,6 +188,7 @@ onMounted(() => {
           if (e.value == (attribute ? 0 : 1)) {
             select(this)
               .append("rect")
+              .classed("bar", true)
               .classed("selected", true)
               .attr("width", xScale.bandwidth())
               .attr("height", () => chartHeight - yScale(1))
@@ -184,6 +201,7 @@ onMounted(() => {
           if (attribute.includes(e.value))
             select(this)
               .append("rect")
+              .classed("bar", true)
               .classed("selected", true)
               .attr("width", xScale.bandwidth())
               .attr("height", () => chartHeight - yScale(1))
