@@ -116,10 +116,9 @@ onMounted(() => {
 
     chart.append("g").call(yAxis);
 
-    chart
-      .selectAll(".bar")
-      .data(counts)
-      .enter()
+    const bars = chart.selectAll(".bar").data(counts).enter();
+
+    bars
       .append("rect")
       .on("click", (e, d) => {
         mushroomStore.setHighlightedMushrooms(d.prop, d.value);
@@ -152,20 +151,41 @@ onMounted(() => {
     };
 
     if (showSelectedMushroom && mushroomStore.isMushroomSelected()) {
+      let isFilteredOut = true;
+      for (let mushroom of mushroomStore.data) {
+        if (mushroomStore.isSelectedMushroom(mushroom)) {
+          isFilteredOut = false;
+          break;
+        }
+      }
+      if (isFilteredOut) return;
+
       const attribute = mushroomStore.selectedMushroom[xAxisLabel.value];
 
       if (!Array.isArray(attribute)) {
-        chart.selectAll(".bar").each(function (e) {
+        bars.each(function (e) {
           if (e.value == (attribute ? 0 : 1)) {
-            select(this).classed("selected", true);
+            select(this)
+              .append("rect")
+              .classed("selected", true)
+              .attr("width", xScale.bandwidth())
+              .attr("height", () => chartHeight - yScale(1))
+              .attr("x", (d) => xScale(d.value))
+              .attr("y", (d) => yScale(d.count / 2.0));
           }
         });
-        return;
+      } else {
+        bars.each(function (e) {
+          if (attribute.includes(e.value))
+            select(this)
+              .append("rect")
+              .classed("selected", true)
+              .attr("width", xScale.bandwidth())
+              .attr("height", () => chartHeight - yScale(1))
+              .attr("x", (d) => xScale(d.value))
+              .attr("y", (d) => yScale(d.count / 2.0));
+        });
       }
-
-      chart.selectAll(".bar").each(function (e) {
-        if (attribute.includes(e.value)) select(this).classed("selected", true);
-      });
     }
   });
 });
@@ -181,11 +201,11 @@ rect
 
   &.highlighted
     fill: rgb(var(--v-theme-secondary)) !important
-    //stroke: rgb(var(--v-theme-accent))
-    //stroke-width: 1px
+    stroke: rgb(var(--v-theme-accent))
+    stroke-width: 1px
 
   &.selected
-    // fill: rgb(var(--v-theme-accent-lighten-2))
+    fill: rgb(var(--v-theme-accent-lighten-2))
     stroke: rgb(var(--v-theme-accent))
     stroke-width: 2px
     stroke-linejoin: round
