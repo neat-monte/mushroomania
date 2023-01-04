@@ -9,7 +9,7 @@
 
 <script setup>
 import ScatterPlot from "@/components/ScatterPlot.vue";
-import MushroomCard from "@/components/MushroomCard.vue";
+import MushroomCard from "@/components/card/MushroomCard.vue";
 import SeasonTable from "@/components/SeasonTable.vue";
 import BarChart from "@/components/BarChart.vue";
 </script>

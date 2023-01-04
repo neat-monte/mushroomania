@@ -1,18 +1,18 @@
 import filterOptions from "@/data/filterOptions";
 
 export const numericalProperties = [
-  { name: "Min. Cap Diameter", prop: "minCapDiameter" },
-  { name: "Max. Cap Diameter", prop: "maxCapDiameter" },
-  { name: "Min. Stem Height", prop: "minStemHeight" },
-  { name: "Max. Stem Height", prop: "maxStemHeight" },
-  { name: "Min. Stem Width", prop: "minStemWidth" },
-  { name: "Max. Stem Width", prop: "maxStemWidth" },
+  { name: "Min. Cap Diameter cm", prop: "minCapDiameter" },
+  { name: "Max. Cap Diameter cm", prop: "maxCapDiameter" },
+  { name: "Min. Stem Height cm", prop: "minStemHeight" },
+  { name: "Max. Stem Height cm", prop: "maxStemHeight" },
+  { name: "Min. Stem Width cm", prop: "minStemWidth" },
+  { name: "Max. Stem Width cm", prop: "maxStemWidth" },
 ];
 
 export const combinedNumericalProperties = [
-  { name: "Cap Diameter", prop: "CapDiameter" },
-  { name: "Stem Height", prop: "StemHeight" },
-  { name: "Stem Width", prop: "StemWidth" },
+  { name: "Cap Diameter cm", prop: "CapDiameter" },
+  { name: "Stem Height cm", prop: "StemHeight" },
+  { name: "Stem Width cm", prop: "StemWidth" },
 ];
 
 export const categoricalProperties = [

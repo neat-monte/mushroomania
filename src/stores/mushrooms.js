@@ -4,6 +4,7 @@ import { defineStore } from "pinia";
 import mushroomData from "@/data/mushroom-data.json";
 import filterOptions from "@/data/filterOptions";
 import dataProperties from "../data/dataProperties";
+import { mapMushroomToRepresentative } from "../utils/mushroomConverter";
 
 const defaultFilters = {
   search: {
@@ -32,6 +33,28 @@ const defaultFilters = {
     hasRing: -1,
     ringType: filterOptions.stem.ringType.map((rt) => rt.value),
   },
+};
+
+const isOfType = (type, prop) => {
+  if (type === -1) return (m) => m;
+  return (mushroom) => {
+    return Boolean(type) !== mushroom[prop];
+  };
+};
+
+const containsAny = (contents, prop) => {
+  return (mushroom) => {
+    return mushroom[prop].some((p) => contents.includes(p));
+  };
+};
+
+const containsAll = (contents, prop) => {
+  return (mushroom) => {
+    return (
+      mushroom[prop].length === contents.length &&
+      mushroom[prop].every((p) => contents.includes(p))
+    );
+  };
 };
 
 export const useMushroomStore = defineStore("mushrooms", () => {
@@ -85,12 +108,26 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     return data;
   });
 
-  const isMushroomSelected = () => {
-    return Object.keys(selectedMushroom).length > 0;
+  const setSelectedMushroom = (mushroom) => {
+    if (isSelectedMushroom(mushroom)) {
+      Object.keys(selectedMushroom).forEach(
+        (key) => delete selectedMushroom[key]
+      );
+    } else {
+      Object.assign(selectedMushroom, structuredClone(mushroom));
+    }
   };
 
-  const setSelectedMushroom = (mushroom) => {
-    Object.assign(selectedMushroom, structuredClone(mushroom));
+  const getSelectedMushroomPresentation = () => {
+    if (isMushroomSelected()) {
+      return mapMushroomToRepresentative(selectedMushroom);
+    } else {
+      return {};
+    }
+  };
+
+  const isMushroomSelected = () => {
+    return Object.keys(selectedMushroom).length > 0;
   };
 
   const isSelectedMushroom = (mushroom) => {
@@ -134,6 +171,7 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     data,
     selectedMushroom,
     setSelectedMushroom,
+    getSelectedMushroomPresentation,
     isMushroomSelected,
     isSelectedMushroom,
     highlightedMushrooms,
@@ -141,27 +179,5 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     isHighlightedMushroom,
   };
 });
-
-const isOfType = (type, prop) => {
-  if (type === -1) return (m) => m;
-  return (mushroom) => {
-    return Boolean(type) !== mushroom[prop];
-  };
-};
-
-const containsAny = (contents, prop) => {
-  return (mushroom) => {
-    return mushroom[prop].some((p) => contents.includes(p));
-  };
-};
-
-const containsAll = (contents, prop) => {
-  return (mushroom) => {
-    return (
-      mushroom[prop].length === contents.length &&
-      mushroom[prop].every((p) => contents.includes(p))
-    );
-  };
-};
 
 export default useMushroomStore;
