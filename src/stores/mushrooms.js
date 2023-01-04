@@ -3,6 +3,7 @@ import { defineStore } from "pinia";
 
 import mushroomData from "@/data/mushroom-data.json";
 import filterOptions from "@/data/filterOptions";
+import dataProperties from "../data/dataProperties";
 
 const defaultFilters = {
   search: {
@@ -36,12 +37,20 @@ export const useMushroomStore = defineStore("mushrooms", () => {
   const filters = reactive(structuredClone(defaultFilters));
 
   const selectedMushroom = reactive({});
-  const mushroomProps = () => {
-    
-  };
+  // const mushroomProps = () => {};
+
+  const highlightedMushrooms = reactive([]);
+  const highlightedProp = reactive({ prop: null, value: null });
 
   const data = computed(() => {
     let data = mushroomData;
+    // calculate averages:
+    data.forEach((d) => {
+      dataProperties.combinedNumerical.forEach(({ prop: t }) => {
+        d[`avg${t}`] = (d[`min${t}`] + d[`max${t}`]) / 2;
+      });
+    });
+
     // search:
     if (filters.search.family)
       data = data.filter((d) => d.family == filters.search.family);
@@ -71,12 +80,41 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     return data;
   });
 
-  const selectMushroom = (mushroom) => {
+  const isMushroomSelected = () => {
+    return Object.keys(selectedMushroom).length > 0;
+  };
+
+  const setSelectedMushroom = (mushroom) => {
     Object.assign(selectedMushroom, structuredClone(mushroom));
   };
 
-  const isMushroomSelected = () => {
-    return Object.keys(selectedMushroom).length > 0;
+  const isSelectedMushroom = (mushroom) => {
+    return (
+      mushroom.family === selectedMushroom.family &&
+      mushroom.name === selectedMushroom.name
+    );
+  };
+
+  const setHighlightedMushrooms = (prop, value) => {
+    highlightedMushrooms.splice(0, highlightedMushrooms.length);
+    if (highlightedProp.prop === prop && highlightedProp.value === value) {
+      highlightedProp.value = highlightedProp.prop = null;
+    } else {
+      highlightedMushrooms.push(
+        ...data.value.filter((mushroom) => {
+          if (Array.isArray(mushroom[prop])) {
+            return mushroom[prop].includes(value);
+          }
+          return mushroom[prop] == value;
+        })
+      );
+      highlightedProp.prop = prop;
+      highlightedProp.value = value;
+    }
+  };
+
+  const isHighlightedMushroom = (mushroom) => {
+    return highlightedMushrooms.includes(mushroom);
   };
 
   const resetToDefault = () => {
@@ -90,8 +128,12 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     resetToDefault,
     data,
     selectedMushroom,
-    selectMushroom,
+    setSelectedMushroom,
     isMushroomSelected,
+    isSelectedMushroom,
+    highlightedMushrooms,
+    setHighlightedMushrooms,
+    isHighlightedMushroom,
   };
 });
 

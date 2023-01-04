@@ -1,5 +1,5 @@
 <template>
-  <div class="exploration-grid">
+  <div id="exploration-grid">
     <ScatterPlot />
     <MushroomCard />
     <BarChart />
@@ -17,16 +17,15 @@ import BarChart from "@/components/BarChart.vue";
 <style lang="sass">
 $padding: 6px
 
-.exploration-grid
+#exploration-grid
   display: grid
   gap: $padding
   padding: $padding
   width: 100%
   height: 100%
   grid-template-columns: repeat(2, 1fr)
-  --secondary-theme: #9E9E9E
-  background: linear-gradient(45deg, #E0E0E0, var(--secondary-theme))
+  background: rbg(var(--v-theme-background))
 
-  #scatter-plot, #bar-chart, #season-table
+  #scatter-plot, #bar-chart, #season-table, #mushroom-card
     height: calc(50vh - $padding * 2)
 </style>

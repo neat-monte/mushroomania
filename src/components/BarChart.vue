@@ -13,6 +13,15 @@
         density="compact"
         variant="underlined"
       />
+      <v-alert
+        class="ml-5"
+        color="accent"
+        text
+        v-if="canHaveMoreThanOneValue"
+        type="info"
+      >
+        One type of mushroom can be part of multiple bars
+      </v-alert>
     </div>
   </div>
 </template>
@@ -28,9 +37,11 @@ import useResizeObserver from "@/utils/resizeObserver";
 const { resizeRef, resizeState } = useResizeObserver();
 
 const mushroomStore = useMushroomStore();
+const showSelectedMushroom = true;
 
 const svgRef = ref(null);
 const xAxisLabel = ref(dataProperties.categorical[0].prop);
+const canHaveMoreThanOneValue = ref("null");
 
 onMounted(() => {
   const svg = select(svgRef.value);
@@ -40,14 +51,18 @@ onMounted(() => {
   watchEffect(() => {
     svg.selectAll("*").remove();
 
-    const categories = dataProperties.categorical.find(
+    const xLabelProperty = dataProperties.categorical.find(
       (cat) => cat.prop === xAxisLabel.value
-    ).values;
+    );
+
+    canHaveMoreThanOneValue.value = xLabelProperty.canHaveMoreThanOneValue;
+
+    const categories = xLabelProperty.values;
 
     const categoryMap = new Map(categories.map((c) => [c.value, c.name]));
     const categoryMapKeys = Array.from(categoryMap.keys());
     const counts = categories.map((c) => {
-      return { value: c.value, count: 0 };
+      return { prop: xAxisLabel.value, value: c.value, count: 0 };
     });
 
     mushroomStore.data.forEach((mushroomEntry) => {
@@ -101,17 +116,19 @@ onMounted(() => {
 
     chart.append("g").call(yAxis);
 
-    chart
-      .selectAll(".bar")
-      .data(counts)
-      .enter()
+    const bars = chart.selectAll(".bar").data(counts).enter();
+
+    bars
       .append("rect")
+      .on("click", (e, d) => {
+        mushroomStore.setHighlightedMushrooms(d.prop, d.value);
+        addHighlightedClass(e);
+      })
       .classed("bar", true)
       .attr("width", xScale.bandwidth())
       .attr("height", (d) => chartHeight - yScale(d.count))
       .attr("x", (d) => xScale(d.value))
-      .attr("y", (d) => yScale(d.count))
-      .style("fill-opacity", 0.75);
+      .attr("y", (d) => yScale(d.count));
 
     chart
       .selectAll(".label")
@@ -123,6 +140,73 @@ onMounted(() => {
       .attr("x", (d) => xScale(d.value) + xScale.bandwidth() / 2)
       .attr("y", (d) => yScale(d.count) - marginForLabel / 2)
       .attr("text-anchor", "middle");
+
+    const addHighlightedClass = (event) => {
+      if (event.currentTarget.classList.contains("highlighted")) {
+        chart.selectAll("rect").classed("highlighted", false);
+      } else {
+        chart.selectAll("rect").classed("highlighted", false);
+        select(event.currentTarget).classed("highlighted", true);
+      }
+    };
+
+    if (showSelectedMushroom && mushroomStore.isMushroomSelected()) {
+      let isFilteredOut = true;
+      for (let mushroom of mushroomStore.data) {
+        if (mushroomStore.isSelectedMushroom(mushroom)) {
+          isFilteredOut = false;
+          break;
+        }
+      }
+      if (isFilteredOut) return;
+
+      const attribute = mushroomStore.selectedMushroom[xAxisLabel.value];
+
+      if (!Array.isArray(attribute)) {
+        bars.each(function (e) {
+          if (e.value == (attribute ? 0 : 1)) {
+            select(this)
+              .append("rect")
+              .classed("selected", true)
+              .attr("width", xScale.bandwidth())
+              .attr("height", () => chartHeight - yScale(1))
+              .attr("x", (d) => xScale(d.value))
+              .attr("y", (d) => yScale(d.count / 2.0));
+          }
+        });
+      } else {
+        bars.each(function (e) {
+          if (attribute.includes(e.value))
+            select(this)
+              .append("rect")
+              .classed("selected", true)
+              .attr("width", xScale.bandwidth())
+              .attr("height", () => chartHeight - yScale(1))
+              .attr("x", (d) => xScale(d.value))
+              .attr("y", (d) => yScale(d.count / 2.0));
+        });
+      }
+    }
   });
 });
 </script>
+
+<style lang="sass">
+rect
+  fill: rgb(var(--v-theme-primary))
+
+  &:hover
+    cursor: pointer
+    fill: rgb(var(--v-theme-secondary)) !important
+
+  &.highlighted
+    fill: rgb(var(--v-theme-secondary)) !important
+    stroke: rgb(var(--v-theme-accent))
+    stroke-width: 1px
+
+  &.selected
+    fill: rgb(var(--v-theme-accent-lighten-2))
+    stroke: rgb(var(--v-theme-accent))
+    stroke-width: 2px
+    stroke-linejoin: round
+</style>

@@ -1,6 +1,6 @@
 <template>
   <v-table id="season-table" fixed-header height="100%">
-    <thead class="table-header" color="blue-grey-lighten-3">
+    <thead>
       <tr>
         <th
           class="text-left family"
@@ -40,7 +40,15 @@
       </tr>
     </thead>
     <tbody class="table-body">
-      <tr v-for="item in sortedData" :key="item.name">
+      <tr
+        v-for="item in sortedData"
+        :key="item.name"
+        :class="`
+          ${mushroomStore.isSelectedMushroom(item) ? 'selected' : ''} 
+          ${mushroomStore.isHighlightedMushroom(item) ? 'highlighted' : ''}
+        `"
+        @click="mushroomStore.setSelectedMushroom(item)"
+      >
         <td>{{ item.family }}</td>
         <td>{{ item.name }}</td>
         <td
@@ -78,21 +86,29 @@ const defaultHeader = [
 ];
 //The order used for sorting on a specific season.
 const sortOrder = {
-  1011: 0,
-  1001: 1,
-  1000: 2,
-  1100: 3,
-  1101: 4,
-  1110: 5,
-  1010: 6,
+  //First all mushrooms in the season
+  1000: 0,
+  //Then all mushrooms in the season + another
+  1100: 1,
+  1010: 2,
+  1001: 3,
+  //Then all mushrooms in the season + 2 others
+  1110: 4,
+  1101: 5,
+  1011: 6,
+  //Undefined behaviour
   1111: 7,
-  "0100": 8,
+  //Undefined behaviour
+  "0111": 8,
+  //Undefined behaviour
   "0110": 9,
-  "0111": 10,
-  "0101": 11,
-  "0010": 12,
-  "0011": 13,
+  "0101": 10,
+  "0011": 11,
+  //Undefined behaviour
+  "0100": 12,
+  "0010": 13,
   "0001": 14,
+  //Lastly all mushrooms with no seasons
   "0000": 15,
 };
 // The order in which to sort rows, default is sort on family first, then name and lastly seasonValue.
@@ -202,13 +218,15 @@ $endperc:       90%
 #season-table
   --v-theme-surface: transparent
   height: 100%
+  border-radius: 4px
 
   .family
     width: 18em
   .name
     width: 18em
+
   th
-    background: #CFD8DC
+    background: rgb(var(--v-theme-background))
 
     &[priority]
       padding-right: 10px
@@ -220,48 +238,74 @@ $endperc:       90%
       border: 5px solid transparent
 
     &[priority="0"]
-      --arrow-color: black
+      &:after
+        @extend .arrow
+      &[direction="up"]:after
+        bottom: 10px
+        border-bottom-color: rgb(var(--v-theme-gray-level-0))
+      &[direction="down"]:after
+        top: 10px
+        border-top-color: rgb(var(--v-theme-gray-level-0))
+
     &[priority="1"]
-      --arrow-color: grey
+      &:after
+        @extend .arrow
+      &[direction="up"]:after
+        bottom: 10px
+        border-bottom-color: rgb(var(--v-theme-gray-level-1))
+      &[direction="down"]:after
+        top: 10px
+        border-top-color: rgb(var(--v-theme-gray-level-1))
+
     &[priority="2"]
-      --arrow-color: silver
+      &:after
+        @extend .arrow
+      &[direction="up"]:after
+        bottom: 10px
+        border-bottom-color: rgb(var(--v-theme-gray-level-2))
+      &[direction="down"]:after
+        top: 10px
+        border-top-color: rgb(var(--v-theme-gray-level-2))
 
-    &[direction="up"]:after
-      @extend .arrow
-      bottom: 15px
-      border-bottom-color: var(--arrow-color)
+  tr
+    &:hover
+      cursor: pointer
+      background-color: rgba(var(--v-theme-accent-lighten-2), 0.5) !important
 
-    &[direction="down"]:after
-      @extend .arrow
-      top: 10px
-      border-top-color: var(--arrow-color)
+    &.highlighted
+      background-color: rgba(var(--v-theme-secondary), .5)
 
-  td
-    &.season
-      &[available=true]
-        margin: 0
-        padding: 0
+    &.selected
+      color: rgb(var(--v-theme-accent))
+      background-color: rgba(var(--v-theme-accent-lighten-2), .5)
+      font-weight: 600
 
+    td
+      &.season
+        &[available=true]
+          margin: 0
+          padding: 0
+
+          &:after
+            content: ""
+            display: block
+            width: 100%
+            height: 1.1rem
+
+      &.spring
+        @extend .season
         &:after
-          content: ""
-          display: block
-          width: 100%
-          height: 1.1rem
-
-    &.spring
-      @extend .season
-      &:after
-        background: linear-gradient(0.25turn, $winter-spring, $startperc, $spring, $endperc, $spring-summer)
-    &.summer
-      @extend .season
-      &:after
-        background: linear-gradient(0.25turn, $spring-summer, $startperc, $summer, $endperc, $summer-autumn)
-    &.autumn
-      @extend .season
-      &:after
-        background: linear-gradient(0.25turn, $summer-autumn, $startperc, $autumn, $endperc, $autumn-winter)
-    &.winter
-      @extend .season
-      &:after
-        background: linear-gradient(0.25turn, $autumn-winter, $startperc, $winter, $endperc, $winter-spring)
+          background: linear-gradient(0.25turn, $winter-spring, $startperc, $spring, $endperc, $spring-summer)
+      &.summer
+        @extend .season
+        &:after
+          background: linear-gradient(0.25turn, $spring-summer, $startperc, $summer, $endperc, $summer-autumn)
+      &.autumn
+        @extend .season
+        &:after
+          background: linear-gradient(0.25turn, $summer-autumn, $startperc, $autumn, $endperc, $autumn-winter)
+      &.winter
+        @extend .season
+        &:after
+          background: linear-gradient(0.25turn, $autumn-winter, $startperc, $winter, $endperc, $winter-spring)
 </style>
