@@ -69,7 +69,7 @@ onMounted(() => {
       const attribute = mushroomEntry[xAxisLabel.value];
 
       if (!Array.isArray(attribute)) {
-        counts[attribute ? 0 : 1].count++;
+        counts[categoryMapKeys.indexOf(attribute ? 0 : 1)].count++;
         return;
       }
 
@@ -165,13 +165,14 @@ onMounted(() => {
       if (!Array.isArray(attribute)) {
         bars.each(function (e) {
           if (e.value == (attribute ? 0 : 1)) {
+            console.log(e.value);
             select(this)
               .append("rect")
               .classed("selected", true)
               .attr("width", xScale.bandwidth())
               .attr("height", () => chartHeight - yScale(1))
               .attr("x", (d) => xScale(d.value))
-              .attr("y", (d) => yScale(d.count / 2.0));
+              .attr("y", (d) => yScale(Math.ceil(d.count / 2.0)));
           }
         });
       } else {
@@ -183,7 +184,7 @@ onMounted(() => {
               .attr("width", xScale.bandwidth())
               .attr("height", () => chartHeight - yScale(1))
               .attr("x", (d) => xScale(d.value))
-              .attr("y", (d) => yScale(d.count / 2.0));
+              .attr("y", (d) => yScale(Math.ceil(d.count / 2.0)));
         });
       }
     }
