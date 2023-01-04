@@ -13,6 +13,9 @@ const defaultFilters = {
   edibility: {
     edibility: -1,
   },
+  damage: {
+    damage: -1,
+  },
   occurrence: {
     seasons: filterOptions.occurrence.seasons.map((s) => s.value),
     isSeasonsStrict: false,
@@ -63,6 +66,8 @@ export const useMushroomStore = defineStore("mushrooms", () => {
       );
     // edibility:
     data = data.filter(isOfType(filters.edibility.edibility, "poisonous"));
+    // damage:
+    data = data.filter(isOfType(filters.damage.damage, "doesBruiseOrBleed"));
     // occurrence:
     data = filters.occurrence.isSeasonsStrict
       ? data.filter(containsAll(filters.occurrence.seasons, "season"))

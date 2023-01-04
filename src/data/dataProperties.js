@@ -26,7 +26,7 @@ export const categoricalProperties = [
     name: "Damage visibility",
     prop: "doesBruiseOrBleed",
     canHaveMoreThanOneValue: false,
-    values: filterOptions.other.damageVisibility,
+    values: filterOptions.damage.damage.filter((c) => c.value !== -1),
   },
   {
     name: "Ring or not",

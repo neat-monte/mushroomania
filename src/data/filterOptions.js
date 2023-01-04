@@ -6,6 +6,14 @@ const edibilityFilterOptions = {
   ],
 };
 
+const damageFilterOptions = {
+  damage: [
+    { name: "All", value: -1 },
+    { name: "Bruise or bleed", value: 1 },
+    { name: "No changes", value: 0 },
+  ],
+};
+
 const occurrenceFilterOptions = {
   seasons: [
     { name: "Spring", value: "s" },
@@ -115,19 +123,12 @@ const stemFilterOptions = {
   ],
 };
 
-const otherProperties = {
-  damageVisibility: [
-    { name: "Bruise or bleed", value: true },
-    { name: "No changes", value: false },
-  ],
-};
-
 export const filterOptions = {
   edibility: edibilityFilterOptions,
+  damage: damageFilterOptions,
   occurrence: occurrenceFilterOptions,
   cap: capFilterOptions,
   stem: stemFilterOptions,
-  other: otherProperties,
 };
 
 export default filterOptions;

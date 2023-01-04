@@ -61,6 +61,7 @@ onMounted(() => {
 
     const categoryMap = new Map(categories.map((c) => [c.value, c.name]));
     const categoryMapKeys = Array.from(categoryMap.keys());
+
     const counts = categories.map((c) => {
       return { prop: xAxisLabel.value, value: c.value, count: 0 };
     });
@@ -165,7 +166,6 @@ onMounted(() => {
       if (!Array.isArray(attribute)) {
         bars.each(function (e) {
           if (e.value == (attribute ? 0 : 1)) {
-            console.log(e.value);
             select(this)
               .append("rect")
               .classed("selected", true)
