@@ -257,7 +257,7 @@ onMounted(() => {
 .plot
   position: relative
 
-  .mushroom
+  circle.mushroom
     fill: rgba(var(--v-theme-primary), 0.3)
 
     &:hover
@@ -272,4 +272,18 @@ onMounted(() => {
       stroke: rgb(var(--v-theme-accent))
       stroke-width: 2px
       stroke-linejoin: round
+
+  rect.mushroom
+    stroke-width: 2px
+    stroke-linejoin: round
+
+    &:hover
+      cursor: pointer
+      stroke: rgb(var(--v-theme-accent-lighten-2)) !important
+
+    &.highlighted
+      stroke: rgba(var(--v-theme-secondary), 0.3)
+
+    &.selected
+      stroke: rgb(var(--v-theme-accent))
 </style>

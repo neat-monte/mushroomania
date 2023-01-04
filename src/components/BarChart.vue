@@ -197,7 +197,7 @@ onMounted(() => {
 </script>
 
 <style lang="sass">
-rect
+.bar
   fill: rgb(var(--v-theme-primary))
 
   &:hover

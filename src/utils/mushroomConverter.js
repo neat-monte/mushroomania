@@ -24,7 +24,6 @@ export const mapMushroomToRepresentative = (mushroom) => {
 };
 
 const mapValuesToString = (primaryProp, secondaryProp, list) => {
-  console.log(list);
   return filterOptions[primaryProp][secondaryProp]
     .filter((prop) => list.includes(prop.value))
     .map((prop) => prop.name)

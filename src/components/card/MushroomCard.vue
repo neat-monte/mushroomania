@@ -39,7 +39,7 @@
             <InfoProperty
               icon="mdi-light-recessed"
               name="Cap shape"
-              :description="mushroom.capDiameter"
+              :description="mushroom.capShape"
             />
             <InfoProperty
               icon="mdi-palette"
