@@ -3,7 +3,7 @@
     <div ref="resizeRef" class="flex-grow-1">
       <svg ref="svgRef" class="position-absolute"></svg>
     </div>
-    <div class="d-flex mx-4 my-2">
+    <div class="controls d-flex mx-4 my-2">
       <v-select
         v-model="xAxisLabel"
         :items="dataProperties.categorical"
@@ -12,15 +12,19 @@
         label="X axis"
         density="compact"
         variant="underlined"
+        hide-details="true"
+        class="x-axis-select"
       />
+      <v-spacer />
       <v-alert
-        class="ml-5"
         color="accent"
-        text
-        v-if="canHaveMoreThanOneValue"
-        type="info"
+        icon="mdi-information-outline"
+        density="compact"
+        variant="text"
+        class="inclusion-alert"
+        :style="{ visibility: canHaveMoreThanOneValue ? 'visible' : 'hidden' }"
       >
-        One type of mushroom can be part of multiple bars
+        A mushroom can be included in multiple bars
       </v-alert>
     </div>
   </div>
@@ -209,4 +213,10 @@ rect
     stroke: rgb(var(--v-theme-accent))
     stroke-width: 2px
     stroke-linejoin: round
+
+.controls
+  .x-axis-select
+    flex: 30
+  .inclusion-alert
+    flex: 60
 </style>

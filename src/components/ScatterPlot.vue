@@ -1,6 +1,6 @@
 <template>
   <div id="scatter-plot" class="d-flex flex-column">
-    <v-tabs ref="selector" v-model="tab" center-active>
+    <v-tabs ref="selector" v-model="tab" density="compact">
       <v-tab :value="1">Points</v-tab>
       <v-tab :value="2">Averages</v-tab>
       <v-tab :value="3">Boxes</v-tab>
@@ -17,6 +17,7 @@
         label="X-axis"
         density="compact"
         variant="underlined"
+        hide-details="true"
       />
       <v-spacer />
       <v-select
@@ -27,9 +28,15 @@
         label="Y-axis"
         density="compact"
         variant="underlined"
+        hide-details="true"
       />
       <v-spacer />
-      <v-checkbox v-model="showOnlyHighlighted" label="Show only highlighted" />
+      <v-checkbox
+        v-model="showOnlyHighlighted"
+        label="Show only highlighted"
+        color="secondary"
+        hide-details="true"
+      />
     </div>
   </div>
 </template>
