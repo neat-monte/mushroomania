@@ -155,6 +155,12 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     }
   };
 
+  const setHighlightedMushroomsArray = (newHighlightedMushrooms) => {
+    highlightedMushrooms.splice(0, highlightedMushrooms.length);
+    highlightedMushrooms.push(...newHighlightedMushrooms);
+    highlightedProp.value = highlightedProp.prop = null;
+  };
+
   const isHighlightedMushroom = (mushroom) => {
     return highlightedMushrooms.includes(mushroom);
   };
@@ -174,9 +180,9 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     getSelectedMushroomPresentation,
     isMushroomSelected,
     isSelectedMushroom,
-    highlightedProp,
     highlightedMushrooms,
     setHighlightedMushrooms,
+    setHighlightedMushroomsArray,
     isHighlightedMushroom,
   };
 });

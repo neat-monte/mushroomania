@@ -71,25 +71,36 @@ onMounted(() => {
         value: c.value,
         count: 0,
         highlights: 0,
+        selects: 0,
+        selectandhighlights: 0,
       };
     });
 
+    const counter = (mushroomEntry, attribute) => {
+      counts[categoryMapKeys.indexOf(attribute)].count++;
+      if (mushroomStore.isHighlightedMushroom(mushroomEntry)) {
+        counts[categoryMapKeys.indexOf(attribute)].highlights++;
+      }
+      if (mushroomStore.isSelectedMushroom(mushroomEntry)) {
+        counts[categoryMapKeys.indexOf(attribute)].selects++;
+      }
+      if (
+        mushroomStore.isHighlightedMushroom(mushroomEntry) &&
+        mushroomStore.isSelectedMushroom(mushroomEntry)
+      ) {
+        counts[categoryMapKeys.indexOf(attribute)].selectandhighlights++;
+      }
+    };
+
     mushroomStore.data.forEach((mushroomEntry) => {
       const attribute = mushroomEntry[xAxisLabel.value];
-
       if (!Array.isArray(attribute)) {
-        counts[categoryMapKeys.indexOf(attribute)].count++;
-        if (mushroomStore.isHighlightedMushroom(mushroomEntry)) {
-          counts[categoryMapKeys.indexOf(attribute)].highlights++;
-        }
+        counter(mushroomEntry, attribute);
         return;
       }
 
       attribute.forEach((abbrv) => {
-        counts[categoryMapKeys.indexOf(abbrv)].count++;
-        if (mushroomStore.isHighlightedMushroom(mushroomEntry)) {
-          counts[categoryMapKeys.indexOf(abbrv)].highlights++;
-        }
+        counter(mushroomEntry, abbrv);
       });
     });
 
@@ -159,7 +170,6 @@ onMounted(() => {
       .filter((d) => d.highlights > 0)
       .append("rect")
       .on("click", (e, d) => {
-        console.log(d);
         mushroomStore.setHighlightedMushrooms(d.prop, d.value);
       })
       .classed("bar", true)
@@ -170,36 +180,22 @@ onMounted(() => {
       .attr("y", (d) => yScale(d.highlights));
 
     if (mushroomStore.isMushroomSelected()) {
-      let isFilteredOut = true;
-      for (let mushroom of mushroomStore.data) {
-        if (mushroomStore.isSelectedMushroom(mushroom)) {
-          isFilteredOut = false;
-          break;
-        }
-      }
-      if (!isFilteredOut) {
-        const selectedMushroom = mushroomStore.selectedMushroom;
-        const highlightedProp = mushroomStore.highlightedProp;
-
-        bars
-          .filter((e) => e.value === selectedMushroom[xAxisLabel.value])
-          .append("rect")
-          .on("click", (e, d) => {
-            mushroomStore.setHighlightedMushrooms(d.prop, d.value);
-          })
-          .classed("bar", true)
-          .classed("selected", true)
-          .attr("width", xScale.bandwidth())
-          .attr("height", () => chartHeight - yScale(1))
-          .attr("x", (d) => xScale(d.value))
-          .attr("y", (d) =>
-            highlightedProp.prop === null
-              ? yScale(Math.ceil(d.count / 2))
-              : selectedMushroom[highlightedProp.prop] == highlightedProp.value
-              ? yScale(Math.ceil(d.highlights / 2))
-              : yScale(Math.ceil(d.highlights + (d.count - d.highlights) / 2))
-          );
-      }
+      bars
+        .filter((d) => d.selects > 0)
+        .append("rect")
+        .on("click", (e, d) => {
+          mushroomStore.setHighlightedMushrooms(d.prop, d.value);
+        })
+        .classed("bar", true)
+        .classed("selected", true)
+        .attr("width", xScale.bandwidth())
+        .attr("height", (d) => chartHeight - yScale(d.selects))
+        .attr("x", (d) => xScale(d.value))
+        .attr("y", (d) =>
+          d.selectandhighlights > 0
+            ? yScale(Math.ceil(d.highlights / 2))
+            : yScale(Math.ceil(d.highlights + (d.count - d.highlights) / 2))
+        );
     }
   });
 });
