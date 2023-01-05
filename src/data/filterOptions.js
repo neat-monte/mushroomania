@@ -1,16 +1,16 @@
 const edibilityFilterOptions = {
   edibility: [
-    { name: "All", value: -1 },
-    { name: "Edible", value: 1 },
-    { name: "Poisonous", value: 0 },
+    { name: "All", value: "none" },
+    { name: "Edible", value: false },
+    { name: "Poisonous", value: true },
   ],
 };
 
 const damageFilterOptions = {
   damage: [
-    { name: "All", value: -1 },
-    { name: "Bruise or bleed", value: 1 },
-    { name: "No changes", value: 0 },
+    { name: "All", value: "none" },
+    { name: "Bruise or bleed", value: true },
+    { name: "No changes", value: false },
   ],
 };
 
@@ -103,9 +103,9 @@ const stemFilterOptions = {
     { name: "None", value: "f" },
   ],
   hasRing: [
-    { name: "All", value: -1 },
-    { name: "One or more", value: 1 },
-    { name: "No ring", value: 0 },
+    { name: "All", value: "none" },
+    { name: "One or more", value: true },
+    { name: "No ring", value: false },
   ],
   ringType: [
     { name: "Cobwebby", value: "c" },

@@ -12,10 +12,10 @@ const defaultFilters = {
     name: null,
   },
   edibility: {
-    edibility: -1,
+    edibility: "none",
   },
   damage: {
-    damage: -1,
+    damage: "none",
   },
   occurrence: {
     seasons: filterOptions.occurrence.seasons.map((s) => s.value),
@@ -30,22 +30,15 @@ const defaultFilters = {
   },
   stem: {
     color: filterOptions.stem.color.map((c) => c.value),
-    hasRing: -1,
+    hasRing: "none",
     ringType: filterOptions.stem.ringType.map((rt) => rt.value),
   },
 };
 
-const isReverseOfType = (type, prop) => {
-  if (type === -1) return (m) => m;
-  return (mushroom) => {
-    return Boolean(type) === mushroom[prop];
-  };
-};
-
 const isOfType = (type, prop) => {
-  if (type === -1) return (m) => m;
+  if (type === "none") return (m) => m;
   return (mushroom) => {
-    return Boolean(type) !== mushroom[prop];
+    return type === mushroom[prop];
   };
 };
 
@@ -95,9 +88,7 @@ export const useMushroomStore = defineStore("mushrooms", () => {
             .indexOf((filters.search.name || "").toLowerCase()) > -1
       );
     // edibility:
-    data = data.filter(
-      isReverseOfType(filters.edibility.edibility, "poisonous")
-    );
+    data = data.filter(isOfType(filters.edibility.edibility, "poisonous"));
     // damage:
     data = data.filter(isOfType(filters.damage.damage, "doesBruiseOrBleed"));
     // occurrence:
@@ -147,7 +138,6 @@ export const useMushroomStore = defineStore("mushrooms", () => {
   };
 
   const setHighlightedMushrooms = (prop, value) => {
-    console.log(value);
     highlightedMushrooms.splice(0, highlightedMushrooms.length);
     if (highlightedProp.prop === prop && highlightedProp.value === value) {
       highlightedProp.value = highlightedProp.prop = null;
@@ -184,6 +174,7 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     getSelectedMushroomPresentation,
     isMushroomSelected,
     isSelectedMushroom,
+    highlightedProp,
     highlightedMushrooms,
     setHighlightedMushrooms,
     isHighlightedMushroom,

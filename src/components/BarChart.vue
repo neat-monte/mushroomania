@@ -66,20 +66,21 @@ onMounted(() => {
     const categoryMapKeys = Array.from(categoryMap.keys());
 
     const counts = categories.map((c) => {
-      return { prop: xAxisLabel.value, value: c.value, count: 0 };
-    });
-
-    const filterCounts = categories.map((c) => {
-      return { prop: xAxisLabel.value, value: c.value, count: 0 };
+      return {
+        prop: xAxisLabel.value,
+        value: c.value,
+        count: 0,
+        highlights: 0,
+      };
     });
 
     mushroomStore.data.forEach((mushroomEntry) => {
       const attribute = mushroomEntry[xAxisLabel.value];
 
       if (!Array.isArray(attribute)) {
-        counts[categoryMapKeys.indexOf(attribute ? 1 : 0)].count++;
+        counts[categoryMapKeys.indexOf(attribute)].count++;
         if (mushroomStore.isHighlightedMushroom(mushroomEntry)) {
-          filterCounts[categoryMapKeys.indexOf(attribute ? 1 : 0)].count++;
+          counts[categoryMapKeys.indexOf(attribute)].highlights++;
         }
         return;
       }
@@ -87,7 +88,7 @@ onMounted(() => {
       attribute.forEach((abbrv) => {
         counts[categoryMapKeys.indexOf(abbrv)].count++;
         if (mushroomStore.isHighlightedMushroom(mushroomEntry)) {
-          filterCounts[categoryMapKeys.indexOf(abbrv)].count++;
+          counts[categoryMapKeys.indexOf(abbrv)].highlights++;
         }
       });
     });
@@ -135,7 +136,6 @@ onMounted(() => {
     bars
       .append("rect")
       .on("click", (e, d) => {
-        console.log(d);
         mushroomStore.setHighlightedMushrooms(d.prop, d.value);
       })
       .classed("bar", true)
@@ -155,10 +155,8 @@ onMounted(() => {
       .attr("y", (d) => yScale(d.count) - marginForLabel / 2)
       .attr("text-anchor", "middle");
 
-    chart
-      .selectAll(".highlighted")
-      .data(filterCounts)
-      .enter()
+    bars
+      .filter((d) => d.highlights > 0)
       .append("rect")
       .on("click", (e, d) => {
         console.log(d);
@@ -167,9 +165,9 @@ onMounted(() => {
       .classed("bar", true)
       .classed("highlighted", true)
       .attr("width", xScale.bandwidth())
-      .attr("height", (d) => chartHeight - yScale(d.count))
+      .attr("height", (d) => chartHeight - yScale(d.highlights))
       .attr("x", (d) => xScale(d.value))
-      .attr("y", (d) => yScale(d.count));
+      .attr("y", (d) => yScale(d.highlights));
 
     if (mushroomStore.isMushroomSelected()) {
       let isFilteredOut = true;
@@ -179,35 +177,28 @@ onMounted(() => {
           break;
         }
       }
-      if (isFilteredOut) return;
+      if (!isFilteredOut) {
+        const selectedMushroom = mushroomStore.selectedMushroom;
+        const highlightedProp = mushroomStore.highlightedProp;
 
-      const attribute = mushroomStore.selectedMushroom[xAxisLabel.value];
-
-      if (!Array.isArray(attribute)) {
-        bars.each(function (e) {
-          if (e.value == (attribute ? 0 : 1)) {
-            select(this)
-              .append("rect")
-              .classed("bar", true)
-              .classed("selected", true)
-              .attr("width", xScale.bandwidth())
-              .attr("height", () => chartHeight - yScale(1))
-              .attr("x", (d) => xScale(d.value))
-              .attr("y", (d) => yScale(Math.ceil(d.count / 2.0)));
-          }
-        });
-      } else {
-        bars.each(function (e) {
-          if (attribute.includes(e.value))
-            select(this)
-              .append("rect")
-              .classed("bar", true)
-              .classed("selected", true)
-              .attr("width", xScale.bandwidth())
-              .attr("height", () => chartHeight - yScale(1))
-              .attr("x", (d) => xScale(d.value))
-              .attr("y", (d) => yScale(Math.ceil(d.count / 2.0)));
-        });
+        bars
+          .filter((e) => e.value === selectedMushroom[xAxisLabel.value])
+          .append("rect")
+          .on("click", (e, d) => {
+            mushroomStore.setHighlightedMushrooms(d.prop, d.value);
+          })
+          .classed("bar", true)
+          .classed("selected", true)
+          .attr("width", xScale.bandwidth())
+          .attr("height", () => chartHeight - yScale(1))
+          .attr("x", (d) => xScale(d.value))
+          .attr("y", (d) =>
+            highlightedProp.prop === null
+              ? yScale(Math.ceil(d.count / 2))
+              : selectedMushroom[highlightedProp.prop] == highlightedProp.value
+              ? yScale(Math.ceil(d.highlights / 2))
+              : yScale(Math.ceil(d.highlights + (d.count - d.highlights) / 2))
+          );
       }
     }
   });

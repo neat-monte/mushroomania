@@ -20,19 +20,19 @@ export const categoricalProperties = [
     name: "Edibility",
     prop: "poisonous",
     canHaveMoreThanOneValue: false,
-    values: filterOptions.edibility.edibility.filter((c) => c.value !== -1),
+    values: filterOptions.edibility.edibility.filter((c) => c.value !== "none"),
   },
   {
     name: "Damage visibility",
     prop: "doesBruiseOrBleed",
     canHaveMoreThanOneValue: false,
-    values: filterOptions.damage.damage.filter((c) => c.value !== -1),
+    values: filterOptions.damage.damage.filter((c) => c.value !== "none"),
   },
   {
     name: "Ring or not",
     prop: "hasRing",
     canHaveMoreThanOneValue: false,
-    values: filterOptions.stem.hasRing.filter((c) => c.value !== -1),
+    values: filterOptions.stem.hasRing.filter((c) => c.value !== "none"),
   },
   {
     name: "Habitat",
