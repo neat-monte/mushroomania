@@ -12,7 +12,10 @@ const defaultFilters = {
     name: null,
   },
   edibility: {
-    edibility: -1,
+    edibility: "none",
+  },
+  damage: {
+    damage: "none",
   },
   occurrence: {
     seasons: filterOptions.occurrence.seasons.map((s) => s.value),
@@ -27,15 +30,15 @@ const defaultFilters = {
   },
   stem: {
     color: filterOptions.stem.color.map((c) => c.value),
-    hasRing: -1,
+    hasRing: "none",
     ringType: filterOptions.stem.ringType.map((rt) => rt.value),
   },
 };
 
 const isOfType = (type, prop) => {
-  if (type === -1) return (m) => m;
+  if (type === "none") return (m) => m;
   return (mushroom) => {
-    return Boolean(type) !== mushroom[prop];
+    return type === mushroom[prop];
   };
 };
 
@@ -86,6 +89,8 @@ export const useMushroomStore = defineStore("mushrooms", () => {
       );
     // edibility:
     data = data.filter(isOfType(filters.edibility.edibility, "poisonous"));
+    // damage:
+    data = data.filter(isOfType(filters.damage.damage, "doesBruiseOrBleed"));
     // occurrence:
     data = filters.occurrence.isSeasonsStrict
       ? data.filter(containsAll(filters.occurrence.seasons, "season"))
@@ -150,6 +155,12 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     }
   };
 
+  const setHighlightedMushroomsArray = (newHighlightedMushrooms) => {
+    highlightedMushrooms.splice(0, highlightedMushrooms.length);
+    highlightedMushrooms.push(...newHighlightedMushrooms);
+    highlightedProp.value = highlightedProp.prop = null;
+  };
+
   const isHighlightedMushroom = (mushroom) => {
     return highlightedMushrooms.includes(mushroom);
   };
@@ -171,6 +182,7 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     isSelectedMushroom,
     highlightedMushrooms,
     setHighlightedMushrooms,
+    setHighlightedMushroomsArray,
     isHighlightedMushroom,
   };
 });

@@ -8,6 +8,7 @@
         <v-expansion-panels multiple color="panel">
           <SearchPanel />
           <EdibilityPanel />
+          <DamagePanel />
           <OccurrencePanel />
           <CapPanel />
           <StemPanel />
@@ -37,6 +38,7 @@
 <script setup>
 import SearchPanel from "@/components/panels/SearchPanel.vue";
 import EdibilityPanel from "@/components/panels/EdibilityPanel.vue";
+import DamagePanel from "@/components/panels/DamagePanel.vue";
 import OccurrencePanel from "@/components/panels/OccurrencePanel.vue";
 import CapPanel from "@/components/panels/CapPanel.vue";
 import StemPanel from "@/components/panels/StemPanel.vue";

@@ -22,6 +22,11 @@
               name="Edible"
               :description="mushroom.edible"
             />
+            <InfoProperty
+              icon="mdi-sword"
+              name="Damage"
+              :description="mushroom.damage"
+            />
           </InfoSection>
           <InfoSection title="Occurrence">
             <InfoProperty
@@ -39,7 +44,7 @@
             <InfoProperty
               icon="mdi-light-recessed"
               name="Cap shape"
-              :description="mushroom.capDiameter"
+              :description="mushroom.capShape"
             />
             <InfoProperty
               icon="mdi-palette"

@@ -43,7 +43,7 @@
 
 <script setup>
 import { onMounted, ref, watchEffect, watch } from "vue";
-import { select, scaleLinear, min, max, axisBottom, axisLeft } from "d3";
+import { select, scaleLinear, min, max, axisBottom, axisLeft, drag } from "d3";
 
 import useMushroomStore from "@/stores/mushrooms";
 import dataProperties from "@/data/dataProperties";
@@ -62,6 +62,115 @@ const selectorOptions = ref(dataProperties.numerical);
 
 const xAxisLabel = ref(dataProperties.numerical[1].prop);
 const yAxisLabel = ref(dataProperties.numerical[3].prop);
+
+const margin = { top: 5, right: 10, bottom: 26, left: 26 };
+
+var svg;
+
+var selectionRect = {
+  element: null,
+  previousElement: null,
+  currentY: 0,
+  currentX: 0,
+  originX: 0,
+  originY: 0,
+  setElement: function (ele) {
+    this.previousElement = this.element;
+    this.element = ele;
+  },
+  getCurrentAttributes: function () {
+    // use plus sign to convert string into number
+    var x = +this.element.attr("x");
+    var y = +this.element.attr("y");
+    var width = +this.element.attr("width");
+    var height = +this.element.attr("height");
+    return {
+      x1: x,
+      y1: y,
+      x2: x + width,
+      y2: y + height,
+    };
+  },
+  init: function (newX, newY) {
+    var rectElement = svg
+      .append("rect")
+      .attr("rx", 4)
+      .attr("ry", 4)
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("width", 0)
+      .attr("height", 0)
+      .classed("selection", true);
+    this.setElement(rectElement);
+    this.originX = newX;
+    this.originY = newY;
+    this.update(newX, newY);
+  },
+  update: function (newX, newY) {
+    this.currentX = newX;
+    this.currentY = newY;
+    this.element
+      .attr("x", this.currentX < this.originX ? this.currentX : this.originX)
+      .attr("y", this.currentY < this.originY ? this.currentY : this.originY)
+      .attr("width", Math.abs(this.currentX - this.originX))
+      .attr("height", Math.abs(this.currentY - this.originY));
+  },
+  focus: function () {
+    this.element.style("stroke", "#DE695B").style("stroke-width", "2.5");
+  },
+  remove: function () {
+    this.element.remove();
+    this.element = null;
+  },
+  removePrevious: function () {
+    if (this.previousElement) {
+      this.previousElement.remove();
+    }
+  },
+};
+
+function started(event) {
+  var p = [event.x, event.y];
+  selectionRect.init(p[0], p[1]);
+  selectionRect.removePrevious();
+}
+
+function dragged(event) {
+  var p = [event.x, event.y];
+  selectionRect.update(p[0], p[1]);
+}
+
+function ended(event) {
+  var finalAttributes = selectionRect.getCurrentAttributes();
+  event.sourceEvent.preventDefault();
+  selectionRect.focus();
+  const newHighlightedMushrooms = getMushroomsInsideRect(finalAttributes);
+  mushroomStore.setHighlightedMushroomsArray(newHighlightedMushrooms);
+  selectionRect.remove();
+}
+
+var dragBehavior = drag()
+  .on("drag", dragged)
+  .on("start", started)
+  .on("end", ended);
+
+function getMushroomsInsideRect({ x1, x2, y1, y2 }) {
+  return svg
+    .selectAll(".mushroom")
+    .filter(function () {
+      const { x, y, width, height } = select(this).node().getBBox();
+      const ox1 = x + margin.left;
+      const oy1 = y + margin.top;
+      const ox2 = ox1 + width;
+      const oy2 = oy1 + height;
+
+      // console.log({ ox1, ox2, oy1, oy2 });
+      // console.log({ x1, x2, y1, y2 });
+
+      return ox1 > x1 && ox2 < x2 && oy1 > y1 && oy2 < y2;
+    })
+    .data();
+}
 
 watch(tab, async (newTab, oldTab) => {
   switch (newTab) {
@@ -86,9 +195,8 @@ watch(tab, async (newTab, oldTab) => {
 });
 
 onMounted(() => {
-  const svg = select(svgRef.value);
-
-  const margin = { top: 5, right: 10, bottom: 26, left: 26 };
+  svg = select(svgRef.value);
+  svg.call(dragBehavior);
 
   watchEffect(() => {
     svg.selectAll("*").remove();
@@ -257,7 +365,7 @@ onMounted(() => {
 .plot
   position: relative
 
-  .mushroom
+  circle.mushroom
     fill: rgba(var(--v-theme-primary), 0.3)
 
     &:hover
@@ -272,4 +380,32 @@ onMounted(() => {
       stroke: rgb(var(--v-theme-accent))
       stroke-width: 2px
       stroke-linejoin: round
+
+  rect.mushroom
+    stroke-width: 2px
+    stroke-linejoin: round
+
+    &:hover
+      cursor: pointer
+      stroke: rgb(var(--v-theme-accent-lighten-2)) !important
+
+    &.highlighted
+      stroke: rgba(var(--v-theme-secondary), 0.3)
+
+    &.selected
+      stroke: rgb(var(--v-theme-accent))
+
+rect.selection
+  cursor: move !important
+  -webkit-touch-callout: none !important
+  -webkit-user-select: none !important
+  -khtml-user-select: none !important
+  -moz-user-select: none !important
+  -ms-user-select: none !important
+  user-select: none !important
+  stroke: #545454
+  stroke-width: 2px
+  stroke-opacity: 1
+  fill: white
+  fill-opacity: 0.5
 </style>

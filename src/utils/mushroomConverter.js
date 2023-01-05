@@ -8,6 +8,7 @@ export const mapMushroomToRepresentative = (mushroom) => {
     name: mushroom.name,
     family: mushroom.family,
     edible: mushroom.poisonous ? "No" : "Yes",
+    damage: mushroom.damage ? "Bruises or bleeds" : "Shows no changes",
     habitats: mapValuesToString("occurrence", "habitats", mushroom.habitat),
     seasons: mapValuesToString("occurrence", "seasons", mushroom.season),
     capDiameter: `${mushroom.minCapDiameter}-${mushroom.maxCapDiameter}cm`,
@@ -24,7 +25,6 @@ export const mapMushroomToRepresentative = (mushroom) => {
 };
 
 const mapValuesToString = (primaryProp, secondaryProp, list) => {
-  console.log(list);
   return filterOptions[primaryProp][secondaryProp]
     .filter((prop) => list.includes(prop.value))
     .map((prop) => prop.name)
