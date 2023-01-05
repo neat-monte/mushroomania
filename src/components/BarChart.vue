@@ -144,6 +144,8 @@ onMounted(() => {
 
     const bars = chart.selectAll(".bar").data(counts).enter();
 
+    const labels = chart.selectAll(".label").data(counts).enter();
+
     bars
       .append("rect")
       .on("click", (e, d) => {
@@ -154,17 +156,6 @@ onMounted(() => {
       .attr("height", (d) => chartHeight - yScale(d.count))
       .attr("x", (d) => xScale(d.value))
       .attr("y", (d) => yScale(d.count));
-
-    chart
-      .selectAll(".label")
-      .data(counts)
-      .enter()
-      .append("text")
-      .classed("label", true)
-      .text((d) => d.count)
-      .attr("x", (d) => xScale(d.value) + xScale.bandwidth() / 2)
-      .attr("y", (d) => yScale(d.count) - marginForLabel / 2)
-      .attr("text-anchor", "middle");
 
     bars
       .filter((d) => d.highlights > 0)
@@ -197,6 +188,23 @@ onMounted(() => {
             : yScale(Math.ceil(d.highlights + (d.count - d.highlights) / 2))
         );
     }
+
+    labels
+      .filter((d) => d.highlights > 0 && d.count > d.highlights)
+      .append("text")
+      .classed("label", true)
+      .text((d) => d.highlights)
+      .attr("x", (d) => xScale(d.value) + xScale.bandwidth() / 2)
+      .attr("y", (d) => yScale(d.highlights) - marginForLabel / 2)
+      .attr("text-anchor", "middle");
+
+    labels
+      .append("text")
+      .classed("label", true)
+      .text((d) => d.count)
+      .attr("x", (d) => xScale(d.value) + xScale.bandwidth() / 2)
+      .attr("y", (d) => yScale(d.count) - marginForLabel / 2)
+      .attr("text-anchor", "middle");
   });
 });
 </script>
