@@ -1,4 +1,4 @@
-import { reactive, computed, toRaw } from "vue";
+import { ref, reactive, computed, toRaw } from "vue";
 import { defineStore } from "pinia";
 
 import mushroomData from "@/data/mushroom-data.json";
@@ -62,9 +62,8 @@ export const useMushroomStore = defineStore("mushrooms", () => {
   const names = mushroomData.map((m) => m.name);
   const filters = reactive(structuredClone(defaultFilters));
 
+  const showOnlyHighlighted = ref(false);
   const selectedMushroom = reactive({});
-  // const mushroomProps = () => {};
-
   const highlightedMushrooms = reactive([]);
   const highlightedProp = reactive({ prop: null, value: null });
 
@@ -119,6 +118,10 @@ export const useMushroomStore = defineStore("mushrooms", () => {
 
     return data;
   });
+
+  const toggleShowOnlyHighlighted = () => {
+    showOnlyHighlighted.value = !showOnlyHighlighted.value;
+  };
 
   const setSelectedMushroom = (mushroom) => {
     if (isSelectedMushroom(mushroom)) {
@@ -235,6 +238,8 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     filterOptions: filters,
     resetToDefault,
     data,
+    showOnlyHighlighted,
+    toggleShowOnlyHighlighted,
     selectedMushroom,
     setSelectedMushroom,
     getSelectedMushroomPresentation,

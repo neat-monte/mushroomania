@@ -46,6 +46,13 @@
         :class="`
           ${mushroomStore.isSelectedMushroom(item) ? 'selected' : ''} 
           ${mushroomStore.isHighlightedMushroom(item) ? 'highlighted' : ''}
+          ${
+            mushroomStore.showOnlyHighlighted &&
+            !mushroomStore.isHighlightedMushroom(item) &&
+            !mushroomStore.isSelectedMushroom(item)
+              ? 'd-none'
+              : ''
+          }
         `"
         @click.exact.stop="mushroomStore.setSelectedMushroom(item)"
         @click.shift.stop="
@@ -224,7 +231,6 @@ $endperc:       90%
 
 #season-table
   --v-theme-surface: transparent
-  height: 100%
   border-radius: 4px
 
   .family

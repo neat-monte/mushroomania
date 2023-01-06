@@ -40,4 +40,11 @@ html
 
   &:active
     background: rgba(0,0,0,.9)
+
+@media screen and (min-width: 1025px)
+  .v-main
+    --v-layout-top: 0 !important
+  .v-navigation-drawer
+    top: 0 !important
+    height: 100% !important
 </style>
