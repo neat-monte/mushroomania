@@ -373,7 +373,7 @@ onMounted(() => {
 
 <style lang="sass">
 #scatter-plot-svg
-  min-height: 270px
+  min-height: 250px
 
 .plot
   position: relative

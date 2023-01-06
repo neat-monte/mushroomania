@@ -37,7 +37,7 @@ $padding: 6px
     height: 55vh
     width: 100vw
 
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 1025px)
   #exploration-grid
     grid-template-columns: repeat(2, 1fr)
 
