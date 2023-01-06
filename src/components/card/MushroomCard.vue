@@ -71,17 +71,15 @@
           </InfoSection>
         </div>
         <div class="information-right mx-2">
-          <div class="rounded">
-            <v-img
-              class="bg-background"
-              width="100%"
-              height="170"
-              aspect-ratio="1"
-              :src="mushroom.url"
-              lazy-src="https://live.staticflickr.com/3280/2855209141_e2b1502342_b.jpg"
-              cover
-            />
-          </div>
+          <v-img
+            class="bg-background rounded"
+            width="100%"
+            height="170"
+            aspect-ratio="1"
+            :src="mushroom.url"
+            lazy-src="https://live.staticflickr.com/3280/2855209141_e2b1502342_b.jpg"
+            cover
+          />
           <InfoSection title="Dimensions">
             <InfoProperty
               icon="mdi-arrow-expand"
@@ -143,8 +141,10 @@ const mushroom = computed(() => {
 
 <style lang="sass" scoped>
 .content
+
   .information-left
     flex: 4
+
   .information-right
     flex: 3
 </style>
