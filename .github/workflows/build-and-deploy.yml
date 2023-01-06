@@ -1,0 +1,24 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build application
+      run: |
+          npm ci
+          npm run build
+
+    - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
