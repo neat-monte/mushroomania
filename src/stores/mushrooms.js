@@ -2,38 +2,9 @@ import { ref, reactive, computed, toRaw } from "vue";
 import { defineStore } from "pinia";
 
 import mushroomData from "@/data/mushroom-data.json";
-import filterOptions from "@/data/filterOptions";
-import dataProperties from "../data/dataProperties";
-import { mapMushroomToRepresentative } from "../utils/mushroomConverter";
-
-const defaultFilters = {
-  search: {
-    family: null,
-    name: null,
-  },
-  edibility: {
-    edibility: "none",
-  },
-  damage: {
-    damage: "none",
-  },
-  occurrence: {
-    seasons: filterOptions.occurrence.seasons.map((s) => s.value),
-    isSeasonsStrict: false,
-    habitats: filterOptions.occurrence.habitats.map((h) => h.value),
-    isHabitatsStrict: false,
-  },
-  cap: {
-    shape: filterOptions.cap.shape.map((s) => s.value),
-    color: filterOptions.cap.color.map((c) => c.value),
-    gillColor: filterOptions.cap.gillColor.map((gc) => gc.value),
-  },
-  stem: {
-    color: filterOptions.stem.color.map((c) => c.value),
-    hasRing: "none",
-    ringType: filterOptions.stem.ringType.map((rt) => rt.value),
-  },
-};
+import dataProperties from "@/data/dataProperties";
+import { mapMushroomToRepresentative } from "@/utils/mushroomConverter";
+import { filters } from "@/utils/filter";
 
 const isOfType = (type, prop) => {
   if (type === "none") return (m) => m;
@@ -60,7 +31,6 @@ const containsAll = (contents, prop) => {
 export const useMushroomStore = defineStore("mushrooms", () => {
   const families = [...new Set(mushroomData.map((m) => m.family))];
   const names = mushroomData.map((m) => m.name);
-  const filters = reactive(structuredClone(defaultFilters));
 
   const showOnlyHighlighted = ref(false);
   const selectedMushroom = reactive({});
@@ -154,8 +124,8 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     );
   };
 
-  const setHighlightedMushrooms = (prop, value, shift, remove) => {
-    const matchedMushrooms = toRaw(
+  const getFilteredMushrooms = (prop, value) => {
+    return toRaw(
       data.value.filter((mushroom) => {
         if (Array.isArray(mushroom[prop])) {
           return mushroom[prop].includes(value);
@@ -163,39 +133,9 @@ export const useMushroomStore = defineStore("mushrooms", () => {
         return mushroom[prop] == value;
       })
     );
-
-    if (shift) {
-      if (remove) {
-        const newHighlightedMushrooms = highlightedMushrooms.filter(
-          (mushroom) => !matchedMushrooms.includes(toRaw(mushroom))
-        );
-
-        highlightedMushrooms.splice(
-          0,
-          highlightedMushrooms.length,
-          ...newHighlightedMushrooms
-        );
-      } else {
-        for (let mushroom of matchedMushrooms) {
-          if (!highlightedMushrooms.includes(toRaw(mushroom))) {
-            highlightedMushrooms.push(mushroom);
-          }
-        }
-      }
-    } else {
-      if (remove) {
-        highlightedMushrooms.splice(0, highlightedMushrooms.length);
-      } else {
-        highlightedMushrooms.splice(
-          0,
-          highlightedMushrooms.length,
-          ...matchedMushrooms
-        );
-      }
-    }
   };
 
-  const setHighlightedMushroomsArray = (additionalMushrooms, shift, remove) => {
+  const setHighlightedMushrooms = (additionalMushrooms, shift, remove) => {
     if (shift) {
       if (remove) {
         const newHighlightedMushrooms = highlightedMushrooms.filter(
@@ -215,11 +155,15 @@ export const useMushroomStore = defineStore("mushrooms", () => {
         }
       }
     } else {
-      highlightedMushrooms.splice(
-        0,
-        highlightedMushrooms.length,
-        ...additionalMushrooms
-      );
+      if (remove) {
+        highlightedMushrooms.splice(0, highlightedMushrooms.length);
+      } else {
+        highlightedMushrooms.splice(
+          0,
+          highlightedMushrooms.length,
+          ...additionalMushrooms
+        );
+      }
     }
   };
 
@@ -227,15 +171,10 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     return highlightedMushrooms.includes(mushroom);
   };
 
-  const resetToDefault = () => {
-    Object.assign(filters, structuredClone(defaultFilters));
-  };
-
   return {
     families,
     names,
     filterOptions: filters,
-    resetToDefault,
     data,
     showOnlyHighlighted,
     toggleShowOnlyHighlighted,
@@ -245,8 +184,8 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     isMushroomSelected,
     isSelectedMushroom,
     highlightedMushrooms,
+    getFilteredMushrooms,
     setHighlightedMushrooms,
-    setHighlightedMushroomsArray,
     isHighlightedMushroom,
   };
 });

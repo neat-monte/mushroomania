@@ -35,7 +35,7 @@
           <span class="font-weight-bold">{{ mushroomStore.data.length }}</span>
         </div>
         <v-btn
-          @click="mushroomStore.resetToDefault"
+          @click="resetFilters"
           size="small"
           variant="flat"
           color="accent"
@@ -59,6 +59,7 @@ import CapPanel from "@/components/panels/CapPanel.vue";
 import StemPanel from "@/components/panels/StemPanel.vue";
 
 import useMushroomStore from "@/stores/mushrooms";
+import { resetFilters } from "@/utils/filter";
 
 const mushroomStore = useMushroomStore();
 

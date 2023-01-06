@@ -150,8 +150,7 @@ onMounted(() => {
       .append("rect")
       .on("click", (e, d) => {
         mushroomStore.setHighlightedMushrooms(
-          d.prop,
-          d.value,
+          mushroomStore.getFilteredMushrooms(d.prop, d.value),
           e.shiftKey,
           false
         );
@@ -167,8 +166,7 @@ onMounted(() => {
       .append("rect")
       .on("click", (e, d) => {
         mushroomStore.setHighlightedMushrooms(
-          d.prop,
-          d.value,
+          mushroomStore.getFilteredMushrooms(d.prop, d.value),
           e.shiftKey,
           true
         );

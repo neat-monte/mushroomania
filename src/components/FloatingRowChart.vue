@@ -56,7 +56,7 @@
         `"
         @click.exact.stop="mushroomStore.setSelectedMushroom(item)"
         @click.shift.stop="
-          mushroomStore.setHighlightedMushroomsArray(
+          mushroomStore.setHighlightedMushrooms(
             [item],
             true,
             mushroomStore.isHighlightedMushroom(item)
