@@ -373,6 +373,7 @@ onMounted(() => {
 
 <style lang="sass">
 #scatter-plot-svg
+  cursor: crosshair !important
   min-height: 250px
 
 .plot
@@ -411,7 +412,6 @@ onMounted(() => {
       stroke: rgb(var(--v-theme-accent))
 
 rect.selection
-  cursor: move !important
   -webkit-touch-callout: none !important
   -webkit-user-select: none !important
   -khtml-user-select: none !important
