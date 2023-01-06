@@ -1,6 +1,6 @@
 <template>
-  <div id="bar-chart" class="d-flex flex-column">
-    <div id="bar-chart-svg" ref="resizeRef" class="flex-grow-1">
+  <div id="column-chart" class="d-flex flex-column">
+    <div id="column-chart-svg" ref="resizeRef" class="flex-grow-1">
       <svg ref="svgRef" class="position-absolute"></svg>
     </div>
     <div class="controls d-flex mx-4 my-2">
@@ -150,8 +150,7 @@ onMounted(() => {
       .append("rect")
       .on("click", (e, d) => {
         mushroomStore.setHighlightedMushrooms(
-          d.prop,
-          d.value,
+          mushroomStore.getFilteredMushrooms(d.prop, d.value),
           e.shiftKey,
           false
         );
@@ -167,8 +166,7 @@ onMounted(() => {
       .append("rect")
       .on("click", (e, d) => {
         mushroomStore.setHighlightedMushrooms(
-          d.prop,
-          d.value,
+          mushroomStore.getFilteredMushrooms(d.prop, d.value),
           e.shiftKey,
           true
         );
@@ -222,7 +220,7 @@ onMounted(() => {
 </script>
 
 <style lang="sass">
-#bar-chart-svg
+#column-chart-svg
   min-height: 300px
 
 .bar

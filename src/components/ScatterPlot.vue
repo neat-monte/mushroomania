@@ -148,7 +148,7 @@ function ended(event) {
     event.sourceEvent.preventDefault();
     selectionRect.focus();
     const newHighlightedMushrooms = getMushroomsInsideRect(finalAttributes);
-    mushroomStore.setHighlightedMushroomsArray(newHighlightedMushrooms, shift);
+    mushroomStore.setHighlightedMushrooms(newHighlightedMushrooms, shift);
     selectionRect.remove();
     wasDragged = false;
   }

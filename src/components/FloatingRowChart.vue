@@ -1,5 +1,5 @@
 <template>
-  <v-table id="season-table" fixed-header height="100%">
+  <v-table id="floating-row-chart" fixed-header height="100%">
     <thead>
       <tr>
         <th
@@ -56,7 +56,7 @@
         `"
         @click.exact.stop="mushroomStore.setSelectedMushroom(item)"
         @click.shift.stop="
-          mushroomStore.setHighlightedMushroomsArray(
+          mushroomStore.setHighlightedMushrooms(
             [item],
             true,
             mushroomStore.isHighlightedMushroom(item)
@@ -229,7 +229,7 @@ $startperc:     10%
 $endperc:       90%
 
 
-#season-table
+#floating-row-chart
   --v-theme-surface: transparent
   border-radius: 4px
 

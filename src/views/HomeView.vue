@@ -1,17 +1,17 @@
 <template>
-  <div id="exploration-grid">
+  <div id="exploration-grid" class="w-100 h-100">
     <ScatterPlot />
     <MushroomCard />
-    <BarChart />
-    <SeasonTable />
+    <ColumnChart />
+    <FloatingRowChart />
   </div>
 </template>
 
 <script setup>
 import ScatterPlot from "@/components/ScatterPlot.vue";
 import MushroomCard from "@/components/card/MushroomCard.vue";
-import SeasonTable from "@/components/SeasonTable.vue";
-import BarChart from "@/components/BarChart.vue";
+import FloatingRowChart from "@/components/FloatingRowChart.vue";
+import ColumnChart from "@/components/ColumnChart.vue";
 </script>
 
 <style lang="sass">
@@ -23,16 +23,14 @@ $padding: 6px
   background: rbg(var(--v-theme-background))
   gap: $padding
   padding: $padding
-  width: 100%
-  height: 100%
 
   #scatter-plot
     order: 1
-  #bar-chart
+  #column-chart
     order: 2
   #mushroom-card
     order: 3
-  #season-table
+  #floating-row-chart
     order: 4
     height: 55vh
     width: 100vw
@@ -43,14 +41,14 @@ $padding: 6px
 
     #scatter-plot
       order: 1
-    #bar-chart
+    #column-chart
       order: 3
     #mushroom-card
       order: 2
-    #season-table
+    #floating-row-chart
       order: 4
 
-    #scatter-plot, #bar-chart, #mushroom-card, #season-table
+    #scatter-plot, #column-chart, #mushroom-card, #floating-row-chart
       height: calc(50vh - $padding * 2)
       width: 100%
 </style>
