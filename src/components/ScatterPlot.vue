@@ -2,8 +2,8 @@
   <div id="scatter-plot" class="d-flex flex-column">
     <v-tabs ref="selector" v-model="tab" density="compact">
       <v-tab :value="1">Points</v-tab>
-      <v-tab :value="2">Averages</v-tab>
-      <v-tab :value="3">Boxes</v-tab>
+      <v-tab :value="2">Aggregates</v-tab>
+      <v-tab :value="3">Areas</v-tab>
     </v-tabs>
     <div ref="resizeRef" class="flex-grow-1">
       <svg ref="svgRef" class="position-absolute"></svg>
@@ -129,6 +129,8 @@ var selectionRect = {
   },
 };
 
+let wasDragged = false;
+
 function started(event) {
   var p = [event.x, event.y];
   selectionRect.init(p[0], p[1]);
@@ -136,17 +138,21 @@ function started(event) {
 }
 
 function dragged(event) {
+  wasDragged = true;
   var p = [event.x, event.y];
   selectionRect.update(p[0], p[1]);
 }
 
 function ended(event) {
-  var finalAttributes = selectionRect.getCurrentAttributes();
-  event.sourceEvent.preventDefault();
-  selectionRect.focus();
-  const newHighlightedMushrooms = getMushroomsInsideRect(finalAttributes);
-  mushroomStore.setHighlightedMushroomsArray(newHighlightedMushrooms);
-  selectionRect.remove();
+  if (wasDragged) {
+    var finalAttributes = selectionRect.getCurrentAttributes();
+    event.sourceEvent.preventDefault();
+    selectionRect.focus();
+    const newHighlightedMushrooms = getMushroomsInsideRect(finalAttributes);
+    mushroomStore.setHighlightedMushroomsArray(newHighlightedMushrooms);
+    selectionRect.remove();
+    wasDragged = false;
+  }
 }
 
 var dragBehavior = drag()
@@ -163,9 +169,6 @@ function getMushroomsInsideRect({ x1, x2, y1, y2 }) {
       const oy1 = y + margin.top;
       const ox2 = ox1 + width;
       const oy2 = oy1 + height;
-
-      // console.log({ ox1, ox2, oy1, oy2 });
-      // console.log({ x1, x2, y1, y2 });
 
       return ox1 > x1 && ox2 < x2 && oy1 > y1 && oy2 < y2;
     })
@@ -382,6 +385,8 @@ onMounted(() => {
       stroke-linejoin: round
 
   rect.mushroom
+    position: absolute
+    z-index: 1
     stroke-width: 2px
     stroke-linejoin: round
 

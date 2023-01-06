@@ -194,9 +194,10 @@ onMounted(() => {
       .append("text")
       .classed("label", true)
       .text((d) => d.highlights)
-      .attr("x", (d) => xScale(d.value) + xScale.bandwidth() / 2)
+      .attr("x", (d) => xScale(d.value) + xScale.bandwidth() / 1.5)
       .attr("y", (d) => yScale(d.highlights) - marginForLabel / 2)
-      .attr("text-anchor", "middle");
+      .attr("text-anchor", "left")
+      .attr("fill", "rgb(var(--v-theme-accent))");
 
     labels
       .append("text")
@@ -204,7 +205,8 @@ onMounted(() => {
       .text((d) => d.count)
       .attr("x", (d) => xScale(d.value) + xScale.bandwidth() / 2)
       .attr("y", (d) => yScale(d.count) - marginForLabel / 2)
-      .attr("text-anchor", "middle");
+      .attr("text-anchor", "middle")
+      .attr("fill", "rgb(var(--v-theme-primary))");
   });
 });
 </script>
