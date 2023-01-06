@@ -6,6 +6,12 @@ import dataProperties from "@/data/dataProperties";
 import { mapMushroomToRepresentative } from "@/utils/mushroomConverter";
 import { filters } from "@/utils/filter";
 
+const mushroomDataAdjusted = mushroomData.map((mushroom) => {
+  mushroom.minStemWidth /= 10;
+  mushroom.maxStemWidth /= 10;
+  return mushroom;
+});
+
 const isOfType = (type, prop) => {
   if (type === "none") return (m) => m;
   return (mushroom) => {
@@ -37,11 +43,7 @@ export const useMushroomStore = defineStore("mushrooms", () => {
   const highlightedMushrooms = reactive([]);
 
   const data = computed(() => {
-    let data = mushroomData;
-    for (let mushroom of mushroomData) {
-      mushroom.minStemWidth /= 10;
-      mushroom.maxStemWidth /= 10;
-    }
+    let data = mushroomDataAdjusted;
     // calculate averages:
     data.forEach((d) => {
       dataProperties.combinedNumerical.forEach(({ prop: t }) => {
