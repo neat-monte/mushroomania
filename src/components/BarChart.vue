@@ -149,7 +149,12 @@ onMounted(() => {
     bars
       .append("rect")
       .on("click", (e, d) => {
-        mushroomStore.setHighlightedMushrooms(d.prop, d.value);
+        mushroomStore.setHighlightedMushrooms(
+          d.prop,
+          d.value,
+          e.shiftKey,
+          false
+        );
       })
       .classed("bar", true)
       .attr("width", xScale.bandwidth())
@@ -161,7 +166,12 @@ onMounted(() => {
       .filter((d) => d.highlights > 0)
       .append("rect")
       .on("click", (e, d) => {
-        mushroomStore.setHighlightedMushrooms(d.prop, d.value);
+        mushroomStore.setHighlightedMushrooms(
+          d.prop,
+          d.value,
+          e.shiftKey,
+          true
+        );
       })
       .classed("bar", true)
       .classed("highlighted", true)
@@ -175,7 +185,12 @@ onMounted(() => {
         .filter((d) => d.selects > 0)
         .append("rect")
         .on("click", (e, d) => {
-          mushroomStore.setHighlightedMushrooms(d.prop, d.value);
+          mushroomStore.setHighlightedMushrooms(
+            d.prop,
+            d.value,
+            e.shiftKey,
+            d.selectandhighlights > 0
+          );
         })
         .classed("bar", true)
         .classed("selected", true)

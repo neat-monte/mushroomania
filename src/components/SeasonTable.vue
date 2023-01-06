@@ -47,7 +47,14 @@
           ${mushroomStore.isSelectedMushroom(item) ? 'selected' : ''} 
           ${mushroomStore.isHighlightedMushroom(item) ? 'highlighted' : ''}
         `"
-        @click="mushroomStore.setSelectedMushroom(item)"
+        @click.exact.stop="mushroomStore.setSelectedMushroom(item)"
+        @click.shift.stop="
+          mushroomStore.setHighlightedMushroomsArray(
+            [item],
+            true,
+            mushroomStore.isHighlightedMushroom(item)
+          )
+        "
       >
         <td>{{ item.family }}</td>
         <td>{{ item.name }}</td>

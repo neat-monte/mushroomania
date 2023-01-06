@@ -18,6 +18,7 @@ import FiltersDrawer from "@/components/FiltersDrawer.vue";
 html
   & *
     font-family: "Lato"
+    user-select: none
 
   & > ::-webkit-scrollbar
     display: none
