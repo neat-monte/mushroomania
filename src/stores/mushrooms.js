@@ -65,7 +65,6 @@ export const useMushroomStore = defineStore("mushrooms", () => {
   const showOnlyHighlighted = ref(false);
   const selectedMushroom = reactive({});
   const highlightedMushrooms = reactive([]);
-  const highlightedProp = reactive({ prop: null, value: null });
 
   const data = computed(() => {
     let data = mushroomData;
