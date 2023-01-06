@@ -5,10 +5,10 @@
       <v-tab :value="2">Aggregates</v-tab>
       <v-tab :value="3">Areas</v-tab>
     </v-tabs>
-    <div ref="resizeRef" class="flex-grow-1">
+    <div id="scatter-plot-svg" ref="resizeRef" class="flex-grow-1">
       <svg ref="svgRef" class="position-absolute"></svg>
     </div>
-    <div class="d-flex mx-4 my-2">
+    <div class="controls d-flex flex-wrap mx-4 my-2">
       <v-select
         v-model="xAxisLabel"
         :items="selectorOptions"
@@ -32,7 +32,7 @@
       />
       <v-spacer />
       <v-checkbox
-        v-model="showOnlyHighlighted"
+        v-model="mushroomStore.showOnlyHighlighted"
         label="Show only highlighted"
         color="secondary"
         hide-details="true"
@@ -51,7 +51,6 @@ import useResizeObserver from "@/utils/resizeObserver";
 
 const mushroomStore = useMushroomStore();
 
-const showOnlyHighlighted = ref(false);
 const tab = ref(null);
 const svgRef = ref(null);
 const selector = ref(null);
@@ -331,7 +330,7 @@ onMounted(() => {
       .data(mushroomStore.data)
       .enter();
 
-    if (!showOnlyHighlighted.value) {
+    if (!mushroomStore.showOnlyHighlighted) {
       dots
         .filter(
           (d) =>
@@ -365,6 +364,9 @@ onMounted(() => {
 </script>
 
 <style lang="sass">
+#scatter-plot-svg
+  min-height: 270px
+
 .plot
   position: relative
 

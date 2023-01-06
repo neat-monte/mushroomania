@@ -1,6 +1,6 @@
 <template>
   <div id="bar-chart" class="d-flex flex-column">
-    <div ref="resizeRef" class="flex-grow-1">
+    <div id="bar-chart-svg" ref="resizeRef" class="flex-grow-1">
       <svg ref="svgRef" class="position-absolute"></svg>
     </div>
     <div class="controls d-flex mx-4 my-2">
@@ -212,6 +212,9 @@ onMounted(() => {
 </script>
 
 <style lang="sass">
+#bar-chart-svg
+  min-height: 300px
+
 .bar
   fill: rgb(var(--v-theme-primary))
 
