@@ -137,14 +137,29 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     );
   };
 
-  const setHighlightedMushrooms = (prop, value) => {
+  const setHighlightedMushrooms = (prop, value, remove = false) => {
+    const propIsArray = Array.isArray(data.value[0][prop]);
+    if (remove) {
+      let i = 0;
+      while (i < highlightedMushrooms.length) {
+        if (
+          (propIsArray && highlightedMushrooms[i][prop].includes(value)) ||
+          highlightedMushrooms[i][prop] == value
+        ) {
+          highlightedMushrooms.splice(i, 1);
+        } else {
+          i++;
+        }
+      }
+      return;
+    }
     highlightedMushrooms.splice(0, highlightedMushrooms.length);
     if (highlightedProp.prop === prop && highlightedProp.value === value) {
       highlightedProp.value = highlightedProp.prop = null;
     } else {
       highlightedMushrooms.push(
         ...data.value.filter((mushroom) => {
-          if (Array.isArray(mushroom[prop])) {
+          if (propIsArray) {
             return mushroom[prop].includes(value);
           }
           return mushroom[prop] == value;

@@ -161,7 +161,7 @@ onMounted(() => {
       .filter((d) => d.highlights > 0)
       .append("rect")
       .on("click", (e, d) => {
-        mushroomStore.setHighlightedMushrooms(d.prop, d.value);
+        mushroomStore.setHighlightedMushrooms(d.prop, d.value, true);
       })
       .classed("bar", true)
       .classed("highlighted", true)
