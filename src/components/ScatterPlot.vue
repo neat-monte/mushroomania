@@ -273,16 +273,16 @@ onMounted(() => {
           type = "rect";
 
           renderFunction = function (d) {
-            const xRound = xScale(0.2) - xScale(0);
-            const yRound = yScale(0) - yScale(0.2);
+            const xRound = fieldWidth / 200;
+            const yRound = fieldHeight / 200;
             let x = xScale(d[xMinLabel]);
             let y = yScale(d[yMaxLabel]);
             let width = xScale(d[xMaxLabel]) - xScale(d[xMinLabel]);
             let height = yScale(d[yMinLabel]) - yScale(d[yMaxLabel]);
             let widthValue = d[xMaxLabel] - d[xMinLabel];
             let heightValue = d[yMaxLabel] - d[yMinLabel];
-            if (widthValue == 0) widthValue = 0.4;
-            if (heightValue == 0) heightValue = 0.4;
+            if (widthValue == 0) widthValue = (xMin - xMax) / 20;
+            if (heightValue == 0) heightValue = (yMin - yMax) / 20;
             let transparency = 0.07 + 0.43 / (widthValue * heightValue);
             if (width < xRound) {
               x -= xRound;
