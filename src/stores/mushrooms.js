@@ -38,6 +38,10 @@ export const useMushroomStore = defineStore("mushrooms", () => {
 
   const data = computed(() => {
     let data = mushroomData;
+    for (let mushroom of mushroomData) {
+      mushroom.minStemWidth /= 10;
+      mushroom.maxStemWidth /= 10;
+    }
     // calculate averages:
     data.forEach((d) => {
       dataProperties.combinedNumerical.forEach(({ prop: t }) => {
