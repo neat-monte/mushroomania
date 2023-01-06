@@ -105,6 +105,17 @@ export const useMushroomStore = defineStore("mushrooms", () => {
     data = data.filter(containsAny(filters.stem.color, "stemColor"));
     data = data.filter(isOfType(filters.stem.hasRing, "hasRing"));
     data = data.filter(containsAny(filters.stem.ringType, "ringType"));
+    
+    if (Object.keys(selectedMushroom).length !== 0){
+      let selectedMushroomFound = false;
+      data.forEach((mushroom) => {
+        if (!selectedMushroomFound) {
+          if (mushroom.name === selectedMushroom.name) selectedMushroomFound = true;   
+        }
+      });
+      if (!selectedMushroomFound) setSelectedMushroom(selectedMushroom);
+    }
+    
     return data;
   });
 
