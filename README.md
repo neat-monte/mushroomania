@@ -4,6 +4,8 @@ Mushroomania is a visualization project that enables the user to navigate and an
 
 The project was developed for the Data Visualization (IN4089) course at The Delft University of Technology.
 
+The project can be accessed via [https://neat-monte.github.io/mushroomania/](https://neat-monte.github.io/mushroomania/)
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
