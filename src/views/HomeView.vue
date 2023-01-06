@@ -26,11 +26,11 @@ $padding: 6px
 
   #scatter-plot
     order: 1
-  #bar-chart
+  #column-chart
     order: 2
   #mushroom-card
     order: 3
-  #season-table
+  #floating-row-chart
     order: 4
     height: 55vh
     width: 100vw
@@ -41,14 +41,14 @@ $padding: 6px
 
     #scatter-plot
       order: 1
-    #bar-chart
+    #column-chart
       order: 3
     #mushroom-card
       order: 2
-    #season-table
+    #floating-row-chart
       order: 4
 
-    #scatter-plot, #bar-chart, #mushroom-card, #season-table
+    #scatter-plot, #column-chart, #mushroom-card, #floating-row-chart
       height: calc(50vh - $padding * 2)
       width: 100%
 </style>

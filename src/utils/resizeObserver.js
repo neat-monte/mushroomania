@@ -13,7 +13,6 @@ export const useResizeObserver = () => {
   });
 
   onMounted(() => {
-    // set initial dimensions right before observing: Element.getBoundingClientRect()
     resizeState.dimensions = resizeRef.value.getBoundingClientRect();
     observer.observe(resizeRef.value);
   });
