@@ -1,4 +1,4 @@
-import { ref, reactive, computed } from "vue";
+import { ref, reactive, computed, toRaw } from "vue";
 import { defineStore } from "pinia";
 
 import mushroomData from "@/data/mushroom-data.json";
@@ -65,7 +65,6 @@ export const useMushroomStore = defineStore("mushrooms", () => {
   const showOnlyHighlighted = ref(false);
   const selectedMushroom = reactive({});
   const highlightedMushrooms = reactive([]);
-  const highlightedProp = reactive({ prop: null, value: null });
 
   const data = computed(() => {
     let data = mushroomData;
@@ -146,49 +145,82 @@ export const useMushroomStore = defineStore("mushrooms", () => {
   };
 
   const isSelectedMushroom = (mushroom) => {
+    return isEqualMushroom(mushroom, selectedMushroom);
+  };
+
+  const isEqualMushroom = (mushroom1, mushroom2) => {
     return (
-      mushroom.family === selectedMushroom.family &&
-      mushroom.name === selectedMushroom.name
+      mushroom1.family === mushroom2.family && mushroom1.name === mushroom2.name
     );
   };
 
-  const setHighlightedMushrooms = (prop, value, remove = false) => {
-    const propIsArray = Array.isArray(data.value[0][prop]);
-    if (remove) {
-      let i = 0;
-      while (i < highlightedMushrooms.length) {
-        if (
-          (propIsArray && highlightedMushrooms[i][prop].includes(value)) ||
-          highlightedMushrooms[i][prop] == value
-        ) {
-          highlightedMushrooms.splice(i, 1);
-        } else {
-          i++;
+  const setHighlightedMushrooms = (prop, value, shift, remove) => {
+    const matchedMushrooms = toRaw(
+      data.value.filter((mushroom) => {
+        if (Array.isArray(mushroom[prop])) {
+          return mushroom[prop].includes(value);
+        }
+        return mushroom[prop] == value;
+      })
+    );
+
+    if (shift) {
+      if (remove) {
+        const newHighlightedMushrooms = highlightedMushrooms.filter(
+          (mushroom) => !matchedMushrooms.includes(toRaw(mushroom))
+        );
+
+        highlightedMushrooms.splice(
+          0,
+          highlightedMushrooms.length,
+          ...newHighlightedMushrooms
+        );
+      } else {
+        for (let mushroom of matchedMushrooms) {
+          if (!highlightedMushrooms.includes(toRaw(mushroom))) {
+            highlightedMushrooms.push(mushroom);
+          }
         }
       }
-      return;
-    }
-    highlightedMushrooms.splice(0, highlightedMushrooms.length);
-    if (highlightedProp.prop === prop && highlightedProp.value === value) {
-      highlightedProp.value = highlightedProp.prop = null;
     } else {
-      highlightedMushrooms.push(
-        ...data.value.filter((mushroom) => {
-          if (propIsArray) {
-            return mushroom[prop].includes(value);
-          }
-          return mushroom[prop] == value;
-        })
-      );
-      highlightedProp.prop = prop;
-      highlightedProp.value = value;
+      if (remove) {
+        highlightedMushrooms.splice(0, highlightedMushrooms.length);
+      } else {
+        highlightedMushrooms.splice(
+          0,
+          highlightedMushrooms.length,
+          ...matchedMushrooms
+        );
+      }
     }
   };
 
-  const setHighlightedMushroomsArray = (newHighlightedMushrooms) => {
-    highlightedMushrooms.splice(0, highlightedMushrooms.length);
-    highlightedMushrooms.push(...newHighlightedMushrooms);
-    highlightedProp.value = highlightedProp.prop = null;
+  const setHighlightedMushroomsArray = (additionalMushrooms, shift, remove) => {
+    if (shift) {
+      if (remove) {
+        const newHighlightedMushrooms = highlightedMushrooms.filter(
+          (mushroom) => !additionalMushrooms.includes(toRaw(mushroom))
+        );
+
+        highlightedMushrooms.splice(
+          0,
+          highlightedMushrooms.length,
+          ...newHighlightedMushrooms
+        );
+      } else {
+        for (let mushroom of additionalMushrooms) {
+          if (!highlightedMushrooms.includes(toRaw(mushroom))) {
+            highlightedMushrooms.push(mushroom);
+          }
+        }
+      }
+    } else {
+      highlightedMushrooms.splice(
+        0,
+        highlightedMushrooms.length,
+        ...additionalMushrooms
+      );
+    }
   };
 
   const isHighlightedMushroom = (mushroom) => {

@@ -148,13 +148,21 @@ function ended(event) {
     event.sourceEvent.preventDefault();
     selectionRect.focus();
     const newHighlightedMushrooms = getMushroomsInsideRect(finalAttributes);
-    mushroomStore.setHighlightedMushroomsArray(newHighlightedMushrooms);
+    mushroomStore.setHighlightedMushroomsArray(newHighlightedMushrooms, shift);
     selectionRect.remove();
     wasDragged = false;
   }
 }
 
+var shift = false;
+
+function filter(event) {
+  shift = event.shiftKey;
+  return !event.ctrlKey && !event.button;
+}
+
 var dragBehavior = drag()
+  .filter(filter)
   .on("drag", dragged)
   .on("start", started)
   .on("end", ended);
@@ -365,7 +373,8 @@ onMounted(() => {
 
 <style lang="sass">
 #scatter-plot-svg
-  min-height: 270px
+  cursor: crosshair !important
+  min-height: 250px
 
 .plot
   position: relative
@@ -403,7 +412,6 @@ onMounted(() => {
       stroke: rgb(var(--v-theme-accent))
 
 rect.selection
-  cursor: move !important
   -webkit-touch-callout: none !important
   -webkit-user-select: none !important
   -khtml-user-select: none !important
